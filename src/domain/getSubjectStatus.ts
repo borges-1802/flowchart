@@ -1,19 +1,25 @@
 import type { Subject, SubjectStatus } from '../types/subject.types';
 
 interface GetSubjectStatusParams {
-  subject: Subject;
+  id: string;
+  preRequisites: string[];
   completedIds: string[];
   selectedSubject: Subject | null;
 }
 
-export function getSubjectStatus({ subject, completedIds, selectedSubject }: GetSubjectStatusParams): SubjectStatus {
-  if (selectedSubject && selectedSubject.id !== subject.id) {
-    if (selectedSubject.postRequisites.includes(subject.id)) return 'highlighted-post';
-    if (selectedSubject.preRequisites.includes(subject.id)) return 'highlighted-pre';
+export function getSubjectStatus({
+  id,
+  preRequisites,
+  completedIds,
+  selectedSubject,
+}: GetSubjectStatusParams): SubjectStatus {
+  if (selectedSubject && selectedSubject.id !== id) {
+    if (selectedSubject.postRequisites.includes(id)) return 'highlighted-post';
+    if (selectedSubject.preRequisites.includes(id)) return 'highlighted-pre';
   }
 
-  if (completedIds.includes(subject.id)) return 'completed';
+  if (completedIds.includes(id)) return 'completed';
 
-  const isAvailable = subject.preRequisites.every((id) => completedIds.includes(id));
+  const isAvailable = preRequisites.every((reqId) => completedIds.includes(reqId));
   return isAvailable ? 'available' : 'locked';
 }

@@ -1,7 +1,6 @@
 {
   "name": "flowchart2",
-    "homepage": "https://borges-1802.github.io/flowchart",
-  "private": true,
+  "homepage": "https://borges-1802.github.io/flowchart",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

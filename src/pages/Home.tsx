@@ -2,36 +2,42 @@ import { useState } from 'react';
 import { Header } from '../components/Header/Header';
 import { SemesterColumn } from '../components/SemesterColumn/SemesterColumn';
 import { SelectElectiveModal } from '../components/SelectElectiveModal/SelectElectiveModal';
+import { SubjectDetailPanel } from '../components/SubjectDetailPanel/SubjectDetailPanel';
 import { getSubjectStatus } from '../domain/getSubjectStatus';
 import subjectsData from '../data/subjects.json';
 import electiveSlotsData from '../data/electiveSlots.json';
+import electivesData from '../data/electives.json';
 import type { Subject } from '../types/subject.types';
 import type { ElectiveSlot } from '../types/electiveSlot.types';
+import type { ElectiveOption } from '../types/electiveOption.types';
 
 const subjects = subjectsData as Subject[];
 const electiveSlots = electiveSlotsData as ElectiveSlot[];
+const electives = electivesData as ElectiveOption[];
 const periods = [
   ...new Set([...subjects.map((subject) => subject.period), ...electiveSlots.map((slot) => slot.period)]),
 ].sort((a, b) => a - b);
+
+interface SelectedElective {
+  id: string;
+  name: string;
+}
 
 export function Home() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [completedIds, setCompletedIds] = useState<string[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [selectedElectives, setSelectedElectives] = useState<Record<string, string>>({});
+  const [selectedElectives, setSelectedElectives] = useState<Record<string, SelectedElective>>({});
   const [openSlotId, setOpenSlotId] = useState<string | null>(null);
 
   function handleToggleTheme() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   }
 
-  function handleBoxClick(id: string) {
+  function handleEntityClick(id: string, preRequisites: string[]) {
     if (selectedId === id) {
-      const subject = subjects.find((item) => item.id === id);
-      if (!subject) return;
-
-      const status = getSubjectStatus({ subject, completedIds, selectedSubject: null });
-      if (status !== 'locked') {
+      const isAvailable = preRequisites.every((reqId) => completedIds.includes(reqId));
+      if (completedIds.includes(id) || isAvailable) {
         setCompletedIds((current) =>
           current.includes(id) ? current.filter((completedId) => completedId !== id) : [...current, id],
         );
@@ -43,9 +49,27 @@ export function Home() {
     setSelectedId(id);
   }
 
-  function handleSelectElective(name: string) {
+  function handleBoxClick(id: string) {
+    const subject = subjects.find((item) => item.id === id);
+    if (!subject) return;
+    handleEntityClick(id, subject.preRequisites);
+  }
+
+  function handleSlotClick(slot: ElectiveSlot) {
+    const selected = selectedElectives[slot.id];
+    if (!selected) return;
+
+    const preRequisites =
+      slot.kind === 'condicionada'
+        ? (electives.find((option) => option.id === selected.id)?.preRequisites ?? [])
+        : [];
+
+    handleEntityClick(selected.id, preRequisites);
+  }
+
+  function handleSelectElective(option: { id: string; name: string }) {
     if (!openSlotId) return;
-    setSelectedElectives((current) => ({ ...current, [openSlotId]: name }));
+    setSelectedElectives((current) => ({ ...current, [openSlotId]: option }));
     setOpenSlotId(null);
   }
 
@@ -67,14 +91,19 @@ export function Home() {
             period={period}
             subjects={subjects.filter((subject) => subject.period === period)}
             slots={electiveSlots.filter((slot) => slot.period === period)}
-            getStatus={(subject) => getSubjectStatus({ subject, completedIds, selectedSubject })}
+            getStatus={(id, preRequisites) =>
+              getSubjectStatus({ id, preRequisites, completedIds, selectedSubject })
+            }
             selectedId={selectedId}
             onBoxClick={handleBoxClick}
             selectedElectives={selectedElectives}
-            onSlotClick={setOpenSlotId}
+            onSlotClick={handleSlotClick}
+            onSlotOpenPicker={setOpenSlotId}
           />
         ))}
       </div>
+
+      {selectedSubject && <SubjectDetailPanel subject={selectedSubject} allSubjects={subjects} />}
 
       {openSlot && (
         <SelectElectiveModal slot={openSlot} onSelect={handleSelectElective} onClose={() => setOpenSlotId(null)} />
