@@ -1,0 +1,176 @@
+[
+  {
+    "id": "FCF108",
+    "name": "Ética I",
+    "shortName": "Ética I",
+    "credits": 4.0
+  },
+  {
+    "id": "FCF614",
+    "name": "Ética II",
+    "shortName": "Ética II",
+    "credits": 4.0
+  },
+  {
+    "id": "FCF615",
+    "name": "Ética III",
+    "shortName": "Ética III",
+    "credits": 4.0
+  },
+  {
+    "id": "FCF616",
+    "name": "Ética IV",
+    "shortName": "Ética IV",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP101",
+    "name": "Teoria Direitos Fundamentais",
+    "shortName": "Dir Fund",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP110",
+    "name": "Fund Direitos Humanos",
+    "shortName": "Fund Dir Hum",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP120",
+    "name": "Fund Polít Públicas Dir Hum",
+    "shortName": "Pol Pub Dir Hum",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP130",
+    "name": "Tóp Esp Polít Públ Dir Hum I",
+    "shortName": "Top Esp Pol Pub I",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP140",
+    "name": "Tóp Esp Polít Públ Dir Hum II",
+    "shortName": "Top Esp Pol Pub II",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP141",
+    "name": "Tóp Esp Polít Públ Dir Hum III",
+    "shortName": "Top Esp Pol Pub III",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP142",
+    "name": "Tóp Esp Polít Públ Dir Hum IV",
+    "shortName": "Top Esp Pol Pub IV",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP143",
+    "name": "Tóp Esp Polít Públ Dir Hum V",
+    "shortName": "Top Esp Pol Pub V",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP144",
+    "name": "Tóp Esp Polít Públ Dir Hum VI",
+    "shortName": "Top Esp Pol Pub VI",
+    "credits": 2.0
+  },
+  {
+    "id": "NEP145",
+    "name": "Tóp Esp Polít Públ Dir Hum VII",
+    "shortName": "Top Esp Pol Pub VII",
+    "credits": 2.0
+  },
+  {
+    "id": "NEP146",
+    "name": "Dir Hum, Gênero e Sexualidades",
+    "shortName": "Dir Hum Gen Sex",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP147",
+    "name": "Dir Hum e Democracia",
+    "shortName": "Dir Hum Dem",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP148",
+    "name": "Dir Hum, Pens Negro e Racismo",
+    "shortName": "Dir Hum Pens Neg Rac",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP149",
+    "name": "Dir Hum e Meio Ambiente",
+    "shortName": "Dir Hum Meio Amb",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP150",
+    "name": "Dir Hum e Saúde",
+    "shortName": "Dir Hum Saúde",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP151",
+    "name": "Dir Hum e Cultura",
+    "shortName": "Dir Hum Cult",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP152",
+    "name": "Dir Hum, Conflit e Territórios",
+    "shortName": "Dir Hum Con Ter",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP153",
+    "name": "Dir Hum e Trabalho",
+    "shortName": "Dir Hum Trab",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP154",
+    "name": "Dir Hum e Sistema de Justiça",
+    "shortName": "Dir Hum Sis Jus",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP155",
+    "name": "Dir Hum e Movimentos Sociais",
+    "shortName": "Dir Hum Mov Soc",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP156",
+    "name": "Dir Hum, Globalização e Tecnol",
+    "shortName": "Dir Hum Glob Tec",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP157",
+    "name": "Dir Hum, Violência e Democrac",
+    "shortName": "Dir Hum Vio Dem",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP158",
+    "name": "Dir Hum e Polít Internacional",
+    "shortName": "Dir Hum Pol Int",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP159",
+    "name": "Dir Hum e Desigualdade Sociais",
+    "shortName": "Dir Hum Des Soc",
+    "credits": 4.0
+  },
+  {
+    "id": "NEP160",
+    "name": "Dir Hum na América Latina",
+    "shortName": "Dir Hum Am Lat",
+    "credits": 4.0
+  }
+]

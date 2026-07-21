@@ -1,0 +1,1069 @@
+[
+  {
+    "id": "FIT112",
+    "name": "Física I",
+    "shortName": "Fis I",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "FIT122",
+    "name": "Física II",
+    "shortName": "Fis II",
+    "preRequisites": [
+      "FIT112",
+      "MAE111"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "FIM230",
+    "name": "Física III",
+    "shortName": "Fis III",
+    "preRequisites": [
+      "FIT112",
+      "MAE992"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "FIM240",
+    "name": "Física IV",
+    "shortName": "Fis IV",
+    "preRequisites": [
+      "FIM230"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP005",
+    "name": "Ética em Computação",
+    "shortName": "Et Comp",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP006",
+    "name": "Internet das Coisas",
+    "shortName": "IOT",
+    "preRequisites": [
+      "ICP246",
+      "ICP362"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP009",
+    "name": "Sist Colaborat e Comput Social",
+    "shortName": "Sis Col",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP010",
+    "name": "Web Semântica",
+    "shortName": "Web Sem",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP011",
+    "name": "Tóp Esp em Ciência de Dados I",
+    "shortName": "Cie Dados I",
+    "preRequisites": [
+      "ICP363",
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP012",
+    "name": "Tóp Esp em Ciência de Dados II",
+    "shortName": "Cie Dados II",
+    "preRequisites": [
+      "ICP363",
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP013",
+    "name": "Séries e Transformadas Comput",
+    "shortName": "Transformadas",
+    "preRequisites": [
+      "ICP115",
+      "MAE992"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP014",
+    "name": "Comput Científ Equaç Dif Ordin",
+    "shortName": "Eq Dif Ord",
+    "preRequisites": [
+      "ICP248",
+      "ICP351"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP015",
+    "name": "Comput Científ Equaç Dif Parc",
+    "shortName": "Eq Dif Parc",
+    "preRequisites": [
+      "ICP014"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP016",
+    "name": "Introd Métod Elementos Finitos",
+    "shortName": "Ele Fin",
+    "preRequisites": [
+      "ICP248"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP017",
+    "name": "Otimização Linear",
+    "shortName": "Otim Lin",
+    "preRequisites": [
+      "ICP365"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP018",
+    "name": "Otimização Não Linear",
+    "shortName": "Otim N Lin",
+    "preRequisites": [
+      "ICP365"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP019",
+    "name": "Álgebra Linear Aplicada",
+    "shortName": "AL Aplicada",
+    "preRequisites": [
+      "ICP248"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP020",
+    "name": "Engenharia de Software",
+    "shortName": "Eng Soft",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP021",
+    "name": "Tóp Esp em Engenharia Dados I",
+    "shortName": "Eng Dados I",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP022",
+    "name": "Tóp Esp em Engenharia Dados II",
+    "shortName": "Eng Dados II",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP023",
+    "name": "Gestão de Projetos",
+    "shortName": "Gestao Proj",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP024",
+    "name": "Análise e Projeto de Sistemas",
+    "shortName": "Proj Sis",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP025",
+    "name": "Computação em Nuvem",
+    "shortName": "Comp Nuvem",
+    "preRequisites": [
+      "ICP246",
+      "ICP362"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP026",
+    "name": "Redes de Computadores II",
+    "shortName": "Redes II",
+    "preRequisites": [
+      "ICP362"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP027",
+    "name": "Criptografia",
+    "shortName": "Cripto",
+    "preRequisites": [
+      "ICP115",
+      "ICP131",
+      "ICP134"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP028",
+    "name": "Tóp Esp em Arquitetura Comput",
+    "shortName": "Top Esp Arq Comp",
+    "preRequisites": [
+      "ICP246"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP029",
+    "name": "Empreendedorismo e Inovação",
+    "shortName": "Empreend",
+    "preRequisites": [
+      "ICP145"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP030",
+    "name": "Governança e Gestão de Dados",
+    "shortName": "Gestão Dados",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP031",
+    "name": "Tóp Esp em Comp Científica I",
+    "shortName": "Comp Ci I",
+    "preRequisites": [
+      "ICP351",
+      "ICP365"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP032",
+    "name": "Tóp Esp em Comp Científica II",
+    "shortName": "Comp Ci II",
+    "preRequisites": [
+      "ICP351",
+      "ICP365"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP034",
+    "name": "Análise de Redes Sociais",
+    "shortName": "Redes Socias",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP035",
+    "name": "Tóp Esp em Teoria da Comput I",
+    "shortName": "Teo Comp I",
+    "preRequisites": [
+      "ICP116",
+      "ICP144"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP036",
+    "name": "Tóp Esp em Teoria da Comput II",
+    "shortName": "Teo Comp II",
+    "preRequisites": [
+      "ICP116",
+      "ICP144"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP038",
+    "name": "Fundamentos Processo Negócio",
+    "shortName": "Proc Neg",
+    "preRequisites": [
+      "ICP132"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP041",
+    "name": "Oficina de Desenv Software I",
+    "shortName": "Dev Soft I",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP042",
+    "name": "Oficina de Desenv Software II",
+    "shortName": "Dev Soft II",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP051",
+    "name": "Tóp Esp em Eng de Software I",
+    "shortName": "Eng Soft I",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP052",
+    "name": "Tóp Esp em Eng de Software II",
+    "shortName": "Eng Soft II",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP061",
+    "name": "Desenvolvimento Web I",
+    "shortName": "Web I",
+    "preRequisites": [
+      "ICP239"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP062",
+    "name": "Desenvolvimento Web II",
+    "shortName": "Web II",
+    "preRequisites": [
+      "ICP239"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP071",
+    "name": "Tóp Esp em Sist Computacion I",
+    "shortName": "Ofi Tec I",
+    "preRequisites": [
+      "ICP361"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP072",
+    "name": "Tóp Esp em Sist Computacion II",
+    "shortName": "Ofi Tec II",
+    "preRequisites": [
+      "ICP362"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP081",
+    "name": "Oficina de Teconologia I",
+    "shortName": "Ofi Tec I",
+    "preRequisites": [
+      "ICP141",
+      "ICP239"
+    ],
+    "credits": 2.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP082",
+    "name": "Oficina de Teconologia II",
+    "shortName": "Ofi Tec II",
+    "preRequisites": [
+      "ICP141",
+      "ICP239"
+    ],
+    "credits": 2.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP083",
+    "name": "Oficina de Teconologia III",
+    "shortName": "Ofi Tec III",
+    "preRequisites": [
+      "ICP141",
+      "ICP239"
+    ],
+    "credits": 2.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP084",
+    "name": "Oficina de Teconologia IV",
+    "shortName": "Ofi Tec IV",
+    "preRequisites": [
+      "ICP141",
+      "ICP239"
+    ],
+    "credits": 2.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP085",
+    "name": "Oficina de Teconologia V",
+    "shortName": "Ofi Tec V",
+    "preRequisites": [
+      "ICP141",
+      "ICP239"
+    ],
+    "credits": 2.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP091",
+    "name": "Tóp Esp em Ciência Comput I",
+    "shortName": "Top Ci Comp I",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP092",
+    "name": "Tóp Esp em Ciência Comput II",
+    "shortName": "Top Ci Comp II",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP093",
+    "name": "Tóp Esp em Ciência Comput III",
+    "shortName": "Top Ci Comp III",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP094",
+    "name": "Tóp Esp em Ciência Comput IV",
+    "shortName": "Top Ci Comp IV",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP095",
+    "name": "Tóp Esp em Ciência Comput V",
+    "shortName": "Top Ci Comp V",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP096",
+    "name": "Lab Análise de Redes Sociais",
+    "shortName": "Redes Sociais II",
+    "preRequisites": [
+      "ICP034"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP100",
+    "name": "Introd Gestão Estratégica Ti",
+    "shortName": "IGETi",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP102",
+    "name": "Tecn para Grandes Vol de Dados",
+    "shortName": "GVD",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP103",
+    "name": "Análise de Risco",
+    "shortName": "Anal Risco",
+    "preRequisites": [
+      "MAD243"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP356",
+    "name": "Organização de Dados II",
+    "shortName": "Org Dados II",
+    "preRequisites": [
+      "ICP116"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP357",
+    "name": "Data Warehousing e Intel Negóc",
+    "shortName": "DW",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP359",
+    "name": "Introd ao Suporte à Decisão",
+    "shortName": "Sup Dec",
+    "preRequisites": [
+      "MAD243"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP367",
+    "name": "Sistemas Distribuídos",
+    "shortName": "Sis Dis",
+    "preRequisites": [
+      "ICP361",
+      "ICP362"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP465",
+    "name": "Tóp Esp Informática Sociedade",
+    "shortName": "Info Soc",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP471",
+    "name": "Compiladores",
+    "shortName": "Compiladores",
+    "preRequisites": [
+      "ICP116",
+      "ICP123",
+      "ICP353"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP478",
+    "name": "Métodos Numéricos I",
+    "shortName": "Met Num I",
+    "preRequisites": [
+      "ICP231"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP491",
+    "name": "Banco de Dados II",
+    "shortName": "BD II",
+    "preRequisites": [
+      "ICP489"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP508",
+    "name": "Inteligência Artificial",
+    "shortName": "IA",
+    "preRequisites": [
+      "ICP368"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP518",
+    "name": "Teoria de Grafos",
+    "shortName": "Grafos",
+    "preRequisites": [
+      "ICP368"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP532",
+    "name": "Mineração de Dados",
+    "shortName": "Min Dados",
+    "preRequisites": [
+      "ICP489",
+      "MAD243"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP603",
+    "name": "Gestão do Conhecimento",
+    "shortName": "Gest Con",
+    "preRequisites": [
+      "ICP142"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP605",
+    "name": "Recuperação de Informação",
+    "shortName": "Rec Info",
+    "preRequisites": [
+      "ICP116"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP606",
+    "name": "Tóp Esp em Programação",
+    "shortName": "TEP",
+    "preRequisites": [
+      "ICP368"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP616",
+    "name": "Interação Humano-computador",
+    "shortName": "IHC",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP622",
+    "name": "Program Paralela e Distribuída",
+    "shortName": "Prog Paral",
+    "preRequisites": [
+      "ICP361"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP633",
+    "name": "Algoritmos de Aproximação",
+    "shortName": "Alg Aprox",
+    "preRequisites": [
+      "ICP368"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP636",
+    "name": "Algoritmos Paralelos",
+    "shortName": "Alg Paral",
+    "preRequisites": [
+      "ICP368"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP638",
+    "name": "Computação Algébrica",
+    "shortName": "Comp Alg",
+    "preRequisites": [
+      "ICP115",
+      "ICP131",
+      "ICP134"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP639",
+    "name": "Computação Quântica",
+    "shortName": "Comp Quant",
+    "preRequisites": [
+      "ICP115",
+      "ICP134"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICP640",
+    "name": "Projeto Teste de Software",
+    "shortName": "Proj Test",
+    "preRequisites": [
+      "ICP237"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "ICPX03",
+    "name": "Monitoria I/II",
+    "shortName": "Monit I/II",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "IEE115",
+    "name": "Economia",
+    "shortName": "Econ",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "LEB599",
+    "name": "Est da Líng Bras de Sinais I",
+    "shortName": "Libras",
+    "preRequisites": [],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "MAE993",
+    "name": "Cálculo Int e Diferencial III",
+    "shortName": "Calc III",
+    "preRequisites": [
+      "MAE992"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  },
+  {
+    "id": "MAE994",
+    "name": "Cálculo Int e Diferencial IV",
+    "shortName": "Calc IV",
+    "preRequisites": [
+      "ICP115",
+      "MAE992"
+    ],
+    "credits": 4.0,
+    "curriculum": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "advice": ""
+  }
+]
