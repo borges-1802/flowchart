@@ -1,4 +1,4 @@
-export type ElectiveKind = 'condicionada' | 'humanidade' | 'livre';
+export type ElectiveKind = 'condicionada' | 'humanidades' | 'livre';
 
 export interface ElectiveSlot {
   id: string;

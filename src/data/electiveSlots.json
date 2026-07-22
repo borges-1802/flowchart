@@ -1,57 +1,57 @@
 [
   {
+    "id": "SLOT-P4-1",
+    "period": 4,
+    "kind": "condicionada"
+  },
+  {
+    "id": "SLOT-P5-1",
+    "period": 5,
+    "kind": "condicionada"
+  },
+  {
+    "id": "SLOT-P6-1",
+    "period": 6,
+    "kind": "condicionada"
+  },
+  {
+    "id": "SLOT-P7-3",
+    "period": 8,
+    "kind": "humanidades"
+  },
+  {
     "id": "SLOT-P7-1",
-    "period": 7,
+    "period": 8,
     "kind": "livre"
   },
   {
     "id": "SLOT-P7-2",
-    "period": 7,
+    "period": 8,
     "kind": "livre"
   },
-  {
-    "id": "SLOT-P7-3",
-    "period": 7,
-    "kind": "humanidade"
-  },
-  {
-    "id": "SLOT-P8-1",
-    "period": 8,
-    "kind": "condicionada"
-  },
-  {
-    "id": "SLOT-P8-2",
-    "period": 8,
-    "kind": "condicionada"
-  },
-  {
-    "id": "SLOT-P8-3",
-    "period": 8,
-    "kind": "condicionada"
-  },
-  {
+    {
     "id": "SLOT-P8-4",
     "period": 8,
     "kind": "condicionada"
   },
   {
-    "id": "SLOT-P9-1",
-    "period": 9,
+    "id": "SLOT-P7-4",
+    "period": 7,
     "kind": "condicionada"
   },
   {
-    "id": "SLOT-P9-2",
-    "period": 9,
+    "id": "SLOT-P8-1",
+    "period": 7,
     "kind": "condicionada"
   },
   {
-    "id": "SLOT-P9-3",
-    "period": 9,
+    "id": "SLOT-P8-2",
+    "period": 7,
     "kind": "condicionada"
   },
   {
-    "id": "SLOT-P9-4",
-    "period": 9,
+    "id": "SLOT-P8-3",
+    "period": 7,
     "kind": "condicionada"
   }
 ]

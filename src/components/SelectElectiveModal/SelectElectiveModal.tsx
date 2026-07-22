@@ -25,7 +25,7 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
   const [searchQuery, setSearchQuery] = useState('');
   const [freeText, setFreeText] = useState('');
 
-  const pool = slot.kind === 'condicionada' ? electives : slot.kind === 'humanidade' ? humanities : [];
+  const pool = slot.kind === 'condicionada' ? electives : slot.kind === 'humanidades' ? humanities : [];
 
   const filteredOptions = useMemo(() => {
     const query = searchQuery.toLowerCase();

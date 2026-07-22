@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '../components/Header/Header';
 import { SemesterColumn } from '../components/SemesterColumn/SemesterColumn';
 import { SelectElectiveModal } from '../components/SelectElectiveModal/SelectElectiveModal';
@@ -77,6 +77,13 @@ export function Home() {
   const selectedSubject = subjects.find((subject) => subject.id === selectedId) ?? null;
   const openSlot = electiveSlots.find((slot) => slot.id === openSlotId) ?? null;
 
+  useEffect(() => {
+    document.body.style.overflow = openSlot ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [openSlot]);
+
   return (
     <div
       className={`min-h-screen ${isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'}`}
@@ -84,7 +91,7 @@ export function Home() {
     >
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
 
-      <div className="flex gap-2 overflow-x-auto p-4">
+      <div className="flex justify-center gap-2 overflow-x-auto p-4">
         {periods.map((period) => (
           <SemesterColumn
             key={period}

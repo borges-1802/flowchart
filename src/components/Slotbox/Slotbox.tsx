@@ -17,14 +17,14 @@ interface SlotBoxProps {
 }
 
 const kindColorClasses: Record<ElectiveKind, string> = {
-  livre: 'bg-amber-500',
-  humanidade: 'bg-teal-500',
+  livre: 'bg-zinc-600',
+  humanidades: 'bg-zinc-400',
   condicionada: 'bg-pink-500',
 };
 
 const kindLabels: Record<ElectiveKind, string> = {
   livre: 'Livre escolha',
-  humanidade: 'Humanidade',
+  humanidades: 'Humanidades',
   condicionada: 'Eletiva do curso',
 };
 
@@ -46,7 +46,7 @@ export function SlotBox({ slot, selected, status, isSelected, onClick, onOpenPic
   const baseColorClass = selected ? statusColorClasses[status] : kindColorClasses[slot.kind];
 
   function startHold() {
-    if (!selected) return;
+    if (!selected || !isSelected) return;
 
     didHoldRef.current = false;
     setIsHolding(true);
