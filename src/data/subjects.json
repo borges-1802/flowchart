@@ -2,7 +2,7 @@
   {
     "id": "ICP131",
     "name": "Programação de Computadores I",
-    "shortName": "Comp I",
+    "shortName": "Prog I",
     "period": 1,
     "preRequisites": [],
     "postRequisites": [
@@ -123,7 +123,7 @@
   {
     "id": "ICP141",
     "name": "Programação de Computadores II",
-    "shortName": "Comp II",
+    "shortName": "Prog II",
     "period": 2,
     "preRequisites": [
       "ICP131"
@@ -152,7 +152,7 @@
   {
     "id": "ICP142",
     "name": "Organização de Dados I",
-    "shortName": "Org Dados I",
+    "shortName": "Org Dados",
     "period": 2,
     "preRequisites": [],
     "postRequisites": [
@@ -190,7 +190,7 @@
   {
     "id": "ICP144",
     "name": "Matemática Discreta",
-    "shortName": "Mat Disc",
+    "shortName": "Discreta",
     "period": 2,
     "preRequisites": [
       "ICP134"
@@ -439,7 +439,7 @@
   {
     "id": "ICP248",
     "name": "Comput Científ e Análise Dados",
-    "shortName": "CO CA DA",
+    "shortName": "COCADA",
     "period": 4,
     "preRequisites": [
       "ICP115",
@@ -697,7 +697,7 @@
   {
     "id": "ICP363",
     "name": "Introd Aprendizado de Máquina",
-    "shortName": "ML",
+    "shortName": "IML",
     "period": 6,
     "preRequisites": [
       "ICP248",
@@ -743,7 +743,7 @@
   {
     "id": "ICP370",
     "name": "Lógica e Computabilidade",
-    "shortName": "Log",
+    "shortName": "Lógica",
     "period": 6,
     "preRequisites": [
       "ICP123"
