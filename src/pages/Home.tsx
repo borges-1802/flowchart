@@ -7,13 +7,27 @@ import { getSubjectStatus } from '../domain/getSubjectStatus';
 import subjectsData from '../data/subjects.json';
 import electiveSlotsData from '../data/electiveSlots.json';
 import electivesData from '../data/electives.json';
+import humanitiesData from '../data/humanities.json';
 import type { Subject } from '../types/subject.types';
 import type { ElectiveSlot } from '../types/electiveSlot.types';
 import type { ElectiveOption } from '../types/electiveOption.types';
 
+interface HumanitiesOption {
+  id: string;
+  name: string;
+  shortName: string;
+  credits: number;
+}
+
 const subjects = subjectsData as Subject[];
 const electiveSlots = electiveSlotsData as ElectiveSlot[];
 const electives = electivesData as ElectiveOption[];
+const humanities = humanitiesData as HumanitiesOption[];
+const nameById = new Map<string, string>([
+  ...subjects.map((subject): [string, string] => [subject.id, subject.name]),
+  ...electives.map((option): [string, string] => [option.id, option.name]),
+  ...humanities.map((option): [string, string] => [option.id, option.name]),
+]);
 const periods = [
   ...new Set([...subjects.map((subject) => subject.period), ...electiveSlots.map((slot) => slot.period)]),
 ].sort((a, b) => a - b);
@@ -84,6 +98,10 @@ export function Home() {
     };
   }, [openSlot]);
 
+  useEffect(() => {
+    document.body.style.backgroundColor = isDark ? '#0a0a0a' : '#fafafa';
+  }, [isDark]);
+
   return (
     <div
       className={`min-h-screen ${isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'}`}
@@ -110,10 +128,15 @@ export function Home() {
         ))}
       </div>
 
-      {selectedSubject && <SubjectDetailPanel subject={selectedSubject} allSubjects={subjects} />}
+      {selectedSubject && <SubjectDetailPanel subject={selectedSubject} nameById={nameById} />}
 
       {openSlot && (
-        <SelectElectiveModal slot={openSlot} onSelect={handleSelectElective} onClose={() => setOpenSlotId(null)} />
+        <SelectElectiveModal
+          slot={openSlot}
+          theme={theme}
+          onSelect={handleSelectElective}
+          onClose={() => setOpenSlotId(null)}
+        />
       )}
     </div>
   );

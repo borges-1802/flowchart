@@ -1,12 +1,14 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 
 interface ModalProps {
+  theme: 'dark' | 'light';
   onClose: () => void;
   children: ReactNode;
 }
 
-export function Modal({ onClose, children }: ModalProps) {
+export function Modal({ theme, onClose, children }: ModalProps) {
   const modalRef = useRef<HTMLDivElement | null>(null);
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -30,10 +32,17 @@ export function Modal({ onClose, children }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      className={`fixed inset-0 z-50 flex h-screen w-screen items-center justify-center p-4 ${
+        isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'
+      }`}
       onClick={(event) => event.stopPropagation()}
     >
-      <div ref={modalRef} className="max-h-[80vh] w-full max-w-md overflow-hidden rounded-xl bg-neutral-900 text-white">
+      <div
+        ref={modalRef}
+        className={`max-h-[80vh] w-full max-w-md overflow-hidden rounded-xl ${
+          isDark ? 'bg-neutral-900 text-white' : 'bg-white text-neutral-900'
+        }`}
+      >
         {children}
       </div>
     </div>

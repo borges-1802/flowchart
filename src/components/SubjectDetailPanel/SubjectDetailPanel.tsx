@@ -2,16 +2,16 @@ import type { Subject } from '../../types/subject.types';
 
 interface SubjectDetailPanelProps {
   subject: Subject;
-  allSubjects: Subject[];
+  nameById: Map<string, string>;
 }
 
-function resolveNames(ids: string[], allSubjects: Subject[]): string[] {
-  return ids.map((id) => allSubjects.find((subject) => subject.id === id)?.name ?? id);
+function resolveNames(ids: string[], nameById: Map<string, string>): string[] {
+  return ids.map((id) => nameById.get(id) ?? id);
 }
 
-export function SubjectDetailPanel({ subject, allSubjects }: SubjectDetailPanelProps) {
-  const preRequisiteNames = resolveNames(subject.preRequisites, allSubjects);
-  const postRequisiteNames = resolveNames(subject.postRequisites, allSubjects);
+export function SubjectDetailPanel({ subject, nameById }: SubjectDetailPanelProps) {
+  const preRequisiteNames = resolveNames(subject.preRequisites, nameById);
+  const postRequisiteNames = resolveNames(subject.postRequisites, nameById);
 
   return (
     <div

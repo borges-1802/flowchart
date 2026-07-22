@@ -17,13 +17,21 @@ const humanities = humanitiesData as HumanitiesOption[];
 
 interface SelectElectiveModalProps {
   slot: ElectiveSlot;
+  theme: 'dark' | 'light';
   onSelect: (option: { id: string; name: string }) => void;
   onClose: () => void;
 }
 
-export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveModalProps) {
+export function SelectElectiveModal({ slot, theme, onSelect, onClose }: SelectElectiveModalProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [freeText, setFreeText] = useState('');
+  const isDark = theme === 'dark';
+
+  const inputClass = isDark
+    ? 'border-neutral-700 bg-neutral-800 text-white'
+    : 'border-neutral-300 bg-neutral-100 text-neutral-900';
+
+  const listItemHoverClass = isDark ? 'hover:bg-neutral-800' : 'hover:bg-neutral-100';
 
   const pool = slot.kind === 'condicionada' ? electives : slot.kind === 'humanidades' ? humanities : [];
 
@@ -36,10 +44,10 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
 
   if (slot.kind === 'livre') {
     return (
-      <Modal onClose={onClose}>
+      <Modal theme={theme} onClose={onClose}>
         <div className="p-4">
           <h3 className="mb-3 text-base font-semibold">Disciplina de livre escolha</h3>
-          <p className="mb-3 text-xs text-neutral-400">
+          <p className={`mb-3 text-xs ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>
             Pode ser qualquer disciplina da UFRJ, sem lista fechada. Digite o nome.
           </p>
           <input
@@ -48,7 +56,7 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
             value={freeText}
             onChange={(event) => setFreeText(event.target.value)}
             placeholder="Nome da disciplina"
-            className="mb-3 w-full rounded-lg border border-neutral-700 bg-neutral-800 px-3 py-2 text-sm text-white"
+            className={`mb-3 w-full rounded-lg border px-3 py-2 text-sm ${inputClass}`}
           />
           <button
             type="button"
@@ -64,7 +72,7 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
   }
 
   return (
-    <Modal onClose={onClose}>
+    <Modal theme={theme} onClose={onClose}>
       <div className="p-4 pb-2">
         <h3 className="mb-3 text-base font-semibold">
           {slot.kind === 'condicionada' ? 'Escolha uma eletiva do curso' : 'Escolha uma humanidade'}
@@ -75,7 +83,7 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
           placeholder="Pesquisar disciplina..."
-          className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-3 py-2 text-sm text-white"
+          className={`w-full rounded-lg border px-3 py-2 text-sm ${inputClass}`}
         />
       </div>
 
@@ -85,14 +93,16 @@ export function SelectElectiveModal({ slot, onSelect, onClose }: SelectElectiveM
             <button
               type="button"
               onClick={() => onSelect({ id: option.id, name: option.name })}
-              className="w-full rounded-lg px-2 py-2 text-left text-sm hover:bg-neutral-800"
+              className={`w-full rounded-lg px-2 py-2 text-left text-sm ${listItemHoverClass}`}
             >
               {option.id} | {option.name}
             </button>
           </li>
         ))}
         {filteredOptions.length === 0 && (
-          <li className="px-2 py-4 text-center text-sm text-neutral-500">Nenhuma disciplina encontrada.</li>
+          <li className={`px-2 py-4 text-center text-sm ${isDark ? 'text-neutral-500' : 'text-neutral-400'}`}>
+            Nenhuma disciplina encontrada.
+          </li>
         )}
       </ul>
     </Modal>
