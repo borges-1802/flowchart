@@ -5,6 +5,7 @@ import type { SubjectStatus } from '../../types/subject.types';
 interface SelectedElective {
   id: string;
   name: string;
+  shortName: string;
 }
 
 interface SlotBoxProps {
@@ -90,7 +91,7 @@ export function SlotBox({ slot, selected, status, isSelected, onClick, onOpenPic
       onTouchStart={startHold}
       onTouchEnd={cancelHold}
       onClick={handleClick}
-      className={`relative flex h-[58px] w-full items-center justify-center overflow-hidden rounded-[10px] px-2.5 text-center text-xs font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${baseColorClass} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
+      className={`relative flex h-[62px] w-full items-center justify-center overflow-hidden rounded-[10px] px-3 text-center text-sm font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${baseColorClass} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
     >
       <span
         aria-hidden="true"
@@ -98,7 +99,16 @@ export function SlotBox({ slot, selected, status, isSelected, onClick, onOpenPic
           isHolding ? 'w-full duration-1000' : 'w-0 duration-150'
         }`}
       />
-      <span className="relative z-10">{selected ? selected.name : kindLabels[slot.kind]}</span>
+      <span className="relative z-10">
+        {selected ? (
+          <>
+            <span className="hidden sm:inline">{selected.name}</span>
+            <span className="inline sm:hidden">{selected.shortName}</span>
+          </>
+        ) : (
+          kindLabels[slot.kind]
+        )}
+      </span>
     </button>
   );
 }

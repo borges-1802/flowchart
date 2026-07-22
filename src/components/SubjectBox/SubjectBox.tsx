@@ -23,9 +23,10 @@ export function SubjectBox({ subject, status, isSelected, onClick }: SubjectBoxP
         event.stopPropagation();
         onClick(subject.id);
       }}
-      className={`flex h-[58px] w-full items-center justify-center rounded-[10px] px-2.5 text-center text-xs font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${statusColorClasses[status]} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
+      className={`flex h-[62px] w-full items-center justify-center rounded-[10px] px-3 text-center text-sm font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${statusColorClasses[status]} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
     >
-      {subject.name}
+      <span className="hidden sm:inline">{subject.name}</span>
+      <span className="inline sm:hidden">{subject.shortName}</span>
     </button>
   );
 }

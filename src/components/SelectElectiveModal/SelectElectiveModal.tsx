@@ -18,7 +18,7 @@ const humanities = humanitiesData as HumanitiesOption[];
 interface SelectElectiveModalProps {
   slot: ElectiveSlot;
   theme: 'dark' | 'light';
-  onSelect: (option: { id: string; name: string }) => void;
+  onSelect: (option: { id: string; name: string; shortName: string }) => void;
   onClose: () => void;
 }
 
@@ -61,7 +61,7 @@ export function SelectElectiveModal({ slot, theme, onSelect, onClose }: SelectEl
           <button
             type="button"
             disabled={!freeText.trim()}
-            onClick={() => onSelect({ id: slot.id, name: freeText.trim() })}
+            onClick={() => onSelect({ id: slot.id, name: freeText.trim(), shortName: freeText.trim() })}
             className="w-full rounded-lg bg-amber-500 px-3 py-2 text-sm font-semibold text-white disabled:opacity-40"
           >
             Confirmar
@@ -92,7 +92,7 @@ export function SelectElectiveModal({ slot, theme, onSelect, onClose }: SelectEl
           <li key={option.id}>
             <button
               type="button"
-              onClick={() => onSelect({ id: option.id, name: option.name })}
+              onClick={() => onSelect({ id: option.id, name: option.name, shortName: option.shortName })}
               className={`w-full rounded-lg px-2 py-2 text-left text-sm ${listItemHoverClass}`}
             >
               {option.id} | {option.name}

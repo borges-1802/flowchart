@@ -104,7 +104,7 @@
   },
   {
     "id": "ICP136",
-    "name": "Introd Pensamento Dedutivo",
+    "name": "Introdução ao Pensamento Dedutivo",
     "shortName": "IPD",
     "period": 1,
     "preRequisites": [],
@@ -213,7 +213,7 @@
   },
   {
     "id": "ICP145",
-    "name": "Habilidades Sociais p Trabalho",
+    "name": "Habilidades Sociais para o Trabalho",
     "shortName": "Hab Soc",
     "period": 2,
     "preRequisites": [
@@ -283,7 +283,7 @@
   },
   {
     "id": "ICP116",
-    "name": "Estrutura dos Dados",
+    "name": "Estrutura de Dados",
     "shortName": "ED",
     "period": 3,
     "preRequisites": [

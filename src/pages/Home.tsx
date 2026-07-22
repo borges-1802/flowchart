@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { usePersistedState } from '../hooks/usePersistedState';
 import { Header } from '../components/Header/Header';
 import { SemesterColumn } from '../components/SemesterColumn/SemesterColumn';
 import { SelectElectiveModal } from '../components/SelectElectiveModal/SelectElectiveModal';
@@ -35,13 +36,17 @@ const periods = [
 interface SelectedElective {
   id: string;
   name: string;
+  shortName: string;
 }
 
 export function Home() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-  const [completedIds, setCompletedIds] = useState<string[]>([]);
+  const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
+  const [completedIds, setCompletedIds] = usePersistedState<string[]>('flowchart:completedIds', []);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [selectedElectives, setSelectedElectives] = useState<Record<string, SelectedElective>>({});
+  const [selectedElectives, setSelectedElectives] = usePersistedState<Record<string, SelectedElective>>(
+    'flowchart:selectedElectives',
+    {},
+  );
   const [openSlotId, setOpenSlotId] = useState<string | null>(null);
 
   function handleToggleTheme() {
@@ -81,7 +86,7 @@ export function Home() {
     handleEntityClick(selected.id, preRequisites);
   }
 
-  function handleSelectElective(option: { id: string; name: string }) {
+  function handleSelectElective(option: { id: string; name: string; shortName: string }) {
     if (!openSlotId) return;
     setSelectedElectives((current) => ({ ...current, [openSlotId]: option }));
     setOpenSlotId(null);
@@ -109,7 +114,7 @@ export function Home() {
     >
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
 
-      <div className="flex justify-center gap-2 overflow-x-auto p-4">
+      <div className="flex flex-col gap-5 p-4 sm:flex-row sm:justify-center sm:gap-2 sm:overflow-x-auto">
         {periods.map((period) => (
           <SemesterColumn
             key={period}
