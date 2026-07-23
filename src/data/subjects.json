@@ -25,7 +25,7 @@
   {
     "id": "ICP132",
     "name": "Processos de Software",
-    "shortName": "Proc Sof",
+    "shortName": "Processos",
     "period": 1,
     "preRequisites": [],
     "postRequisites": [
@@ -44,8 +44,8 @@
   },
   {
     "id": "ICP133",
-    "name": "Fund de Sistemas de Computação",
-    "shortName": "FSC",
+    "name": "Fundamentos de Sistemas de Comp",
+    "shortName": "Fundamentos",
     "period": 1,
     "preRequisites": [],
     "postRequisites": [
@@ -66,7 +66,7 @@
   {
     "id": "ICP134",
     "name": "Números Inteiros Criptografia",
-    "shortName": "Num Int",
+    "shortName": "Cripto",
     "period": 1,
     "preRequisites": [],
     "postRequisites": [
@@ -87,7 +87,7 @@
   {
     "id": "ICP135",
     "name": "Projeto de Carreira",
-    "shortName": "Proj Car",
+    "shortName": "Projeto de Carreira",
     "period": 1,
     "preRequisites": [],
     "postRequisites": [
@@ -170,7 +170,7 @@
   {
     "id": "ICP143",
     "name": "Projeto Prático",
-    "shortName": "Proj Prat",
+    "shortName": "Projeto Prático",
     "period": 2,
     "preRequisites": [
       "ICP131",
@@ -235,7 +235,7 @@
   {
     "id": "MAE111",
     "name": "Cálculo Infinitesimal I",
-    "shortName": "Calc I",
+    "shortName": "Cálculo I",
     "period": 2,
     "preRequisites": [],
     "postRequisites": [
@@ -264,7 +264,7 @@
     "postRequisites": [
       "ICP248",
       "ICP350",
-      "ICP251",
+      "ICP351",
       "ICP365",
       "ICP013",
       "ICP027",
@@ -309,7 +309,7 @@
   },
   {
     "id": "ICP237",
-    "name": "Introd à Modelagem de Sistemas",
+    "name": "Introdução à Modelagem de Sistemas",
     "shortName": "IMS",
     "period": 3,
     "preRequisites": [
@@ -339,7 +339,7 @@
   },
   {
     "id": "ICP238",
-    "name": "Introd à Computação Numérica",
+    "name": "Introdução à Computação Numérica",
     "shortName": "ICN",
     "period": 3,
     "preRequisites": [
@@ -389,14 +389,15 @@
   },
   {
     "id": "MAE992",
-    "name": "Cálculo Integ e Diferencial II",
-    "shortName": "Calc II",
+    "name": "Cálculo Integral e Diferencial II",
+    "shortName": "Cálculo II",
     "period": 3,
     "preRequisites": [
       "MAE111"
     ],
     "postRequisites": [
       "ICP248",
+      "MAD243",
       "ICP351",
       "FIM230",
       "ICP013",
@@ -415,7 +416,7 @@
   {
     "id": "ICP246",
     "name": "Arquitet Comput e Sist Operac",
-    "shortName": "Arq Comp SO",
+    "shortName": "ArqComp e SO",
     "period": 4,
     "preRequisites": [
       "ICP133",
@@ -438,7 +439,7 @@
   },
   {
     "id": "ICP248",
-    "name": "Comput Científ e Análise Dados",
+    "name": "Comput Científica e Análise de Dados",
     "shortName": "COCADA",
     "period": 4,
     "preRequisites": [
@@ -463,7 +464,7 @@
   {
     "id": "ICP249",
     "name": "Tecnologia e Sociedade",
-    "shortName": "Tec Soc",
+    "shortName": "TecSoc",
     "period": 4,
     "preRequisites": [
       "ICP145"
@@ -511,7 +512,7 @@
   {
     "id": "MAD243",
     "name": "Estatística e Probabilidade",
-    "shortName": "Prob Est",
+    "shortName": "ProbEst",
     "period": 4,
     "preRequisites": [
       "MAE992"
@@ -577,7 +578,7 @@
   {
     "id": "ICP351",
     "name": "Model Matemát e Computacional",
-    "shortName": "Mod Mat",
+    "shortName": "ModMat",
     "period": 5,
     "preRequisites": [
       "ICP115",
@@ -607,8 +608,7 @@
     ],
     "postRequisites": [
       "ICP361",
-      "ICP473",
-      "ICP353"
+      "ICP473"
     ],
     "credits": 4.0,
     "curriculum": "Tradução de linguagem de alto nível para linguagem de montagem; Compilação com otimização e análise de desempenho; Comparativo entre as arquiteturas de 32 e 64 bits; Comunicação entre processos, chamadas de sistemas, tratadores de eventos; Ligação de programas e criação de bibliotecas estáticas e compartilhadas; Otimização de desempenho de programas frente a novas arquiteturas de processadores e limitações dos compiladores.",
@@ -647,7 +647,7 @@
   {
     "id": "ICP361",
     "name": "Programação Concorrente",
-    "shortName": "Comp Conc",
+    "shortName": "Concorrente",
     "period": 6,
     "preRequisites": [
       "ICP239",
@@ -719,7 +719,7 @@
   {
     "id": "ICP365",
     "name": "Otimização",
-    "shortName": "Otim",
+    "shortName": "Otimização",
     "period": 6,
     "preRequisites": [
       "ICP115",
@@ -766,7 +766,9 @@
     "preRequisites": [
       "ICP249"
     ],
-    "postRequisites": [],
+    "postRequisites": [
+      "ICPK01"
+    ],
     "credits": 4.0,
     "curriculum": "Concepções do conhecimento e da pesquisa acadêmica. Tipos de pesquisa. Processo de desenvolvimento da pesquisa. Estruturação, redação e formatação de projeto de pesquisa. Relevância e contextualização da pesquisa. Fundamentação e contextualização da pesquisa. Estratégias de embasamento. Levantamento de fontes e referências. Ética na redação científica e legitimidade do saber. Métodos e estratégias de pesquisa. Coleta de dados. Técnicas para análise de dados. Planejamento e cronograma.",
     "difficultyLevel": "2/5",
