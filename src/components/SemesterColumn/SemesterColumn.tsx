@@ -19,6 +19,9 @@ interface SemesterColumnProps {
   selectedElectives: Record<string, SelectedElective>;
   onSlotClick: (slot: ElectiveSlot) => void;
   onSlotOpenPicker: (slotId: string) => void;
+  onCompleteAll: () => void;
+  isComplete: boolean;
+  onUncompleteAll: () => void;
 }
 
 export function SemesterColumn({
@@ -31,9 +34,12 @@ export function SemesterColumn({
   selectedElectives,
   onSlotClick,
   onSlotOpenPicker,
+  onCompleteAll,
+  isComplete,
+  onUncompleteAll,
 }: SemesterColumnProps) {
   return (
-    <div className="w-full sm:w-[148px] sm:shrink-0">
+    <div className="w-full sm:w-37 sm:shrink-0">
       <p className="mb-1.5 text-center text-[11px] text-neutral-500">Período {period}</p>
       <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-col">
         {subjects.map((subject) => (
@@ -60,6 +66,21 @@ export function SemesterColumn({
           );
         })}
       </div>
+
+      <button
+        type="button"
+        onClick={(event) => {
+          event.stopPropagation();
+          isComplete ? onUncompleteAll() : onCompleteAll();
+        }}
+        className={`col-span-3 mt-2 w-full rounded-lg border py-1.5 text-[11px] font-medium transition-colors sm:col-span-1 ${
+          isComplete
+            ? 'border-neutral-600/50 text-neutral-400 hover:bg-neutral-500/10'
+            : 'border-green-600/50 text-green-500 hover:bg-green-500/10'
+        }`}
+      >
+        {isComplete ? 'Desmarcar período todo' : 'Marcar período todo'}
+      </button>
     </div>
   );
 }

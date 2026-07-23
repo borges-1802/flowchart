@@ -92,6 +92,52 @@ export function Home() {
     setOpenSlotId(null);
   }
 
+  function handleCompleteColumn(period: number) {
+    const isUnlocked = (preRequisites: string[]) => preRequisites.every((id) => completedIds.includes(id));
+
+    const subjectIds = subjects
+      .filter((subject) => subject.period === period && isUnlocked(subject.preRequisites))
+      .map((subject) => subject.id);
+
+    const slotIds = electiveSlots
+      .filter((slot) => slot.period === period)
+      .map((slot) => {
+        const selected = selectedElectives[slot.id];
+        if (!selected) return null;
+
+        const preRequisites =
+          slot.kind === 'condicionada'
+            ? (electives.find((option) => option.id === selected.id)?.preRequisites ?? [])
+            : [];
+
+        return isUnlocked(preRequisites) ? selected.id : null;
+      })
+      .filter((id): id is string => Boolean(id));
+
+    const idsToComplete = [...subjectIds, ...slotIds];
+
+    setCompletedIds((current) => [...new Set([...current, ...idsToComplete])]);
+  }
+
+  function getPeriodIds(period: number): string[] {
+    const subjectIds = subjects.filter((subject) => subject.period === period).map((subject) => subject.id);
+    const slotIds = electiveSlots
+      .filter((slot) => slot.period === period)
+      .map((slot) => selectedElectives[slot.id]?.id)
+      .filter((id): id is string => Boolean(id));
+    return [...subjectIds, ...slotIds];
+  }
+
+  function isPeriodComplete(period: number): boolean {
+    const ids = getPeriodIds(period);
+    return ids.length > 0 && ids.every((id) => completedIds.includes(id));
+  }
+
+  function handleUncompleteColumn(period: number) {
+    const idsToRemove = new Set(getPeriodIds(period));
+    setCompletedIds((current) => current.filter((id) => !idsToRemove.has(id)));
+  }
+
   const isDark = theme === 'dark';
   const selectedSubject = subjects.find((subject) => subject.id === selectedId) ?? null;
   const openSlot = electiveSlots.find((slot) => slot.id === openSlotId) ?? null;
@@ -129,6 +175,9 @@ export function Home() {
             selectedElectives={selectedElectives}
             onSlotClick={handleSlotClick}
             onSlotOpenPicker={setOpenSlotId}
+            onCompleteAll={() => handleCompleteColumn(period)}
+            isComplete={isPeriodComplete(period)}
+            onUncompleteAll={() => handleUncompleteColumn(period)}
           />
         ))}
       </div>
