@@ -17,10 +17,10 @@
     "curriculum": "Resolução de problemas de forma algorítmica; Funções e modularização; Recursão; Variáveis, expressões; Controle de fluxo e repetições; Tipos básicos e estruturados; Tipos abstratos de dados; Vetores e matrizes; Cadeias de caracteres; Documentação, legibilidade, manutenção e eficiência de programas.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações, listas.",
-    "teachers": "Ronald Chiesse",
+    "teachers": "Hugo Musso",
     "advice": "Não costuma ser muito complicada, mas é sempre bom praticar o que se aprende em aula.",
     "availability": "Baixa",
-    "schedule": "Seg-Qua 13h-15h"
+    "schedule": "Seg-Qua 8h-10h"
   },
   {
     "id": "ICP132",
@@ -35,10 +35,10 @@
     ],
     "credits": 4.0,
     "curriculum": "Conceitos de organização, sistema e sistema de informação; Processos de Negócio (Modelagem de Processos (BPMN)); Introdução a Engenharia de Software (Conceito de Partes Interessadas, Valor e Qualidade de Software); Processo de Software (Requisitos, Modelagem, Projeto de software, Implementação, Testes, Manutenção); Conceitos de no-code programming.",
-    "difficultyLevel": "2/5",
+    "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
-    "teachers": "Juliana França",
-    "advice": "A segunda mais tranquila do primeiro período, não precisa ter medo.",
+    "teachers": "Eldanae Teixeira",
+    "advice": "A segunda mais tranquila do primeiro período, não precisa ter medo, faça os trabalhos e resumos dos slides.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
   },
@@ -61,7 +61,7 @@
     "teachers": "Silvana Rossetto",
     "advice": "Pode ser difícil se for a sua primeira vez vendo este conteúdo, recomenda-se rever as aulas e pesquisar conteúdo no youtube.",
     "availability": "Baixa",
-    "schedule": "Ter-Qui 15h-17h"
+    "schedule": "Ter-Qui 8h-10h"
   },
   {
     "id": "ICP134",
@@ -79,10 +79,10 @@
     "curriculum": "Divisão de inteiros e algoritmo euclidiano. Primos e o teorema da fatoração única. Indução e recursão. Aritmética modular e teorema de Fermat. Testes de primalidade. Criptografia RSA.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, listas",
-    "teachers": "Daniel Chicayban",
+    "teachers": "João Carlos, Hugo Nóbrega",
     "advice": "Matéria mais complicada do primeiro período, estuda y estuda, nunca deixe de perguntar e de refazer questão, se for o Hugo dando a matéria conte a compaixão dele.",
     "availability": "Alta",
-    "schedule": "Ter-Qui 10h-12h"
+    "schedule": "Ter-Qui 10h-12h, Qua-Sex 8h-10h"
   },
   {
     "id": "ICP135",
@@ -97,10 +97,10 @@
     "curriculum": "Identidade Profissional: Relações entre formação e carreira profissional; Perfis profissionais na área de computação e identidade profissional; Plano de carreira. Comunicação profissional: comunicação e contexto-leitura, compreensão e escrita de textos técnicos/acadêmicos; Autorregulação da Aprendizagem: Projetos de aprendizagem; Aprendizagem universitária; Gestão de tempo. Cidadania e dimensões do trabalho: o trabalho e a sociedade; Ética, sociedade e trabalho; Legislação-aspectos individuais.",
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
-    "teachers": "Maria Luiza (Veteranos), Eldanae (Calourous)",
+    "teachers": "Maria Luiza",
     "advice": "Matéria mais tranquila do primeiro período, basicamente fazer todos os trabalhos e treinar apresentações que você consegue sair com uma nota alta.",
     "availability": "Alta",
-    "schedule": "Seg-Qua 13h-15h (Veteranos) / Seg-Qua 15h-17h (Calouros)"
+    "schedule": "Seg-Qua 13h-15h"
   },
   {
     "id": "ICP136",
@@ -116,9 +116,9 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "Severino Collier",
-    "advice": "Basicamente pré-cálculo, essa e cripto se complementam, estude bastante.",
+    "advice": "Basicamente pré-cálculo com lógica, essa e cripto se complementam, estude bastante.",
     "availability": "Alta",
-    "schedule": "Seg-Qua 10h-12h (Talvez tenha de 8h-10h na quarta também)"
+    "schedule": "Seg-Qua 10h-12h"
   },
   {
     "id": "ICP141",
@@ -144,10 +144,10 @@
     "curriculum": "Pesquisa sequencial e pesquisa binária; Ordenação por inserção e por seleção; Ponteiros e alocação dinâmica de memória; Estruturas de dados lineares: listas, pilhas e filas; Persistência de dados com arquivos; Noções de complexidade de algoritmos.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Giseli Rabello",
-    "advice": "Continuação de Prog I, mesma coisa.",
+    "teachers": "Marcos Leipnitz, Giseli Rabello",
+    "advice": "Continuação de Prog I, se for a Giseli, estude MUITO, se for o Marcos, conte com a compaixão dele.",
     "availability": "Baixa",
-    "schedule": "Qua-Sex 8h-10h"
+    "schedule": "Qua-Sex 8h-10h, Ter-Qui 8h-10h"
   },
   {
     "id": "ICP142",
@@ -162,7 +162,7 @@
     "curriculum": "Tipos de dados: dado bruto, dado agregado, dado primário, dado secundário, estruturado, semi e não estruturado, etc.; Ciclo de vida do dado: geração, coleta, tratamento, exploração e visualização; Valor do dado: interoperabilidade e reuso; Dado e metadado; Conceito de Transparência e Privacidade, Legislação associada; Engenharia e Ciência de Dados no apoio a gestão de dados nas organizações.",
     "difficultyLevel": "1/5",
     "evaluationStyle": "Apresentações, trabalhos",
-    "teachers": "Jonice De Oliveira",
+    "teachers": "Sergio Serra",
     "advice": "Outra matéria pra você ficar tranquilo.",
     "availability": "Baixa",
     "schedule": "Ter 10h-12h"
@@ -182,8 +182,8 @@
     "curriculum": "Conceitos básicos para o desenvolvimento de um projeto de software aplicado.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Trabalhos",
-    "teachers": "Gabriel Pereira",
-    "advice": "Antigo CL, estude pela internet.",
+    "teachers": "Marcos Leipnitz",
+    "advice": "Estude como usar Protoboard e Arduíno, além disso estude circuitos lógicos, matéria bem prática mesmo.",
     "availability": "Baixa",
     "schedule": "Ter 13h-15h"
   },
@@ -206,8 +206,8 @@
     "curriculum": "Contagem: Revisão sobre permutações, combinações e arranjos. Princípio de inclusão e exclusão. Números binomiais. Triângulo de Pascal. Números de Fibonacci e recorrências lineares de segunda ordem. Grafos: definição; grau de um vértice; caminhos, ciclos e conectividade; caminhos de Euler e ciclos hamiltonianos; árvores; contagem de árvores; grafos bipartidos e aplicações; grafos planares e a fórmula de Euler; coloração de mapas e grafos; teorema das cinco cores.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
-    "teachers": "Hugo Nobrega",
-    "advice": "Provavelmente você já viu algum meme sobre discrete maths. Essa matéria é o porque",
+    "teachers": "Claudson Bornstein",
+    "advice": "if !=Mitre return pull",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
   },
@@ -332,7 +332,7 @@
     "curriculum": "Introdução à modelagem de sistemas (por que e o que modelar de sistemas computacionais); Modelagem de Sistemas usando notação atual (ex: UML): Caso Uso; Diagramas de Atividade; Diagrama de Classes (conceitual); Modelagem de Dados.",
     "difficultyLevel": "2/5",
     "evaluationStyle": "Trabalhos",
-    "teachers": "Rafael Maiani",
+    "teachers": "Juliana França",
     "advice": "Se for com a França aproveite, ótima professora. Rafael e Eldanae são bem rígidos em relação a presença.",
     "availability": "Alta",
     "schedule": "Ter-Qui 15h-17h"
@@ -355,8 +355,8 @@
     "curriculum": "Noções sobre erros e representação de ponto flutuante. Número de condicionamento e sensibilidade dos métodos numéricos. Diferenciação numérica e Polinômio de Taylor. Cálculo de zeros de funções. Interpolação polinomial: formas de Lagrange e de Newton. Integração numérica. Métodos numéricos para equações diferenciais ordinárias.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Marcello Goulart",
-    "advice": "Antigo Cálculo Numérico, é bom ter aprendido os outros cálculos.",
+    "teachers": "Daniel Alfaro",
+    "advice": "Antigo Cálculo Numérico, entenda todos os métodos, a aplicação é tranquila, mas é bom ter aprendido os outros cálculos.",
     "availability": "Média",
     "schedule": "Qua 15h-17h"
   },
@@ -382,8 +382,8 @@
     "curriculum": "Classes e objetos; Atributos e métodos; Encapsulamento; Herança e polimorfismo; Agregação e composição; Métodos abstratos e classes abstratas; Interfaces; Tipos genéricos; Tipos enumeráveis; Padrões de projeto: singleton, factory, observer (orientação a eventos); Testes unitários; Escrita e depuração de programas usando IDEs modernas; Listas, Mapas, Conjuntos; Tratamento de exceções.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Ronald Chiesse",
-    "advice": "Outra matéria essencial, estude bastante, a média costuma ser 5 com o Mitre.",
+    "teachers": "Vinícius Gusmão",
+    "advice": "Outra matéria essencial, estude bastante, e aproveite o Gusmão.",
     "availability": "Média",
     "schedule": "Ter-Qui 10h-12h"
   },
@@ -433,7 +433,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Gabriel Pereira",
-    "advice": "Muita matéria para pouco tempo. A prova da Rafaela é bem condizente, preste atenção na revisão dela.",
+    "advice": "Muita matéria para pouco tempo.",
     "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h"
   },
@@ -454,10 +454,10 @@
     ],
     "credits": 4.0,
     "curriculum": "Sistemas lineares: Modelagem de sistemas lineares, Métodos diretos: Fatoração LU e QR., Métodos iterativos: Gauss-Jacobi; Gauss-Seidel. Ajuste de curvas: Modelagem; Método dos Mínimos quadrados; Curvas Spline. SVD e autovalores: Modelagem: Sistema lineares dinâmicos; Métodos iterativos: Método da potência; Algoritmo QR.; Aplicações: Redução de dimensão; Pseudoinversa. Sistemas não lineares: Modelagem de sistemas não lineares; Método de Newton; Método do gradiente descendente.",
-    "difficultyLevel": "4/5",
+    "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "João Paixão",
-    "advice": "Listas, trabalhos e provas bem longas estilo João Paixão.",
+    "advice": "Listas, trabalhos e provas bem longas estilo João Paixão. Doidera.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 10h-12h"
   },
@@ -505,7 +505,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações",
     "teachers": "Vivian Dos Santos",
-    "advice": "Se garanta na P1. Álgebra relacional is no joke.",
+    "advice": "Se garanta na P1!!!! Álgebra relacional is no joke.",
     "availability": "Alta",
     "schedule": "Qua-Sex 8h-10h"
   },
@@ -529,8 +529,8 @@
     "curriculum": "Noções básicas de Estatística e Probabilidade. Análise exploratória. Variáveis aleatórias e Distribuições de Probabilidades. Distribuições conjuntas marginais e condicionais. Valores esperados. Teoremas limites. Teorema central do limite. Distribuições amostrais. Estimação de parâmetros. Testes de Hipóteses.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Hugo Tremonte",
-    "advice": "Matéria essencial pra AD. Estude bastante, ambos os professores que atualmente dão são tranquilos. Caso tenha muita dificuldade, o Responde Aí é uma das melhores fontes de estudo, basicamente segue o formato do conteúdo dado em sala.",
+    "teachers": "Ralph Silva",
+    "advice": "Matéria essencial pra AD e Redes. Estude bastante, ambos os professores que atualmente dão são tranquilos. Caso tenha muita dificuldade, o Responde Aí é uma das melhores fontes de estudo, basicamente segue o formato do conteúdo dado em sala.",
     "availability": "Alta",
     "schedule": "Ter-Qui 8h-10h"
   },
@@ -551,7 +551,7 @@
     "curriculum": "Hierarquia de Chomsky. Linguagens e gramáticas (regulares, livres de contexto, sensíveis ao contexto). Máquinas de estados finitos (modelos não determinísticos, expressões regulares, minimização). Autômato de pilha. Algoritmos e ferramentas de análise léxica e sintática (LL(k) e LR(k)).",
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Hugo Musso",
+    "teachers": "Mitre Costa",
     "advice": "Matéria abstrata, pré-lógica. Estude e reze para não ser o Mitre. Apostila do Menasché é uma boa.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 13h-15h"
@@ -568,10 +568,10 @@
     "postRequisites": [],
     "credits": 4.0,
     "curriculum": "Introdução às técnicas de aferição e modelagem analítica. Técnicas para a construção de simuladores e análise de resultados com uso de intervalos de confiança. Uso de cadeias de Markov de tempo discreto e de tempo contínuo para a modelagem e resolução de diferentes problemas envolvendo a análise em equilíbrio e em transiente. Aplicação da teoria de filas M/G/1 e análise de suas variações. Filas com prioridade e aplicações práticas.",
-    "difficultyLevel": "5/5",
+    "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
-    "teachers": "Vinícius Gusmão",
-    "advice": "Provavelmente a matéria mais díficil do curso inteiro. Conteúdo complicado, listas longas, provas maiores ainda. Faça todos os exercícios, pergunte em sala, demonstre interesse. Ela foi o fim de muitos alunos do curso.",
+    "teachers": "Ronald Chiesse",
+    "advice": "Se for Gusmão e Ronald: Faça. Se for o Sadoc dobra e passa pro próximo.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
   },
@@ -591,10 +591,10 @@
     ],
     "credits": 4.0,
     "curriculum": "Etapas do processo de modelagem. Modelos científicos e definição de modelo matemático. Classificação dos modelos de interesse. Apresentação de exemplos dos vários tipos de modelos. Modelagem de problemas de diferentes áreas do conhecimento, como física, biologia, etc., baseados em sistemas de equações de diferenças e diferenciais, otimização, grafos e cadeias de Markov. Outros tópicos de interesse a critério do professor.",
-    "difficultyLevel": "3/5",
+    "difficultyLevel": "4/5",
     "evaluationStyle": "Trabalhos, listas",
     "teachers": "Severino Collier",
-    "advice": "Se for o Marcello, aproveite. Se for o Amaury, corra.",
+    "advice": "Complicado com TODO mundo. Não tem boa opção pra essa matéria. Muito abstrata, precisa de muito conhecimento etc.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
   },
@@ -612,10 +612,10 @@
     ],
     "credits": 4.0,
     "curriculum": "Tradução de linguagem de alto nível para linguagem de montagem; Compilação com otimização e análise de desempenho; Comparativo entre as arquiteturas de 32 e 64 bits; Comunicação entre processos, chamadas de sistemas, tratadores de eventos; Ligação de programas e criação de bibliotecas estáticas e compartilhadas; Otimização de desempenho de programas frente a novas arquiteturas de processadores e limitações dos compiladores.",
-    "difficultyLevel": "4/5",
+    "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Valéria Menezes",
-    "advice": "Outra matéria de arquitetura, bem baixo nível. Estude e tire bastante dúvida, traduzir coisas de assembly nunca são fáceis.",
+    "advice": "Outra matéria de arquitetura, bem baixo nível. Estude e refaça os exercícios do livro base.",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
   },
@@ -639,8 +639,8 @@
     "curriculum": "Representação de Grafos; Ordenação Topológica; Buscas em grafos e Digrafos (largura e profundidade); Técnicas de Desenvolvimento de Algoritmos; Decomposição; Recursão; Algoritmo Guloso; Programação Dinâmica; Aplicação das Técnicas Usadas; Fluxo Máximo.",
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas",
-    "teachers": "Mitre Costa",
-    "advice": "",
+    "teachers": "Paulo Mann, Vinícius Gusmão",
+    "advice": "é.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 10h-12h"
   },
@@ -662,7 +662,7 @@
     "curriculum": "Técnicas de programação concorrente: multiprocessos, multithreading. Comunicação via variáveis compartilhadas e troca de mensagens. Sincronização por exclusão mútua e condicional e métodos de trava: locks, semáforos, variáveis de condição. Problemas clássicos da concorrência. Deadlock, starvation, thread safety. Programação assíncrona: futuros, promessas, async/await. Modelagem, teste e avaliação de programas concorrentes. Ambientes de programação concorrente.",
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Silvana Rosetto",
+    "teachers": "Gabriel Pereira",
     "advice": "Matéria relativamente complicada, porém a didática da Silvana é excelente. Contudo, a mão dela é bem pesada então estude bastante.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 8h-10h"
@@ -711,7 +711,7 @@
     "curriculum": "Contextualizando o aprendizado de máquina (história e paradigmas); Questões éticas; Tipos de aprendizado de máquina: supervisionado, não supervisionado, por reforço; Métricas de avaliação; Tipos de problemas; Métodos de aprendizado: classificação (árvore de decisão, regressão linear, regressão logística, classificador Bayesiano, redes neurais, SVM), agrupamento (K-means, classificação hierárquico), associação (algoritmos a priori); Aprendizado por reforço; Programação em lógica indutiva.",
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas",
-    "teachers": "João Carlos",
+    "teachers": "Paulo Mann",
     "advice": "Matéria densa, mas trabalhos relativamente tranquilos, cuidado com a prova",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -735,8 +735,8 @@
     "curriculum": "Modelagem e Caracterização dos Problemas. Programação Linear. Programação Linear Inteira. Programação Não Linear Irrestrita. Aplicações.",
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
-    "teachers": "Maria Helena, Luziane",
-    "advice": "Matemática densa, faça muitos exercícios, a Maria Helena é bem compreensível.",
+    "teachers": "Luziane",
+    "advice": "Matemática densa, faça muitos exercícios, e faça as listas.",
     "availability": "Baixa",
     "schedule": ""
   },
@@ -751,10 +751,10 @@
     "postRequisites": [],
     "credits": 4.0,
     "curriculum": "Linguagens e sintaxe da Lógica de Primeira Ordem (LPO). Formalização e modelagem de problemas usando LPO. Semântica da LPO. Sistemas de prova para a LPO. Noções da equivalência entre consequência semântica e sintática. Noções de provadores automáticos. O Problema da Decisão de Hilbert-Ackermann. Máquina de Turing. Programação em Máquinas de Turing. Máquina de Turing universal. Problema da Parada. Reduções entre problemas; problemas indecidíveis. Noções da equivalência entre Máquinas de Turing e outros modelos de computação.",
-    "difficultyLevel": "4/5",
+    "difficultyLevel": "2/5",
     "evaluationStyle": "Provas, listas",
-    "teachers": "Hugo Nobrega",
-    "advice": "Matéria muito densa e abstrata, mesmo se você estudar e achar que está entendendo, na verdade não está. Sempre double-check com o prof, conte com a compaixão do Hugo.",
+    "teachers": "Aloísio Pina",
+    "advice": "Faça imediatamente.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 8h-10h"
   },
@@ -773,7 +773,7 @@
     "curriculum": "Concepções do conhecimento e da pesquisa acadêmica. Tipos de pesquisa. Processo de desenvolvimento da pesquisa. Estruturação, redação e formatação de projeto de pesquisa. Relevância e contextualização da pesquisa. Fundamentação e contextualização da pesquisa. Estratégias de embasamento. Levantamento de fontes e referências. Ética na redação científica e legitimidade do saber. Métodos e estratégias de pesquisa. Coleta de dados. Técnicas para análise de dados. Planejamento e cronograma.",
     "difficultyLevel": "2/5",
     "evaluationStyle": "Apresentações, trabalhos",
-    "teachers": "Carla Amor",
+    "teachers": "Carla Amor Divino",
     "advice": "Matéria tranquila, talvez tenha uma quantidade de trabalho um pouco desproporcional, por isso é recomendável puxar com algumas eletivas.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -792,7 +792,7 @@
     "curriculum": "Fundamentos e princípios de segurança em sistemas computacionais; Leis, normas, políticas e padrões de segurança da informação; Elementos do processo de segurança da informação; Segurança em redes e em infraestrutura; Tipos de ataque; Ferramentas e políticas de segurança em redes; Segurança na Web; Segurança de software; Técnicas básicas e modernas de encriptação; Assinatura e certificado digital; Segurança de dados e criptografia; Segurança da informação e sociedade.",
     "difficultyLevel": "3/5",
     "evaluationStyle": "Apresentações, prova",
-    "teachers": "Evandro",
+    "teachers": "Gabriel Caldas",
     "advice": "Pouco se sabe sobre essa matéria, porém parece ser tranquila.",
     "availability": "Baixa",
     "schedule": ""
