@@ -19,7 +19,7 @@ interface SlotBoxProps {
 
 const kindColorClasses: Record<ElectiveKind, string> = {
   livre: 'bg-zinc-600',
-  humanidades: 'bg-zinc-400',
+  humanidades: 'bg-zinc-700',
   condicionada: 'bg-pink-500',
 };
 
@@ -91,7 +91,7 @@ export function SlotBox({ slot, selected, status, isSelected, onClick, onOpenPic
       onTouchStart={startHold}
       onTouchEnd={cancelHold}
       onClick={handleClick}
-      className={`relative flex h-[62px] w-full items-center justify-center overflow-hidden rounded-[10px] px-3 text-center text-sm font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${baseColorClass} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
+      className={`relative flex h-13.5 w-full items-center justify-center overflow-hidden rounded-[10px] px-2 text-center text-xs font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${baseColorClass} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
     >
       <span
         aria-hidden="true"

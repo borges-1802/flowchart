@@ -39,7 +39,7 @@ export function SemesterColumn({
   onUncompleteAll,
 }: SemesterColumnProps) {
   return (
-    <div className="w-full sm:w-37 sm:shrink-0">
+    <div className="w-full sm:w-34 sm:shrink-0">
       <p className="mb-1.5 text-center text-[11px] text-neutral-500">Período {period}</p>
       <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-col">
         {subjects.map((subject) => (
