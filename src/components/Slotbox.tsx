@@ -1,6 +1,6 @@
 import { useRef, useState, type MouseEvent } from 'react';
-import type { ElectiveSlot, ElectiveKind } from '../../types/electiveSlot.types';
-import type { SubjectStatus } from '../../types/subject.types';
+import type { ElectiveSlot, ElectiveKind } from '../types/electiveSlot.types';
+import type { SubjectStatus } from '../types/subject.types';
 
 interface SelectedElective {
   id: string;

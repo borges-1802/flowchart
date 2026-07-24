@@ -1,7 +1,7 @@
-import type { Subject, SubjectStatus } from '../../types/subject.types';
-import type { ElectiveSlot } from '../../types/electiveSlot.types';
-import { SubjectBox } from '../SubjectBox/SubjectBox';
-import { SlotBox } from '../Slotbox/Slotbox';
+import type { Subject, SubjectStatus } from '../types/subject.types';
+import type { ElectiveSlot } from '../types/electiveSlot.types';
+import { SubjectBox } from './SubjectBox';
+import { SlotBox } from './Slotbox';
 
 interface SelectedElective {
   id: string;

@@ -1,4 +1,4 @@
-import type { Subject } from '../../types/subject.types';
+import type { Subject } from '../types/subject.types';
 
 interface SubjectDetailPanelProps {
   subject: Subject;

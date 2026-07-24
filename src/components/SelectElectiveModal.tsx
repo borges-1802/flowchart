@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import { Modal } from '../Modal/Modal';
-import electivesData from '../../data/electives.json';
-import humanitiesData from '../../data/humanities.json';
-import type { ElectiveSlot } from '../../types/electiveSlot.types';
-import type { ElectiveOption } from '../../types/electiveOption.types';
+import { Modal } from './Modal';
+import electivesData from '../data/electives.json';
+import humanitiesData from '../data/humanities.json';
+import type { ElectiveSlot } from '../types/electiveSlot.types';
+import type { ElectiveOption } from '../types/electiveOption.types';
 
 interface HumanitiesOption {
   id: string;

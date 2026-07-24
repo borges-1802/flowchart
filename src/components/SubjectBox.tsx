@@ -1,4 +1,4 @@
-import type { Subject, SubjectStatus } from '../../types/subject.types';
+import type { Subject, SubjectStatus } from '../types/subject.types';
 
 interface SubjectBoxProps {
   subject: Subject;

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { usePersistedState } from '../hooks/usePersistedState';
-import { Header } from '../components/Header/Header';
-import { SemesterColumn } from '../components/SemesterColumn/SemesterColumn';
-import { SelectElectiveModal } from '../components/SelectElectiveModal/SelectElectiveModal';
-import { SubjectDetailPanel } from '../components/SubjectDetailPanel/SubjectDetailPanel';
+import { Header } from '../components/Header';
+import { SemesterColumn } from '../components/SemesterColumn';
+import { SelectElectiveModal } from '../components/SelectElectiveModal';
+import { SubjectDetailPanel } from '../components/SubjectDetailPanel';
+import { Legend } from '../components/Legend';
 import { getSubjectStatus } from '../domain/getSubjectStatus';
 import subjectsData from '../data/subjects.json';
 import electiveSlotsData from '../data/electiveSlots.json';
@@ -181,6 +182,8 @@ export function Home() {
           />
         ))}
       </div>
+
+      <Legend theme={theme} />
 
       {selectedSubject && <SubjectDetailPanel subject={selectedSubject} nameById={nameById} />}
 
