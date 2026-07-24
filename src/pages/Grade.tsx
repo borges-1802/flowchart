@@ -22,6 +22,7 @@ export function Grade() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [placedIdsArray, setPlacedIdsArray] = usePersistedState<string[]>('grade:placedIds', []);
   const placedIds = useMemo(() => new Set(placedIdsArray), [placedIdsArray]);
+  const isDark = theme === 'dark';
 
   function handleToggleTheme() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
@@ -49,19 +50,22 @@ export function Grade() {
   const credits = placedOptions.reduce((sum, option) => sum + option.credits, 0);
   const hoursPerWeek = placedOptions.reduce((sum, option) => sum + option.hours, 0);
 
+  const cardClass = isDark ? 'bg-neutral-900' : 'bg-neutral-100';
+
   return (
     <>
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
-      <div className="min-h-screen bg-neutral-950 p-4 text-white">
+      <div className={`min-h-screen p-4 ${isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'}`}>
         <h2 className="mb-1 text-xl font-bold">Montar Grade Horária</h2>
-        <p className="mb-4 text-sm text-neutral-500">
+        <p className={`mb-4 text-sm ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}>
           Clique numa disciplina e depois numa célula vazia da grade pra encaixar. Clique num bloco já encaixado pra
           remover.
         </p>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
-          <div className="order-2 max-h-105 overflow-hidden rounded-xl bg-neutral-900 p-4 lg:order-1 lg:max-h-110">
+          <div className={`order-2 max-h-[420px] overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-[440px] ${cardClass}`}>
             <DisciplineList
+              theme={theme}
               options={options}
               periods={periods}
               selectedPeriod={selectedPeriod}
@@ -71,8 +75,9 @@ export function Grade() {
             />
           </div>
 
-          <div className="order-1 overflow-x-auto rounded-xl bg-neutral-900 p-4 lg:order-2">
+          <div className={`order-1 overflow-x-auto rounded-xl p-4 lg:order-2 ${cardClass}`}>
             <ScheduleGrid
+              theme={theme}
               options={options}
               placedIds={placedIds}
               selectedOption={selectedOption}
@@ -81,7 +86,7 @@ export function Grade() {
           </div>
         </div>
 
-        <GradeSummary credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
+        <GradeSummary theme={theme} credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
       </div>
     </>
   );

@@ -32,14 +32,14 @@ export function Modal({ theme, onClose, children }: ModalProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex h-screen w-screen items-center justify-center p-4 ${
+      className={`fixed inset-0 z-50 flex h-dvh w-screen items-start justify-center overflow-y-auto p-4 pt-12 sm:items-center sm:pt-4 ${
         isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'
       }`}
       onClick={(event) => event.stopPropagation()}
     >
       <div
         ref={modalRef}
-        className={`max-h-[80vh] w-full max-w-md overflow-hidden rounded-xl ${
+        className={`max-h-[75dvh] w-full max-w-md overflow-hidden rounded-xl ${
           isDark ? 'bg-neutral-900 text-white' : 'bg-white text-neutral-900'
         }`}
       >

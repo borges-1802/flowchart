@@ -22,15 +22,16 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         isDark ? 'border-neutral-800 bg-neutral-900 text-white' : 'border-neutral-200 bg-white text-neutral-900'
       }`}
     >
-      <h1 className="m-0 text-3xl font-bold">Flowchart v2</h1>
+      <div>
+          <Link
+          to="/"
+          className={`m-0 text-3xl font-bold ${hoverClass}`}
+        >
+          Flowchart v2
+        </Link>
+      </div>
 
       <div className="hidden items-center gap-2 sm:flex">
-        <Link
-          to="/"
-          className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
-        >
-          Home
-        </Link>
         <Link
           to="/Grade"
           className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
