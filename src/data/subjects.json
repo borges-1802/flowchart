@@ -18,6 +18,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações, listas.",
     "teachers": "Hugo Musso",
+    "teacherHistory": [],
     "advice": "Não costuma ser muito complicada, mas é sempre bom praticar o que se aprende em aula.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -38,6 +39,7 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
     "teachers": "Eldanae Teixeira",
+    "teacherHistory": [],
     "advice": "A segunda mais tranquila do primeiro período, não precisa ter medo, faça os trabalhos e resumos dos slides.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -59,6 +61,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Silvana Rossetto",
+    "teacherHistory": [],
     "advice": "Pode ser difícil se for a sua primeira vez vendo este conteúdo, recomenda-se rever as aulas e pesquisar conteúdo no youtube.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 8h-10h"
@@ -80,6 +83,7 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "João Carlos, Hugo Nóbrega",
+    "teacherHistory": [],
     "advice": "Matéria mais complicada do primeiro período, estuda y estuda, nunca deixe de perguntar e de refazer questão, se for o Hugo dando a matéria conte a compaixão dele.",
     "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h, Qua-Sex 8h-10h"
@@ -98,6 +102,7 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
     "teachers": "Maria Luiza",
+    "teacherHistory": [],
     "advice": "Matéria mais tranquila do primeiro período, basicamente fazer todos os trabalhos e treinar apresentações que você consegue sair com uma nota alta.",
     "availability": "Alta",
     "schedule": "Seg-Qua 13h-15h"
@@ -116,6 +121,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "Severino Collier",
+    "teacherHistory": [],
     "advice": "Basicamente pré-cálculo com lógica, essa e cripto se complementam, estude bastante.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -145,6 +151,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Marcos Leipnitz, Giseli Rabello",
+    "teacherHistory": [],
     "advice": "Continuação de Prog I, se for a Giseli, estude MUITO, se for o Marcos, conte com a compaixão dele.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 8h-10h, Ter-Qui 8h-10h"
@@ -163,6 +170,7 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Apresentações, trabalhos",
     "teachers": "Sergio Serra",
+    "teacherHistory": [],
     "advice": "Outra matéria pra você ficar tranquilo.",
     "availability": "Baixa",
     "schedule": "Ter 10h-12h"
@@ -183,6 +191,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Trabalhos",
     "teachers": "Marcos Leipnitz",
+    "teacherHistory": [],
     "advice": "Estude como usar Protoboard e Arduíno, além disso estude circuitos lógicos, matéria bem prática mesmo.",
     "availability": "Baixa",
     "schedule": "Ter 13h-15h"
@@ -207,6 +216,7 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
     "teachers": "Claudson Bornstein",
+    "teacherHistory": [],
     "advice": "if !=Mitre return pull",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
@@ -228,6 +238,7 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Apresentações, trabalhos",
     "teachers": "Adriana Vivacqua",
+    "teacherHistory": [],
     "advice": "Ótima matéria!",
     "availability": "Alta",
     "schedule": "Qui 10h-12h (Turma A) / Qui 13h-15h (Turma B)"
@@ -248,6 +259,7 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
     "teachers": "Vários",
+    "teacherHistory": [],
     "advice": "Inferno 1.0. Estuda até dizer chega. Se passar de primeira, será um dos poucos.",
     "availability": "Baixa",
     "schedule": ""
@@ -277,6 +289,7 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Juliana Valério",
+    "teacherHistory": [],
     "advice": "Estude e faça exercício, repetition is key.",
     "availability": "Alta",
     "schedule": "Seg-Qua 13h-15h e Sex 10h-12h"
@@ -303,6 +316,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Claudson Bornstein",
+    "teacherHistory": [],
     "advice": "Essencial, vale a pena ir bem nessa daqui, conta legal pra currículo.",
     "availability": "Média",
     "schedule": "Ter-Qui 13h-15h (Turma A) / Ter-Qui 10h-12h (Turma B)"
@@ -333,6 +347,7 @@
     "difficultyLevel": "2/5",
     "evaluationStyle": "Trabalhos",
     "teachers": "Juliana França",
+    "teacherHistory": [],
     "advice": "Se for com a França aproveite, ótima professora. Rafael e Eldanae são bem rígidos em relação a presença.",
     "availability": "Alta",
     "schedule": "Ter-Qui 15h-17h"
@@ -356,6 +371,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Daniel Alfaro",
+    "teacherHistory": [],
     "advice": "Antigo Cálculo Numérico, entenda todos os métodos, a aplicação é tranquila, mas é bom ter aprendido os outros cálculos.",
     "availability": "Média",
     "schedule": "Qua 15h-17h"
@@ -383,6 +399,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Vinícius Gusmão",
+    "teacherHistory": [],
     "advice": "Outra matéria essencial, estude bastante, e aproveite o Gusmão.",
     "availability": "Média",
     "schedule": "Ter-Qui 10h-12h"
@@ -409,6 +426,20 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
     "teachers": "Vários",
+    "teacherHistory": [
+      {
+        "name": "Lucas Aragão",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Nicolas Danielski",
+        "semester": "2025.1"
+      },
+      {
+        "name": "-",
+        "semester": "2025.2"
+      }
+    ],
     "advice": "Inferno 2.0. Escolha um professor bom para assistir as aulas. Talvez o Responde Aí te ajude. Maioria das pessoas já fez mais de uma vez",
     "availability": "Baixa",
     "schedule": ""
@@ -433,6 +464,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Gabriel Pereira",
+    "teacherHistory": [],
     "advice": "Muita matéria para pouco tempo.",
     "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h"
@@ -457,6 +489,7 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "João Paixão",
+    "teacherHistory": [],
     "advice": "Listas, trabalhos e provas bem longas estilo João Paixão. Doidera.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 10h-12h"
@@ -477,6 +510,7 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, Apresentações",
     "teachers": "Jonice De Oliveira",
+    "teacherHistory": [],
     "advice": "Se for a Jonice comemore. Com a Marilu, relatos dizem que é bem trabalhoso, mas nada muito complicado.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -505,6 +539,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações",
     "teachers": "Vivian Dos Santos",
+    "teacherHistory": [],
     "advice": "Se garanta na P1!!!! Álgebra relacional is no joke.",
     "availability": "Alta",
     "schedule": "Qua-Sex 8h-10h"
@@ -530,6 +565,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Ralph Silva",
+    "teacherHistory": [],
     "advice": "Matéria essencial pra AD e Redes. Estude bastante, ambos os professores que atualmente dão são tranquilos. Caso tenha muita dificuldade, o Responde Aí é uma das melhores fontes de estudo, basicamente segue o formato do conteúdo dado em sala.",
     "availability": "Alta",
     "schedule": "Ter-Qui 8h-10h"
@@ -552,6 +588,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Mitre Costa",
+    "teacherHistory": [],
     "advice": "Matéria abstrata, pré-lógica. Estude e reze para não ser o Mitre. Apostila do Menasché é uma boa.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 13h-15h"
@@ -571,6 +608,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Ronald Chiesse",
+    "teacherHistory": [],
     "advice": "Se for Gusmão e Ronald: Faça. Se for o Sadoc dobra e passa pro próximo.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -594,6 +632,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Trabalhos, listas",
     "teachers": "Severino Collier",
+    "teacherHistory": [],
     "advice": "Complicado com TODO mundo. Não tem boa opção pra essa matéria. Muito abstrata, precisa de muito conhecimento etc.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -615,6 +654,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Valéria Menezes",
+    "teacherHistory": [],
     "advice": "Outra matéria de arquitetura, bem baixo nível. Estude e refaça os exercícios do livro base.",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
@@ -640,6 +680,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas",
     "teachers": "Paulo Mann, Vinícius Gusmão",
+    "teacherHistory": [],
     "advice": "é.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 10h-12h"
@@ -663,6 +704,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Gabriel Pereira",
+    "teacherHistory": [],
     "advice": "Matéria relativamente complicada, porém a didática da Silvana é excelente. Contudo, a mão dela é bem pesada então estude bastante.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 8h-10h"
@@ -690,6 +732,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Daniel Sadoc",
+    "teacherHistory": [],
     "advice": "Se for com o Sadoc é uma matéria 5/5. Muito conteúdista e densa, estudar nunca vai ser o suficiente. Caso a Carol esteja lecionando aproveite para passar.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -712,6 +755,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas",
     "teachers": "Paulo Mann",
+    "teacherHistory": [],
     "advice": "Matéria densa, mas trabalhos relativamente tranquilos, cuidado com a prova",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -736,6 +780,7 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Luziane",
+    "teacherHistory": [],
     "advice": "Matemática densa, faça muitos exercícios, e faça as listas.",
     "availability": "Baixa",
     "schedule": ""
@@ -754,6 +799,7 @@
     "difficultyLevel": "2/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "Aloísio Pina",
+    "teacherHistory": [],
     "advice": "Faça imediatamente.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 8h-10h"
@@ -774,6 +820,7 @@
     "difficultyLevel": "2/5",
     "evaluationStyle": "Apresentações, trabalhos",
     "teachers": "Carla Amor Divino",
+    "teacherHistory": [],
     "advice": "Matéria tranquila, talvez tenha uma quantidade de trabalho um pouco desproporcional, por isso é recomendável puxar com algumas eletivas.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -793,6 +840,7 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Apresentações, prova",
     "teachers": "Gabriel Caldas",
+    "teacherHistory": [],
     "advice": "Pouco se sabe sobre essa matéria, porém parece ser tranquila.",
     "availability": "Baixa",
     "schedule": ""
@@ -811,6 +859,7 @@
     "difficultyLevel": "",
     "evaluationStyle": "",
     "teachers": "",
+    "teacherHistory": [],
     "advice": "",
     "availability": "",
     "schedule": ""
