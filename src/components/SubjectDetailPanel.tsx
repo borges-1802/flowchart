@@ -59,7 +59,7 @@ export function SubjectDetailPanel({ subject, nameById }: SubjectDetailPanelProp
                 {preRequisiteNames.map((name) => (
                   <span
                     key={name}
-                    className="rounded-full bg-green-500/20 px-2.5 py-1 text-xs font-medium"
+                    className="rounded-full bg-blue-500/65 px-2.5 py-1 text-xs font-medium"
                   >
                     {name}
                   </span>
