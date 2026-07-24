@@ -1,7 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Sun, Moon, Menu, X } from 'lucide-react';
-
-const CURRICULUM_URL = 'https://ic.ufrj.br/info/grade-curricular-bcc/';
 
 interface HeaderProps {
   theme: 'dark' | 'light';
@@ -26,14 +25,18 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
       <h1 className="m-0 text-3xl font-bold">Flowchart v2</h1>
 
       <div className="hidden items-center gap-2 sm:flex">
-        <a
-          href={CURRICULUM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/"
           className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
         >
-          Grade Curricular
-        </a>
+          Home
+        </Link>
+        <Link
+          to="/Grade"
+          className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
+        >
+          Montar Grade
+        </Link>
 
         <button
           type="button"
@@ -60,15 +63,13 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
             isDark ? 'border-neutral-800 bg-neutral-900' : 'border-neutral-200 bg-white'
           }`}
         >
-          <a
-            href={CURRICULUM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/Grade"
             onClick={closeMenu}
             className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
           >
-            Grade Curricular
-          </a>
+            Montar Grade
+          </Link>
 
           <button
             type="button"
