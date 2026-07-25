@@ -71,11 +71,11 @@ const PALETTE: ColorSet[] = [
     previewLight: 'border-fuchsia-500 bg-fuchsia-200',
   },
   {
-    base: 'bg-rose-700',
+    base: 'bg-indigo-500',
     text: 'text-white',
-    ring: 'ring-rose-700',
-    previewDark: 'border-rose-700 bg-rose-700/10',
-    previewLight: 'border-rose-700 bg-rose-200',
+    ring: 'ring-indigo-500',
+    previewDark: 'border-indigo-500 bg-indigo-500/10',
+    previewLight: 'border-indigo-500 bg-indigo-200',
   },
 ];
 
