@@ -5,8 +5,9 @@ interface DisciplineListProps {
   theme: 'dark' | 'light';
   options: DisciplineOption[];
   periods: number[];
-  selectedPeriod: number | 'all';
-  onPeriodChange: (period: number | 'all') => void;
+  hasElectives: boolean;
+  selectedPeriod: number | 'all' | 'eletiva';
+  onPeriodChange: (period: number | 'all' | 'eletiva') => void;
   armedId: string | null;
   placedIds: Set<string>;
   colorAssignments: Record<string, number>;
@@ -18,6 +19,7 @@ export function DisciplineList({
   theme,
   options,
   periods,
+  hasElectives,
   selectedPeriod,
   onPeriodChange,
   armedId,
@@ -28,7 +30,11 @@ export function DisciplineList({
 }: DisciplineListProps) {
   const isDark = theme === 'dark';
   const filteredOptions =
-    selectedPeriod === 'all' ? options : options.filter((option) => option.period === selectedPeriod);
+    selectedPeriod === 'all'
+      ? options
+      : selectedPeriod === 'eletiva'
+        ? options.filter((option) => option.period === 0)
+        : options.filter((option) => option.period === selectedPeriod);
 
   return (
     <div className="flex h-full flex-col">
@@ -38,9 +44,10 @@ export function DisciplineList({
 
       <select
         value={selectedPeriod}
-        onChange={(event) =>
-          onPeriodChange(event.target.value === 'all' ? 'all' : Number(event.target.value))
-        }
+        onChange={(event) => {
+          const value = event.target.value;
+          onPeriodChange(value === 'all' || value === 'eletiva' ? value : Number(value));
+        }}
         className={`mb-3 rounded-lg border px-3 py-2 text-sm ${
           isDark ? 'border-neutral-700 bg-neutral-800 text-white' : 'border-neutral-300 bg-white text-neutral-900'
         }`}
@@ -51,6 +58,7 @@ export function DisciplineList({
             {period}º período
           </option>
         ))}
+        {hasElectives && <option value="eletiva">Eletivas</option>}
       </select>
 
       <div className="custom-scrollbar flex flex-1 flex-col gap-1 overflow-y-auto">

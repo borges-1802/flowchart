@@ -277,7 +277,7 @@
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Matheus Adauto",
+        "teacher": "Docente Externo",
         "slots": [
           {
             "day": "SEG",
@@ -290,24 +290,6 @@
           {
             "day": "SEX",
             "time": "10-12h"
-          }
-        ]
-      },
-      {
-        "code": "T2",
-        "teacher": "Amaury Cruz",
-        "slots": [
-          {
-            "day": "SEG",
-            "time": "13-15h"
-          },
-          {
-            "day": "QUA",
-            "time": "13-15h"
-          },
-          {
-            "day": "SEX",
-            "time": "13-15h"
           }
         ]
       }
@@ -822,6 +804,317 @@
           },
           {
             "day": "SEX",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP532",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Silas Lima Filho",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP357",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Vivian Santos",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "10-12h"
+          },
+          {
+            "day": "QUA",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP009",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Adriana Vivacqua",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "TER",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP014",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Alfaro",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "10-12h"
+          },
+          {
+            "day": "QUA",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP016",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Marcello Goulart",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUA",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP005",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "João Carlos Pereira",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUI",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP518",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Matheus Adauto",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "08-10h"
+          },
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP071",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Valéria Bastos",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "10-12h"
+          },
+          {
+            "day": "QUI",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP605",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Giseli Lopes",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUI",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP096",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Jonice Oliveira",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP022",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Maria Luiza Campos",
+        "slots": [
+          {
+            "day": "SEX",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP471",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Hugo Musso",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "10-12h"
+          },
+          {
+            "day": "QUA",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP095",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "João Paixão",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUA",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP081",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Sergio Serra",
+        "slots": [
+          {
+            "day": "QUI",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP478",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Mauro Rincon",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "08-10h"
+          },
+          {
+            "day": "QUI",
             "time": "08-10h"
           }
         ]

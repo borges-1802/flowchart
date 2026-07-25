@@ -8,18 +8,24 @@ import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDi
 import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import subjectsData from '../data/subjects.json';
+import electivesData from '../data/electives.json';
 import turmasData from '../data/turmas.json';
 import type { Subject } from '../types/subject.types';
 import type { SubjectSchedule } from '../types/turma.types';
+import type { ElectiveOption } from '../types/electiveOption.types';
 
 const subjects = subjectsData as Subject[];
+const electives = electivesData as ElectiveOption[];
 const schedules = turmasData as SubjectSchedule[];
-const options = buildDisciplineOptions(subjects, schedules);
-const periods = [...new Set(options.map((option) => option.period))].sort((a, b) => a - b);
+const options = buildDisciplineOptions(subjects, electives, schedules);
+const periods = [...new Set(options.map((option) => option.period).filter((period) => period > 0))].sort(
+  (a, b) => a - b,
+);
+const hasElectives = options.some((option) => option.period === 0);
 
 export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
-  const [selectedPeriod, setSelectedPeriod] = useState<number | 'all'>('all');
+  const [selectedPeriod, setSelectedPeriod] = useState<number | 'all' | 'eletiva'>('all');
   const [armedId, setArmedId] = useState<string | null>(null);
   const [placedIdsArray, setPlacedIdsArray] = usePersistedState<string[]>('grade:placedIds', []);
   const [colorAssignments, setColorAssignments] = usePersistedState<Record<string, number>>(
@@ -90,7 +96,7 @@ export function Grade() {
       <div className={`min-h-screen p-4 ${isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'}`}>
         <h2 className="mb-1 text-xl font-bold">Montar Grade Horária</h2>
         <p className="mb-4 text-sm text-neutral-500">
-          Clique duas vezes numa disciplina pra encaixar. Pra remover, clique no X dentro do item já encaixado.
+          Monte sua grade horária selecionando as disciplinas que deseja cursar.
         </p>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
@@ -99,6 +105,7 @@ export function Grade() {
               theme={theme}
               options={options}
               periods={periods}
+              hasElectives={hasElectives}
               selectedPeriod={selectedPeriod}
               onPeriodChange={setSelectedPeriod}
               armedId={armedId}
