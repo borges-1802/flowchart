@@ -1,11 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Header } from '../components/Header';
 import { DisciplineList } from '../components/Grade/DisciplineList';
 import { ScheduleGrid } from '../components/Grade/ScheduleGrid';
 import { GradeSummary } from '../components/Grade/GradeSummary';
 import { usePersistedState } from '../hooks/usePersistedState';
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
-import { hasConflict } from '../domain/scheduleGrid';
+import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import subjectsData from '../data/subjects.json';
 import turmasData from '../data/turmas.json';
@@ -28,6 +28,13 @@ export function Grade() {
   );
   const placedIds = useMemo(() => new Set(placedIdsArray), [placedIdsArray]);
   const isDark = theme === 'dark';
+  const [feedback, setFeedback] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!feedback) return;
+    const timer = setTimeout(() => setFeedback(null), 3000);
+    return () => clearTimeout(timer);
+  }, [feedback]);
 
   function handleToggleTheme() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
@@ -36,21 +43,27 @@ export function Grade() {
   const armedOption = options.find((option) => option.id === armedId) ?? null;
 
   function placeOption(option: DisciplineOption) {
-    if (hasConflict(option, placedIds, options)) return;
+    if (isSameSubjectAlreadyPlaced(option, placedIds, options)) {
+      setFeedback(`Você já tem uma turma de ${option.subjectId} na grade.`);
+      return;
+    } else if (hasConflict(option, placedIds, options)) {
+      setFeedback(`${option.shortName} conflita com outra disciplina já encaixada.`);
+      return;
+    } else {
+      if (!(option.subjectId in colorAssignments)) {
+        const placedSubjectIds = new Set(
+          options.filter((item) => placedIds.has(item.id)).map((item) => item.subjectId),
+        );
+        const usedIndices = [...placedSubjectIds]
+          .map((subjectId) => colorAssignments[subjectId])
+          .filter((index) => index !== undefined);
+        const newIndex = pickRandomColorIndex(usedIndices);
+        setColorAssignments((current) => ({ ...current, [option.subjectId]: newIndex }));
+      }
 
-    if (!(option.subjectId in colorAssignments)) {
-      const placedSubjectIds = new Set(
-        options.filter((item) => placedIds.has(item.id)).map((item) => item.subjectId),
-      );
-      const usedIndices = [...placedSubjectIds]
-        .map((subjectId) => colorAssignments[subjectId])
-        .filter((index) => index !== undefined);
-      const newIndex = pickRandomColorIndex(usedIndices);
-      setColorAssignments((current) => ({ ...current, [option.subjectId]: newIndex }));
+      setPlacedIdsArray((current) => [...current, option.id]);
+      setArmedId(null);
     }
-
-    setPlacedIdsArray((current) => [...current, option.id]);
-    setArmedId(null);
   }
 
   function handleItemClick(option: DisciplineOption) {
@@ -108,6 +121,16 @@ export function Grade() {
         </div>
 
         <GradeSummary theme={theme} credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
+
+        {feedback && (
+          <div
+            className={`fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-lg px-4 py-2.5 text-sm font-medium shadow-lg ${
+              isDark ? 'bg-neutral-800 text-white' : 'bg-neutral-900 text-white'
+            }`}
+          >
+            {feedback}
+          </div>
+        )}
       </div>
     </>
   );

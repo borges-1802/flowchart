@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Menu, ChartBar, CalendarDays, X } from 'lucide-react';
+import { Sun, Moon, Menu, ChartBar, CalendarDays, Info, X } from 'lucide-react';
 interface HeaderProps {
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
@@ -43,6 +43,12 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         >
           Montar Grade
         </Link>
+        <Link
+          to="/sobre"
+          className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
+        >
+          Sobre
+        </Link>
 
         <button
           type="button"
@@ -83,6 +89,14 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
             className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
           >
             <CalendarDays className="h-4 w-4" />Montar Grade
+          </Link>
+
+          <Link
+            to="/sobre"
+            onClick={closeMenu}
+            className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
+          >
+            <Info className="h-4 w-4" />Sobre
           </Link>
 
           <button
