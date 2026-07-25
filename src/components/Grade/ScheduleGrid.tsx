@@ -59,6 +59,12 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
                 colorIndex={occupant ? colorAssignments[occupant.subjectId] : undefined}
                 isPreview={isPreview}
                 previewColor={previewColor}
+                conflictOption={
+                  occupant && armedOption && armedOption.slots.some((slot) => slot.day === day && slot.time === time)
+                    ? armedOption
+                    : null
+                }
+                conflictColorIndex={armedOption ? colorAssignments[armedOption.subjectId] : undefined}
               />
             );
           })}

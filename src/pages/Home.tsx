@@ -185,7 +185,7 @@ export function Home() {
 
       <Legend theme={theme} />
 
-      {selectedSubject && <SubjectDetailPanel subject={selectedSubject} nameById={nameById} />}
+      {selectedSubject && <SubjectDetailPanel theme={theme} subject={selectedSubject} nameById={nameById} />}
 
       {openSlot && (
         <SelectElectiveModal
