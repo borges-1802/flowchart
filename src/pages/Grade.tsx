@@ -4,8 +4,9 @@ import { DisciplineList } from '../components/Grade/DisciplineList';
 import { ScheduleGrid } from '../components/Grade/ScheduleGrid';
 import { GradeSummary } from '../components/Grade/GradeSummary';
 import { usePersistedState } from '../hooks/usePersistedState';
-import { buildDisciplineOptions } from '../domain/buildDisciplineOptions';
-import { hasConflict, getOptionAt } from '../domain/scheduleGrid';
+import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
+import { hasConflict } from '../domain/scheduleGrid';
+import { pickRandomColorIndex } from '../domain/subjectColor';
 import subjectsData from '../data/subjects.json';
 import turmasData from '../data/turmas.json';
 import type { Subject } from '../types/subject.types';
@@ -19,8 +20,12 @@ const periods = [...new Set(options.map((option) => option.period))].sort((a, b)
 export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
   const [selectedPeriod, setSelectedPeriod] = useState<number | 'all'>('all');
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [armedId, setArmedId] = useState<string | null>(null);
   const [placedIdsArray, setPlacedIdsArray] = usePersistedState<string[]>('grade:placedIds', []);
+  const [colorAssignments, setColorAssignments] = usePersistedState<Record<string, number>>(
+    'grade:colorAssignments',
+    {},
+  );
   const placedIds = useMemo(() => new Set(placedIdsArray), [placedIdsArray]);
   const isDark = theme === 'dark';
 
@@ -28,22 +33,36 @@ export function Grade() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   }
 
-  const selectedOption = options.find((option) => option.id === selectedId) ?? null;
+  const armedOption = options.find((option) => option.id === armedId) ?? null;
 
-  function handleCellClick(day: string, time: string) {
-    const occupant = getOptionAt(day, time, placedIds, options);
+  function placeOption(option: DisciplineOption) {
+    if (hasConflict(option, placedIds, options)) return;
 
-    if (occupant) {
-      setPlacedIdsArray((current) => current.filter((id) => id !== occupant.id));
-      return;
+    if (!(option.subjectId in colorAssignments)) {
+      const placedSubjectIds = new Set(
+        options.filter((item) => placedIds.has(item.id)).map((item) => item.subjectId),
+      );
+      const usedIndices = [...placedSubjectIds]
+        .map((subjectId) => colorAssignments[subjectId])
+        .filter((index) => index !== undefined);
+      const newIndex = pickRandomColorIndex(usedIndices);
+      setColorAssignments((current) => ({ ...current, [option.subjectId]: newIndex }));
     }
 
-    if (!selectedOption) return;
-    if (!selectedOption.slots.some((slot) => slot.day === day && slot.time === time)) return;
-    if (hasConflict(selectedOption, placedIds, options)) return;
+    setPlacedIdsArray((current) => [...current, option.id]);
+    setArmedId(null);
+  }
 
-    setPlacedIdsArray((current) => [...current, selectedOption.id]);
-    setSelectedId(null);
+  function handleItemClick(option: DisciplineOption) {
+    if (armedId === option.id) {
+      placeOption(option);
+      return;
+    }
+    setArmedId(option.id);
+  }
+
+  function handleRemove(optionId: string) {
+    setPlacedIdsArray((current) => current.filter((id) => id !== optionId));
   }
 
   const placedOptions = options.filter((option) => placedIds.has(option.id));
@@ -57,21 +76,23 @@ export function Grade() {
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
       <div className={`min-h-screen p-4 ${isDark ? 'bg-neutral-950 text-white' : 'bg-neutral-50 text-neutral-900'}`}>
         <h2 className="mb-1 text-xl font-bold">Montar Grade Horária</h2>
-        <p className={`mb-4 text-sm ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}>
-          Clique numa disciplina e depois numa célula vazia da grade pra encaixar. Clique num bloco já encaixado pra
-          remover.
+        <p className="mb-4 text-sm text-neutral-500">
+          Clique duas vezes numa disciplina pra encaixar. Pra remover, clique no X dentro do item já encaixado.
         </p>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
-          <div className={`order-2 max-h-[420px] overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-[440px] ${cardClass}`}>
+          <div className={`order-2 max-h-105 overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-110 ${cardClass}`}>
             <DisciplineList
               theme={theme}
               options={options}
               periods={periods}
               selectedPeriod={selectedPeriod}
               onPeriodChange={setSelectedPeriod}
-              selectedId={selectedId}
-              onSelect={(id) => setSelectedId(id === selectedId ? null : id)}
+              armedId={armedId}
+              placedIds={placedIds}
+              colorAssignments={colorAssignments}
+              onItemClick={handleItemClick}
+              onRemove={handleRemove}
             />
           </div>
 
@@ -80,8 +101,8 @@ export function Grade() {
               theme={theme}
               options={options}
               placedIds={placedIds}
-              selectedOption={selectedOption}
-              onCellClick={handleCellClick}
+              armedOption={armedOption}
+              colorAssignments={colorAssignments}
             />
           </div>
         </div>

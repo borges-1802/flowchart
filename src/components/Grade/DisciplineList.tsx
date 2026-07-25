@@ -7,8 +7,11 @@ interface DisciplineListProps {
   periods: number[];
   selectedPeriod: number | 'all';
   onPeriodChange: (period: number | 'all') => void;
-  selectedId: string | null;
-  onSelect: (id: string) => void;
+  armedId: string | null;
+  placedIds: Set<string>;
+  colorAssignments: Record<string, number>;
+  onItemClick: (option: DisciplineOption) => void;
+  onRemove: (optionId: string) => void;
 }
 
 export function DisciplineList({
@@ -17,8 +20,11 @@ export function DisciplineList({
   periods,
   selectedPeriod,
   onPeriodChange,
-  selectedId,
-  onSelect,
+  armedId,
+  placedIds,
+  colorAssignments,
+  onItemClick,
+  onRemove,
 }: DisciplineListProps) {
   const isDark = theme === 'dark';
   const filteredOptions =
@@ -53,8 +59,11 @@ export function DisciplineList({
             key={option.id}
             theme={theme}
             option={option}
-            isSelected={selectedId === option.id}
-            onClick={() => onSelect(option.id)}
+            isArmed={armedId === option.id}
+            isPlaced={placedIds.has(option.id)}
+            colorIndex={colorAssignments[option.subjectId]}
+            onClick={() => onItemClick(option)}
+            onRemove={() => onRemove(option.id)}
           />
         ))}
         {filteredOptions.length === 0 && (

@@ -1,43 +1,38 @@
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
-import { getSubjectColor } from '../../domain/subjectColor';
+import { getColorByIndex, NEUTRAL_DOT } from '../../domain/subjectColor';
 
 interface ScheduleCellProps {
   theme: 'dark' | 'light';
   occupant: DisciplineOption | null;
+  colorIndex: number | undefined;
   isPreview: boolean;
   previewColor: string | null;
-  onClick: () => void;
 }
 
-export function ScheduleCell({ theme, occupant, isPreview, previewColor, onClick }: ScheduleCellProps) {
+export function ScheduleCell({ theme, occupant, colorIndex, isPreview, previewColor }: ScheduleCellProps) {
   const isDark = theme === 'dark';
 
   if (occupant) {
-    const color = getSubjectColor(occupant.subjectId);
-    const cellClass = isDark ? color.cellDark : color.cellLight;
+    const color = colorIndex !== undefined ? getColorByIndex(colorIndex) : null;
+    const bgClass = color ? color.base : NEUTRAL_DOT;
+    const textClass = color ? color.text : isDark ? 'text-white' : 'text-black';
 
     return (
-      <button
-        type="button"
-        onClick={onClick}
-        className={`flex h-16 w-full flex-col items-center justify-center rounded-lg px-1 text-center ring-1 transition-opacity hover:opacity-80 ${cellClass}`}
-      >
+      <div className={`flex h-16 w-full flex-col items-center justify-center rounded-lg px-1 text-center ${bgClass} ${textClass}`}>
         <span className="truncate text-xs font-semibold">{occupant.shortName}</span>
         <span className="truncate text-[10px] opacity-80">{occupant.teacher}</span>
-      </button>
+      </div>
     );
   }
 
   return (
-    <button
-      type="button"
-      onClick={onClick}
+    <div
       className={`h-16 w-full rounded-lg border border-dashed transition-colors ${
         isPreview && previewColor
           ? previewColor
           : isDark
-            ? 'border-neutral-800 hover:border-neutral-700'
-            : 'border-neutral-300 hover:border-neutral-400'
+            ? 'border-neutral-800'
+            : 'border-neutral-300'
       }`}
     />
   );

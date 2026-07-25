@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
 import { DAYS, TIME_BLOCKS, getOptionAt } from '../../domain/scheduleGrid';
-import { getSubjectColor } from '../../domain/subjectColor';
+import { getColorByIndex } from '../../domain/subjectColor';
 import { ScheduleCell } from './ScheduleCell';
 
 interface ScheduleGridProps {
   theme: 'dark' | 'light';
   options: DisciplineOption[];
   placedIds: Set<string>;
-  selectedOption: DisciplineOption | null;
-  onCellClick: (day: string, time: string) => void;
+  armedOption: DisciplineOption | null;
+  colorAssignments: Record<string, number>;
 }
 
 const dayLabels: Record<(typeof DAYS)[number], string> = {
@@ -20,7 +20,7 @@ const dayLabels: Record<(typeof DAYS)[number], string> = {
   SEX: 'SEX',
 };
 
-export function ScheduleGrid({ theme, options, placedIds, selectedOption, onCellClick }: ScheduleGridProps) {
+export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssignments }: ScheduleGridProps) {
   const isDark = theme === 'dark';
 
   return (
@@ -38,11 +38,17 @@ export function ScheduleGrid({ theme, options, placedIds, selectedOption, onCell
           {DAYS.map((day) => {
             const occupant = getOptionAt(day, time, placedIds, options);
             const isPreview =
-              !occupant && selectedOption ? selectedOption.slots.some((slot) => slot.day === day && slot.time === time) : false;
-            const previewColor = selectedOption
-              ? isDark
-                ? getSubjectColor(selectedOption.subjectId).previewDark
-                : getSubjectColor(selectedOption.subjectId).previewLight
+              !occupant && armedOption ? armedOption.slots.some((slot) => slot.day === day && slot.time === time) : false;
+
+            const armedColorIndex = armedOption ? colorAssignments[armedOption.subjectId] : undefined;
+            const previewColor = armedOption
+              ? armedColorIndex !== undefined
+                ? isDark
+                  ? getColorByIndex(armedColorIndex).previewDark
+                  : getColorByIndex(armedColorIndex).previewLight
+                : isDark
+                  ? 'border-neutral-500 bg-neutral-500/10'
+                  : 'border-neutral-400 bg-neutral-100'
               : null;
 
             return (
@@ -50,9 +56,9 @@ export function ScheduleGrid({ theme, options, placedIds, selectedOption, onCell
                 key={`${day}-${time}`}
                 theme={theme}
                 occupant={occupant}
+                colorIndex={occupant ? colorAssignments[occupant.subjectId] : undefined}
                 isPreview={isPreview}
                 previewColor={previewColor}
-                onClick={() => onCellClick(day, time)}
               />
             );
           })}

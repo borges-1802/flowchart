@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Menu, X } from 'lucide-react';
-
+import { Sun, Moon, Menu, ChartBar, CalendarDays, X } from 'lucide-react';
 interface HeaderProps {
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
@@ -25,13 +24,19 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
       <div>
           <Link
           to="/"
-          className={`m-0 text-3xl font-bold ${hoverClass}`}
+          className={`m-0 text-3xl font-bold`}
         >
-          Flowchart v2
+          Flowchart BCC
         </Link>
       </div>
 
       <div className="hidden items-center gap-2 sm:flex">
+        <Link
+          to="/"
+          className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
+        >
+          Flowchart
+        </Link>
         <Link
           to="/Grade"
           className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
@@ -64,12 +69,20 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
             isDark ? 'border-neutral-800 bg-neutral-900' : 'border-neutral-200 bg-white'
           }`}
         >
+           <Link
+          to="/"
+          onClick={closeMenu}
+          className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
+        >
+          <ChartBar className="h-4 w-4" />Flowchart
+        </Link>
+
           <Link
             to="/Grade"
             onClick={closeMenu}
-            className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
+            className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
           >
-            Montar Grade
+            <CalendarDays className="h-4 w-4" />Montar Grade
           </Link>
 
           <button

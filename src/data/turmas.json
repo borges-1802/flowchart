@@ -277,7 +277,7 @@
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Docente Externo",
+        "teacher": "Matheus Adauto",
         "slots": [
           {
             "day": "SEG",
@@ -295,20 +295,6 @@
       },
       {
         "code": "T2",
-        "teacher": "Matheus Adauto",
-        "slots": [
-          {
-            "day": "SEG",
-            "time": "10-12h"
-          },
-          {
-            "day": "QUA",
-            "time": "10-12h"
-          }
-        ]
-      },
-      {
-        "code": "T3",
         "teacher": "Amaury Cruz",
         "slots": [
           {
@@ -317,6 +303,10 @@
           },
           {
             "day": "QUA",
+            "time": "13-15h"
+          },
+          {
+            "day": "SEX",
             "time": "13-15h"
           }
         ]
