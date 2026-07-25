@@ -24,17 +24,25 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
   const isDark = theme === 'dark';
 
   return (
-    <div className="grid min-w-150 grid-cols-[64px_repeat(5,1fr)] gap-2">
+    <div className="grid w-full grid-cols-[22px_repeat(5,1fr)] gap-0.5 sm:grid-cols-[64px_repeat(5,1fr)] sm:gap-2">
       <div />
       {DAYS.map((day) => (
-        <p key={day} className={`text-center text-xs font-semibold ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>
+        <p
+          key={day}
+          className={`text-center text-[9px] font-semibold sm:text-xs ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}
+        >
           {dayLabels[day]}
         </p>
       ))}
 
       {TIME_BLOCKS.map((time) => (
         <Fragment key={time}>
-          <p className={`flex items-center text-xs ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}>{time}</p>
+          <p
+            className={`flex items-center text-[8px] leading-tight sm:text-xs ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}
+          >
+            <span className="sm:hidden">{time.split('-')[0]}h</span>
+            <span className="hidden sm:inline">{time}</span>
+          </p>
           {DAYS.map((day) => {
             const occupant = getOptionAt(day, time, placedIds, options);
             const isPreview =

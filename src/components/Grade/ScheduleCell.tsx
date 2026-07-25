@@ -30,13 +30,17 @@ export function ScheduleCell({
     const conflictColor = conflictColorIndex !== undefined ? getColorByIndex(conflictColorIndex) : null;
 
     return (
-      <div className={`relative flex h-16 w-full flex-col items-center justify-center rounded-lg px-1 text-center ${bgClass} ${textClass}`}>
-        <span className="truncate text-xs font-semibold">{occupant.shortName}</span>
-        <span className="truncate text-[10px] opacity-80">{occupant.teacher}</span>
+      <div
+        className={`relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded px-0.5 text-center sm:aspect-auto sm:h-16 sm:rounded-lg sm:px-1 ${bgClass} ${textClass}`}
+      >
+        <span className="line-clamp-2 w-full wrap-break-word text-[8px] font-semibold leading-[1.1] sm:line-clamp-1 sm:truncate sm:text-xs sm:leading-tight">
+          {occupant.shortName}
+        </span>
+        <span className="hidden w-full truncate text-[10px] opacity-80 sm:block">{occupant.teacher}</span>
 
         {conflictOption && (
           <span
-            className={`absolute -right-1 -top-1 max-w-[85%] truncate rounded-full px-1.5 py-0.5 text-[9px] font-bold shadow-md ring-2 ${
+            className={`absolute -right-1 -top-1 max-w-[85%] truncate rounded-full px-1 py-0.5 text-[7px] font-bold shadow-md ring-1 sm:px-1.5 sm:text-[9px] sm:ring-2 ${
               isDark ? 'ring-neutral-900' : 'ring-white'
             } ${conflictColor ? `${conflictColor.base} ${conflictColor.text}` : 'bg-neutral-500 text-white'}`}
           >
@@ -49,7 +53,7 @@ export function ScheduleCell({
 
   return (
     <div
-      className={`h-16 w-full rounded-lg border border-dashed transition-colors ${
+      className={`aspect-square w-full rounded border border-dashed transition-colors sm:aspect-auto sm:h-16 sm:rounded-lg ${
         isPreview && previewColor
           ? previewColor
           : isDark
