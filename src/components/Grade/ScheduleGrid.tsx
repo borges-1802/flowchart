@@ -24,7 +24,7 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
   const isDark = theme === 'dark';
 
   return (
-    <div className="grid grid-cols-[64px_repeat(5,1fr)] gap-2">
+    <div className="grid min-w-150 grid-cols-[64px_repeat(5,1fr)] gap-2">
       <div />
       {DAYS.map((day) => (
         <p key={day} className={`text-center text-xs font-semibold ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>

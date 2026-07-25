@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter basename="/flowchart">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Grade" element={<Grade />} />
+        <Route path="/grade" element={<Grade />} />
       </Routes>
     </BrowserRouter>
   );

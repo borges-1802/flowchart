@@ -38,7 +38,7 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           Flowchart
         </Link>
         <Link
-          to="/Grade"
+          to="/grade"
           className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
         >
           Montar Grade
@@ -78,7 +78,7 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         </Link>
 
           <Link
-            to="/Grade"
+            to="/grade"
             onClick={closeMenu}
             className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
           >
