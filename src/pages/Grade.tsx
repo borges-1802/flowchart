@@ -3,10 +3,12 @@ import { Header } from '../components/Header';
 import { DisciplineList } from '../components/Grade/DisciplineList';
 import { ScheduleGrid } from '../components/Grade/ScheduleGrid';
 import { GradeSummary } from '../components/Grade/GradeSummary';
+import { GradeTabs } from '../components/Grade/GradeTabs';
 import { usePersistedState } from '../hooks/usePersistedState';
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
 import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
+import { getMigratedTabsState, type TabId, type TabData, type TabsState } from '../domain/gradeTabs';
 import subjectsData from '../data/subjects.json';
 import electivesData from '../data/electives.json';
 import turmasData from '../data/turmas.json';
@@ -27,12 +29,13 @@ export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
   const [selectedPeriod, setSelectedPeriod] = useState<number | 'all' | 'eletiva'>('all');
   const [armedId, setArmedId] = useState<string | null>(null);
-  const [placedIdsArray, setPlacedIdsArray] = usePersistedState<string[]>('grade:placedIds', []);
-  const [colorAssignments, setColorAssignments] = usePersistedState<Record<string, number>>(
-    'grade:colorAssignments',
-    {},
-  );
-  const placedIds = useMemo(() => new Set(placedIdsArray), [placedIdsArray]);
+  const [activeTab, setActiveTab] = usePersistedState<TabId>('grade:activeTab', 'A');
+  const [tabsState, setTabsState] = usePersistedState<TabsState>('grade:tabs', getMigratedTabsState());
+  const [tabNames, setTabNames] = usePersistedState<Record<TabId, string>>('grade:tabNames', {
+    A: 'Grade A',
+    B: 'Grade B',
+    C: 'Grade C',
+  });
   const isDark = theme === 'dark';
   const [feedback, setFeedback] = useState<string | null>(null);
 
@@ -46,6 +49,14 @@ export function Grade() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   }
 
+  function updateActiveTab(updater: (tab: TabData) => TabData) {
+    setTabsState((current) => ({ ...current, [activeTab]: updater(current[activeTab]) }));
+  }
+
+  const currentTab = tabsState[activeTab];
+  const placedIds = useMemo(() => new Set(currentTab.placedIds), [currentTab.placedIds]);
+  const colorAssignments = currentTab.colorAssignments;
+
   const armedOption = options.find((option) => option.id === armedId) ?? null;
 
   function placeOption(option: DisciplineOption) {
@@ -56,18 +67,24 @@ export function Grade() {
       setFeedback(`${option.shortName} conflita com outra disciplina já encaixada.`);
       return;
     } else {
-      if (!(option.subjectId in colorAssignments)) {
-        const placedSubjectIds = new Set(
-          options.filter((item) => placedIds.has(item.id)).map((item) => item.subjectId),
-        );
-        const usedIndices = [...placedSubjectIds]
-          .map((subjectId) => colorAssignments[subjectId])
-          .filter((index) => index !== undefined);
-        const newIndex = pickRandomColorIndex(usedIndices);
-        setColorAssignments((current) => ({ ...current, [option.subjectId]: newIndex }));
-      }
+      updateActiveTab((tab) => {
+        const nextColorAssignments = { ...tab.colorAssignments };
 
-      setPlacedIdsArray((current) => [...current, option.id]);
+        if (!(option.subjectId in nextColorAssignments)) {
+          const placedSubjectIds = new Set(
+            options.filter((item) => tab.placedIds.includes(item.id)).map((item) => item.subjectId),
+          );
+          const usedIndices = [...placedSubjectIds]
+            .map((subjectId) => nextColorAssignments[subjectId])
+            .filter((index) => index !== undefined);
+          nextColorAssignments[option.subjectId] = pickRandomColorIndex(usedIndices);
+        }
+
+        return {
+          placedIds: [...tab.placedIds, option.id],
+          colorAssignments: nextColorAssignments,
+        };
+      });
       setArmedId(null);
     }
   }
@@ -81,7 +98,19 @@ export function Grade() {
   }
 
   function handleRemove(optionId: string) {
-    setPlacedIdsArray((current) => current.filter((id) => id !== optionId));
+    updateActiveTab((tab) => ({
+      ...tab,
+      placedIds: tab.placedIds.filter((id) => id !== optionId),
+    }));
+  }
+
+  function handleTabChange(tabId: TabId) {
+    setActiveTab(tabId);
+    setArmedId(null);
+  }
+
+  function handleRenameTab(tabId: TabId, name: string) {
+    setTabNames((current) => ({ ...current, [tabId]: name }));
   }
 
   const placedOptions = options.filter((option) => placedIds.has(option.id));
@@ -116,14 +145,24 @@ export function Grade() {
             />
           </div>
 
-          <div className={`order-1 overflow-x-auto rounded-xl p-4 lg:order-2 ${cardClass}`}>
-            <ScheduleGrid
+          <div className="order-1 lg:order-2">
+            <GradeTabs
               theme={theme}
-              options={options}
-              placedIds={placedIds}
-              armedOption={armedOption}
-              colorAssignments={colorAssignments}
+              activeTab={activeTab}
+              tabNames={tabNames}
+              onChange={handleTabChange}
+              onRename={handleRenameTab}
             />
+
+            <div className={`overflow-x-auto rounded-xl p-4 ${cardClass}`}>
+              <ScheduleGrid
+                theme={theme}
+                options={options}
+                placedIds={placedIds}
+                armedOption={armedOption}
+                colorAssignments={colorAssignments}
+              />
+            </div>
           </div>
         </div>
 

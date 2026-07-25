@@ -27,7 +27,7 @@ const steps = [
 const gradeSteps = [
   {
     title: 'Clique duas vezes',
-    text: 'numa disciplina da lista pra encaixar ela na grade — o primeiro clique seleciona, o segundo confirma.',
+    text: 'numa disciplina da lista pra encaixar ela na grade, o primeiro clique seleciona e o segundo confirma.',
   },
   {
     title: '',
@@ -44,6 +44,14 @@ const gradeSteps = [
   {
     title: 'Pra remover',
     text: 'clique no X dentro do item já encaixado, na lista de disciplinas.',
+  },
+  {
+    title: '',
+    text: 'Você pode montar até 3 grades diferentes (as abas no canto acima da grade) pra comparar opções de horário lado a lado. Cada uma guarda seu próprio conjunto de disciplinas, sem misturar com as outras.',
+  },
+  {
+    title: '',
+    text: 'Clique duas vezes no nome de uma aba pra renomear (ex: "Plano A", "Se der ruim"). O nome fica salvo, assim como o conteúdo de cada grade.',
   },
 ];
 
