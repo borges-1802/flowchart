@@ -54,7 +54,7 @@
   {
     "id": "ICP005",
     "name": "Ética em Computação",
-    "shortName": "Et Comp",
+    "shortName": "Ética em Comp",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -79,7 +79,7 @@
   {
     "id": "ICP009",
     "name": "Sist Colaborat e Comput Social",
-    "shortName": "Sis Col",
+    "shortName": "Sistemas e Computação Social",
     "preRequisites": [
       "ICP237"
     ],
@@ -92,7 +92,7 @@
   {
     "id": "ICP010",
     "name": "Web Semântica",
-    "shortName": "Web Sem",
+    "shortName": "Web Semântica",
     "preRequisites": [
       "ICP489"
     ],
@@ -105,7 +105,7 @@
   {
     "id": "ICP011",
     "name": "Tóp Esp em Ciência de Dados I",
-    "shortName": "Cie Dados I",
+    "shortName": "Tóp Esp Cie Dados I",
     "preRequisites": [
       "ICP363",
       "ICP489"
@@ -119,7 +119,7 @@
   {
     "id": "ICP012",
     "name": "Tóp Esp em Ciência de Dados II",
-    "shortName": "Cie Dados II",
+    "shortName": "Tóp Esp Cie Dados II",
     "preRequisites": [
       "ICP363",
       "ICP489"
@@ -133,7 +133,7 @@
   {
     "id": "ICP013",
     "name": "Séries e Transformadas Comput",
-    "shortName": "Transformadas",
+    "shortName": "Séries e Transformadas",
     "preRequisites": [
       "ICP115",
       "MAE992"
@@ -147,7 +147,7 @@
   {
     "id": "ICP014",
     "name": "Comput Científ Equaç Dif Ordin",
-    "shortName": "Eq Dif Ord",
+    "shortName": "COC Eq Dif Ord",
     "preRequisites": [
       "ICP248",
       "ICP351"
@@ -161,7 +161,7 @@
   {
     "id": "ICP015",
     "name": "Comput Científ Equaç Dif Parc",
-    "shortName": "Eq Dif Parc",
+    "shortName": "COC Eq Dif Parc",
     "preRequisites": [
       "ICP014"
     ],
@@ -174,7 +174,7 @@
   {
     "id": "ICP016",
     "name": "Introd Métod Elementos Finitos",
-    "shortName": "Ele Fin",
+    "shortName": "Elementos Finitos",
     "preRequisites": [
       "ICP248"
     ],
@@ -187,7 +187,7 @@
   {
     "id": "ICP017",
     "name": "Otimização Linear",
-    "shortName": "Otim Lin",
+    "shortName": "Otimização Linear",
     "preRequisites": [
       "ICP365"
     ],
@@ -200,7 +200,7 @@
   {
     "id": "ICP018",
     "name": "Otimização Não Linear",
-    "shortName": "Otim N Lin",
+    "shortName": "Otimização Não Linear",
     "preRequisites": [
       "ICP365"
     ],
@@ -213,7 +213,7 @@
   {
     "id": "ICP019",
     "name": "Álgebra Linear Aplicada",
-    "shortName": "AL Aplicada",
+    "shortName": "ALAplicada",
     "preRequisites": [
       "ICP248"
     ],
@@ -239,7 +239,7 @@
   {
     "id": "ICP021",
     "name": "Tóp Esp em Engenharia Dados I",
-    "shortName": "Eng Dados I",
+    "shortName": "Tóp Esp Eng Dados I",
     "preRequisites": [
       "ICP489"
     ],
@@ -252,7 +252,7 @@
   {
     "id": "ICP022",
     "name": "Tóp Esp em Engenharia Dados II",
-    "shortName": "Eng Dados II",
+    "shortName": "Tóp Esp Eng Dados II",
     "preRequisites": [
       "ICP489"
     ],
@@ -265,7 +265,7 @@
   {
     "id": "ICP023",
     "name": "Gestão de Projetos",
-    "shortName": "Gestao Proj",
+    "shortName": "Gestao de Projetos",
     "preRequisites": [
       "ICP237"
     ],
@@ -278,7 +278,7 @@
   {
     "id": "ICP024",
     "name": "Análise e Projeto de Sistemas",
-    "shortName": "Proj Sis",
+    "shortName": "Análise e Proj Sistemas",
     "preRequisites": [
       "ICP237"
     ],
@@ -333,7 +333,7 @@
   {
     "id": "ICP028",
     "name": "Tóp Esp em Arquitetura Comput",
-    "shortName": "Top Esp Arq Comp",
+    "shortName": "Tóp Esp Arq Comp",
     "preRequisites": [
       "ICP246"
     ],
@@ -346,7 +346,7 @@
   {
     "id": "ICP029",
     "name": "Empreendedorismo e Inovação",
-    "shortName": "Empreend",
+    "shortName": "Empreendorismo",
     "preRequisites": [
       "ICP145"
     ],
@@ -359,7 +359,7 @@
   {
     "id": "ICP030",
     "name": "Governança e Gestão de Dados",
-    "shortName": "Gestão Dados",
+    "shortName": "Governança de Dados",
     "preRequisites": [
       "ICP489"
     ],
@@ -372,7 +372,7 @@
   {
     "id": "ICP031",
     "name": "Tóp Esp em Comp Científica I",
-    "shortName": "Comp Ci I",
+    "shortName": "Tóp Esp Comp Científica I",
     "preRequisites": [
       "ICP351",
       "ICP365"
@@ -386,7 +386,7 @@
   {
     "id": "ICP032",
     "name": "Tóp Esp em Comp Científica II",
-    "shortName": "Comp Ci II",
+    "shortName": "Tóp Esp Comp Científica II",
     "preRequisites": [
       "ICP351",
       "ICP365"
@@ -400,7 +400,7 @@
   {
     "id": "ICP034",
     "name": "Análise de Redes Sociais",
-    "shortName": "Redes Socias",
+    "shortName": "Análise de Redes Sociais",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -411,7 +411,7 @@
   {
     "id": "ICP035",
     "name": "Tóp Esp em Teoria da Comput I",
-    "shortName": "Teo Comp I",
+    "shortName": "Tóp Esp Teo Comp I",
     "preRequisites": [
       "ICP116",
       "ICP144"
@@ -425,7 +425,7 @@
   {
     "id": "ICP036",
     "name": "Tóp Esp em Teoria da Comput II",
-    "shortName": "Teo Comp II",
+    "shortName": "Tóp Esp Teo Comp II",
     "preRequisites": [
       "ICP116",
       "ICP144"
@@ -439,7 +439,7 @@
   {
     "id": "ICP038",
     "name": "Fundamentos Processo Negócio",
-    "shortName": "Proc Neg",
+    "shortName": "Fund Processo Negócio",
     "preRequisites": [
       "ICP132"
     ],
@@ -452,7 +452,7 @@
   {
     "id": "ICP041",
     "name": "Oficina de Desenv Software I",
-    "shortName": "Dev Soft I",
+    "shortName": "Oficina de Software I",
     "preRequisites": [
       "ICP237"
     ],
@@ -465,7 +465,7 @@
   {
     "id": "ICP042",
     "name": "Oficina de Desenv Software II",
-    "shortName": "Dev Soft II",
+    "shortName": "Oficina de Software II",
     "preRequisites": [
       "ICP237"
     ],
@@ -478,7 +478,7 @@
   {
     "id": "ICP051",
     "name": "Tóp Esp em Eng de Software I",
-    "shortName": "Eng Soft I",
+    "shortName": "Tóp Esp Eng Soft I",
     "preRequisites": [
       "ICP237"
     ],
@@ -491,7 +491,7 @@
   {
     "id": "ICP052",
     "name": "Tóp Esp em Eng de Software II",
-    "shortName": "Eng Soft II",
+    "shortName": "Tóp Esp Eng Soft II",
     "preRequisites": [
       "ICP237"
     ],
@@ -504,7 +504,7 @@
   {
     "id": "ICP061",
     "name": "Desenvolvimento Web I",
-    "shortName": "Web I",
+    "shortName": "Dev Web I",
     "preRequisites": [
       "ICP239"
     ],
@@ -517,7 +517,7 @@
   {
     "id": "ICP062",
     "name": "Desenvolvimento Web II",
-    "shortName": "Web II",
+    "shortName": "Dev Web II",
     "preRequisites": [
       "ICP239"
     ],
@@ -530,7 +530,7 @@
   {
     "id": "ICP071",
     "name": "Tóp Esp em Sist Computacion I",
-    "shortName": "Ofi Tec I",
+    "shortName": "Tóp Esp Sistemas I",
     "preRequisites": [
       "ICP361"
     ],
@@ -543,7 +543,7 @@
   {
     "id": "ICP072",
     "name": "Tóp Esp em Sist Computacion II",
-    "shortName": "Ofi Tec II",
+    "shortName": "Tóp Esp Sistemas II",
     "preRequisites": [
       "ICP362"
     ],
@@ -556,7 +556,7 @@
   {
     "id": "ICP081",
     "name": "Oficina de Teconologia I",
-    "shortName": "Ofi Tec I",
+    "shortName": "Oficina Tecn I",
     "preRequisites": [
       "ICP141",
       "ICP239"
@@ -570,7 +570,7 @@
   {
     "id": "ICP082",
     "name": "Oficina de Teconologia II",
-    "shortName": "Ofi Tec II",
+    "shortName": "Oficina Tecn II",
     "preRequisites": [
       "ICP141",
       "ICP239"
@@ -584,7 +584,7 @@
   {
     "id": "ICP083",
     "name": "Oficina de Teconologia III",
-    "shortName": "Ofi Tec III",
+    "shortName": "Oficina Tecn III",
     "preRequisites": [
       "ICP141",
       "ICP239"
@@ -598,7 +598,7 @@
   {
     "id": "ICP084",
     "name": "Oficina de Teconologia IV",
-    "shortName": "Ofi Tec IV",
+    "shortName": "Oficina Tecn IV",
     "preRequisites": [
       "ICP141",
       "ICP239"
@@ -612,7 +612,7 @@
   {
     "id": "ICP085",
     "name": "Oficina de Teconologia V",
-    "shortName": "Ofi Tec V",
+    "shortName": "Oficina Tecn V",
     "preRequisites": [
       "ICP141",
       "ICP239"
@@ -626,7 +626,7 @@
   {
     "id": "ICP091",
     "name": "Tóp Esp em Ciência Comput I",
-    "shortName": "Top Ci Comp I",
+    "shortName": "Tóp Esp Cie Comp I",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -637,7 +637,7 @@
   {
     "id": "ICP092",
     "name": "Tóp Esp em Ciência Comput II",
-    "shortName": "Top Ci Comp II",
+    "shortName": "Tóp Esp Cie Comp II",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -648,7 +648,7 @@
   {
     "id": "ICP093",
     "name": "Tóp Esp em Ciência Comput III",
-    "shortName": "Top Ci Comp III",
+    "shortName": "Tóp Esp Cie Comp III",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -659,7 +659,7 @@
   {
     "id": "ICP094",
     "name": "Tóp Esp em Ciência Comput IV",
-    "shortName": "Top Ci Comp IV",
+    "shortName": "Tóp Esp Cie Comp IV",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -670,7 +670,7 @@
   {
     "id": "ICP095",
     "name": "Tóp Esp em Ciência Comput V",
-    "shortName": "Top Ci Comp V",
+    "shortName": "Tóp Esp Cie Comp V",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -681,7 +681,7 @@
   {
     "id": "ICP096",
     "name": "Lab Análise de Redes Sociais",
-    "shortName": "Redes Sociais II",
+    "shortName": "Lab Análise de Redes Sociais",
     "preRequisites": [
       "ICP034"
     ],
@@ -694,7 +694,7 @@
   {
     "id": "ICP100",
     "name": "Introd Gestão Estratégica Ti",
-    "shortName": "IGETi",
+    "shortName": "Gestão Estratégica TI",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -705,7 +705,7 @@
   {
     "id": "ICP102",
     "name": "Tecn para Grandes Vol de Dados",
-    "shortName": "GVD",
+    "shortName": "Tec Grande Vol Dados",
     "preRequisites": [
       "ICP489"
     ],
@@ -718,7 +718,7 @@
   {
     "id": "ICP103",
     "name": "Análise de Risco",
-    "shortName": "Anal Risco",
+    "shortName": "Análise de Risco",
     "preRequisites": [
       "MAD243"
     ],
@@ -757,7 +757,7 @@
   {
     "id": "ICP359",
     "name": "Introd ao Suporte à Decisão",
-    "shortName": "Sup Dec",
+    "shortName": "Intro Suporte Decisão",
     "preRequisites": [
       "MAD243"
     ],
@@ -770,7 +770,7 @@
   {
     "id": "ICP367",
     "name": "Sistemas Distribuídos",
-    "shortName": "Sis Dis",
+    "shortName": "Sistemas Distribuídos",
     "preRequisites": [
       "ICP361",
       "ICP362"
@@ -784,7 +784,7 @@
   {
     "id": "ICP465",
     "name": "Tóp Esp Informática Sociedade",
-    "shortName": "Info Soc",
+    "shortName": "Tóp Esp Info Soc",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
@@ -810,7 +810,7 @@
   {
     "id": "ICP478",
     "name": "Métodos Numéricos I",
-    "shortName": "Met Num I",
+    "shortName": "Métodos Numéricos I",
     "preRequisites": [
       "ICP248"
     ],
@@ -849,7 +849,7 @@
   {
     "id": "ICP518",
     "name": "Teoria de Grafos",
-    "shortName": "Grafos",
+    "shortName": "Teoria de Grafos",
     "preRequisites": [
       "ICP368"
     ],
@@ -876,7 +876,7 @@
   {
     "id": "ICP603",
     "name": "Gestão do Conhecimento",
-    "shortName": "Gest Con",
+    "shortName": "Gestão do Conhecimento",
     "preRequisites": [
       "ICP142"
     ],
@@ -902,7 +902,7 @@
   {
     "id": "ICP606",
     "name": "Tóp Esp em Programação",
-    "shortName": "TEP",
+    "shortName": "Tóp Esp Programação",
     "preRequisites": [
       "ICP368"
     ],
@@ -928,7 +928,7 @@
   {
     "id": "ICP622",
     "name": "Program Paralela e Distribuída",
-    "shortName": "Prog Paral",
+    "shortName": "Prog Paralela",
     "preRequisites": [
       "ICP361"
     ],
@@ -954,7 +954,7 @@
   {
     "id": "ICP636",
     "name": "Algoritmos Paralelos",
-    "shortName": "Alg Paral",
+    "shortName": "Alg Paralelos",
     "preRequisites": [
       "ICP368"
     ],
@@ -967,7 +967,7 @@
   {
     "id": "ICP638",
     "name": "Computação Algébrica",
-    "shortName": "Comp Alg",
+    "shortName": "Comp Algébrica",
     "preRequisites": [
       "ICP115",
       "ICP131",
@@ -982,7 +982,7 @@
   {
     "id": "ICP639",
     "name": "Computação Quântica",
-    "shortName": "Comp Quant",
+    "shortName": "Comp Quântica",
     "preRequisites": [
       "ICP115",
       "ICP134"
@@ -996,7 +996,7 @@
   {
     "id": "ICP640",
     "name": "Projeto Teste de Software",
-    "shortName": "Proj Test",
+    "shortName": "Proj Teste Software",
     "preRequisites": [
       "ICP237"
     ],
@@ -1020,7 +1020,7 @@
   {
     "id": "IEE115",
     "name": "Economia",
-    "shortName": "Econ",
+    "shortName": "Economia",
     "preRequisites": [],
     "credits": 4.0,
     "curriculum": "",
