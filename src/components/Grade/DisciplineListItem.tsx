@@ -12,6 +12,16 @@ interface DisciplineListItemProps {
   onRemove: () => void;
 }
 
+function formatSlots(slots: { day: string; time: string }[]): string {
+  const dayGroupsByTime = new Map<string, string[]>();
+  for (const slot of slots) {
+    const days = dayGroupsByTime.get(slot.time) ?? [];
+    days.push(slot.day);
+    dayGroupsByTime.set(slot.time, days);
+  }
+  return [...dayGroupsByTime.entries()].map(([time, days]) => `${days.join('/')} ${time}`).join(', ');
+}
+
 export function DisciplineListItem({
   theme,
   option,
@@ -22,6 +32,7 @@ export function DisciplineListItem({
   onRemove,
 }: DisciplineListItemProps) {
   const isDark = theme === 'dark';
+  const schedule = formatSlots(option.slots);
 
   if (isPlaced) {
     const color = colorIndex !== undefined ? getColorByIndex(colorIndex) : null;
@@ -35,6 +46,7 @@ export function DisciplineListItem({
             {option.subjectId} · {option.shortName}
           </span>
           <span className="block truncate text-xs opacity-80">{option.teacher}</span>
+          <span className="block truncate text-[11px] opacity-70">{schedule}</span>
         </span>
         <span className="shrink-0 text-xs opacity-80">{option.hours}h</span>
         <button
@@ -66,6 +78,7 @@ export function DisciplineListItem({
           {option.subjectId} · {option.shortName}
         </span>
         <span className="block truncate text-xs text-neutral-500">{option.teacher}</span>
+        <span className="block truncate text-[11px] text-neutral-500">{schedule}</span>
       </span>
       <span className="shrink-0 text-xs text-neutral-500">{option.hours}h</span>
     </button>
