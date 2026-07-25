@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecionando...</title>
+      var BASE_PATH = '/flowchart';
+      var fullPath = location.pathname + location.search + location.hash;
+      var afterBase = fullPath.startsWith(BASE_PATH) ? fullPath.slice(BASE_PATH.length) : fullPath;
+      location.replace(BASE_PATH + '/?redirect=' + encodeURIComponent(afterBase));
+    </script>
+  </head>
+  <body></body>
+</html>
