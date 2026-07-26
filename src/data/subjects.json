@@ -18,8 +18,21 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações, listas.",
     "teachers": "Hugo Musso",
-    "teacherHistory": [],
-    "advice": "Não costuma ser muito complicada, mas é sempre bom praticar o que se aprende em aula.",
+    "teacherHistory": [
+      {
+        "name": "Carla Delgado",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Carla Delgado",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Carla Delgado",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Introdução a programação. Não costuma ser muito complicada, mas se você não tem experiência com programação, é recomendado estudar bastante e praticar.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
   },
@@ -39,7 +52,20 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
     "teachers": "Eldanae Teixeira",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Lucas Aragão",
+        "semester": "Eldanae Teixeira"
+      },
+      {
+        "name": "Juliana França",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Juliana França",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "A segunda mais tranquila do primeiro período, não precisa ter medo, faça os trabalhos e resumos dos slides.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -61,7 +87,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Silvana Rossetto",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Silvana Rossetto, Gabriel Caldas",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Silvana Rossetto",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Silvana Rossetto, Anamaria Moreira (P1,P2) & Gabriel Caldas (P3)",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Pode ser difícil se for a sua primeira vez vendo este conteúdo, recomenda-se rever as aulas e pesquisar conteúdo no youtube.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 8h-10h"
@@ -83,7 +122,20 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "João Carlos, Hugo Nóbrega",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "João Carlos",
+        "semester": "2026.1"
+      },
+      {
+        "name": "João Carlos",
+        "semester": "2025.2"
+      },
+      {
+        "name": "João Carlos",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria mais complicada do primeiro período, estuda y estuda, nunca deixe de perguntar e de refazer questão, se for o Hugo dando a matéria conte a compaixão dele.",
     "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h, Qua-Sex 8h-10h"
@@ -102,7 +154,20 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, apresentações",
     "teachers": "Maria Luiza",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Anamaria Moreira",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Eldanae Teixeira",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Eldanae Teixeira",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria mais tranquila do primeiro período, basicamente fazer todos os trabalhos e treinar apresentações que você consegue sair com uma nota alta.",
     "availability": "Alta",
     "schedule": "Seg-Qua 13h-15h"
@@ -121,7 +186,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "Severino Collier",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Severino Collier, João Carlos",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Severino Collier",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Juliana Valério, João Carlos",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Basicamente pré-cálculo com lógica, essa e cripto se complementam, estude bastante.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -148,10 +226,23 @@
     ],
     "credits": 4.0,
     "curriculum": "Pesquisa sequencial e pesquisa binária; Ordenação por inserção e por seleção; Ponteiros e alocação dinâmica de memória; Estruturas de dados lineares: listas, pilhas e filas; Persistência de dados com arquivos; Noções de complexidade de algoritmos.",
-    "difficultyLevel": "3/5",
+    "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Marcos Leipnitz, Giseli Rabello",
-    "teacherHistory": [],
+    "teachers": "Marcos Leipnitz, Giseli Lopes",
+    "teacherHistory": [
+      {
+        "name": "Giseli Lopes",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Marcos Leipnitz",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Marcos Leipnitz",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Continuação de Prog I, se for a Giseli, estude MUITO, se for o Marcos, conte com a compaixão dele.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 8h-10h, Ter-Qui 8h-10h"
@@ -170,8 +261,21 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Apresentações, trabalhos",
     "teachers": "Sergio Serra",
-    "teacherHistory": [],
-    "advice": "Outra matéria pra você ficar tranquilo.",
+    "teacherHistory": [
+      {
+        "name": "Sergio Serra",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Adriana Vivacqua",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Adriana Vivacqua",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Outra matéria pra você ficar MUITO tranquilo.",
     "availability": "Baixa",
     "schedule": "Ter 10h-12h"
   },
@@ -188,10 +292,23 @@
     "postRequisites": [],
     "credits": 2.0,
     "curriculum": "Conceitos básicos para o desenvolvimento de um projeto de software aplicado.",
-    "difficultyLevel": "3/5",
+    "difficultyLevel": "2/5",
     "evaluationStyle": "Trabalhos",
     "teachers": "Marcos Leipnitz",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Marcos Leipnitz",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Gabriel Pereira",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Gabriel Pereira",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Estude como usar Protoboard e Arduíno, além disso estude circuitos lógicos, matéria bem prática mesmo.",
     "availability": "Baixa",
     "schedule": "Ter 13h-15h"
@@ -216,8 +333,21 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
     "teachers": "Claudson Bornstein",
-    "teacherHistory": [],
-    "advice": "if !=Mitre return pull",
+    "teacherHistory": [
+      {
+        "name": "Matheus Adauto",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Claudson Bornstein, Hugo Nóbrega",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Claudson Bornstein",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "if !=Mitre return pull. Se for o Claudson, refaça provas antigas, se for o Hugo, novamente, conte com a compaixão dele. Matéria mais chata do segundo período.",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
   },
@@ -238,8 +368,21 @@
     "difficultyLevel": "1/5",
     "evaluationStyle": "Apresentações, trabalhos",
     "teachers": "Adriana Vivacqua",
-    "teacherHistory": [],
-    "advice": "Ótima matéria!",
+    "teacherHistory": [
+      {
+        "name": "Juliana Valério",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Adriana Vivacqua",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Adriana Vivacqua",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Ótima matéria! Apenas apresente seus trabalhos.",
     "availability": "Alta",
     "schedule": "Qui 10h-12h (Turma A) / Qui 13h-15h (Turma B)"
   },
@@ -258,8 +401,21 @@
     "curriculum": "Funções de uma variável real. Limites e derivadas. Cálculo de derivadas e aplicações. Teorema do valor médio. Integral definida. Teorema fundamental do cálculo. Cálculo de integrais e aplicações.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
-    "teachers": "Vários",
-    "teacherHistory": [],
+    "teachers": "Não Informado",
+    "teacherHistory": [
+      {
+        "name": "Nicolas Danielski",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Não Informado",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Henrique Nogueira",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Inferno 1.0. Estuda até dizer chega. Se passar de primeira, será um dos poucos.",
     "availability": "Baixa",
     "schedule": ""
@@ -288,9 +444,22 @@
     "curriculum": "Vetores no plano, base e combinação linear. Transformações lineares e matrizes no plano. Autovalores e autovetores para operadores do plano. Diagonalização e mudança de variáveis em dimensão dois. Sistemas lineares e eliminação gaussiana. Rn e seus subespaços. Interseção, soma e complemento de subespaços. Dependência e independência linear. Base e coordenadas. Transformações lineares e matrizes. Mudança de base. Autovalores e autovetores e diagonalização de operadores.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Juliana Valério",
-    "teacherHistory": [],
-    "advice": "Estude e faça exercício, repetition is key.",
+    "teachers": "Severino Collier, Juliana Valério",
+    "teacherHistory": [
+      {
+        "name": "Juliana Valério",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Juliana Valério",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Marcello Goulart",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Estude e faça exercício, repetition is key. Não deixe pra estudar em cima da hora, conteúdo muito denso.",
     "availability": "Alta",
     "schedule": "Seg-Qua 13h-15h e Sex 10h-12h"
   },
@@ -316,8 +485,21 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Claudson Bornstein",
-    "teacherHistory": [],
-    "advice": "Essencial, vale a pena ir bem nessa daqui, conta legal pra currículo.",
+    "teacherHistory": [
+      {
+        "name": "Claudson Bornstein",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Vinícius Gusmão",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Claudson Bornstein",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Essencial, vale a pena ir bem nessa daqui, conta legal pra currículo. Se for o Claudson refaça provas antigas.",
     "availability": "Média",
     "schedule": "Ter-Qui 13h-15h (Turma A) / Ter-Qui 10h-12h (Turma B)"
   },
@@ -344,11 +526,24 @@
     ],
     "credits": 4.0,
     "curriculum": "Introdução à modelagem de sistemas (por que e o que modelar de sistemas computacionais); Modelagem de Sistemas usando notação atual (ex: UML): Caso Uso; Diagramas de Atividade; Diagrama de Classes (conceitual); Modelagem de Dados.",
-    "difficultyLevel": "2/5",
+    "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos",
     "teachers": "Juliana França",
-    "teacherHistory": [],
-    "advice": "Se for com a França aproveite, ótima professora. Rafael e Eldanae são bem rígidos em relação a presença.",
+    "teacherHistory": [
+      {
+        "name": "Adriana Vivacqua",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Juliana França",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Rafael Maiani",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Se for com a França aproveite, ótima professora. Se for com a Vivacqua também aproveite!",
     "availability": "Alta",
     "schedule": "Ter-Qui 15h-17h"
   },
@@ -371,7 +566,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Daniel Alfaro",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Daniel Alfaro",
+        "semester": "2026.1"
+      },
+      {
+        "name": "João Paixão, Marcello Goulart",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Marcello Goulart",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Antigo Cálculo Numérico, entenda todos os métodos, a aplicação é tranquila, mas é bom ter aprendido os outros cálculos.",
     "availability": "Média",
     "schedule": "Qua 15h-17h"
@@ -399,7 +607,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Vinícius Gusmão",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Vinícius Gusmão",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Mitre Dourado",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Mitre Dourado",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Outra matéria essencial, estude bastante, e aproveite o Gusmão.",
     "availability": "Média",
     "schedule": "Ter-Qui 10h-12h"
@@ -464,7 +685,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Gabriel Pereira",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Valéria Bastos",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Gabriel Pereira, Marcos Leipnitz",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Valéria Bastos",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Muita matéria para pouco tempo.",
     "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h"
@@ -489,8 +723,21 @@
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "João Paixão",
-    "teacherHistory": [],
-    "advice": "Listas, trabalhos e provas bem longas estilo João Paixão. Doidera.",
+    "teacherHistory": [
+      {
+        "name": "João Paixão, Marcello Goulart",
+        "semester": "2026.1"
+      },
+      {
+        "name": "João Paixão",
+        "semester": "2025.2"
+      },
+      {
+        "name": "João Paixão",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Listas, trabalhos e provas bem longas estilo João Paixão. Doidera. Estude.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 10h-12h"
   },
@@ -509,8 +756,21 @@
     "curriculum": "Idade média: surgimento das primeiras universidades. Idade moderna: a característica universal de Leibniz, redes sociais acadêmicas no século XVII, Euler e a teoria de grafos. Revolução industrial: Boole, de Morgan e a lógica simbólica, Babbage, Ada Lovelace e a máquina analítica, algoritmos eficientes e computação humana. Século XX: Turing e o computador universal, von Neumann e os primeiros computadores eletrônicos, Julia Robinson e a impossibilidade da solução de equações diofantinas. Século XXI: internet e outros temas atuais.",
     "difficultyLevel": "1/5",
     "evaluationStyle": "Trabalhos, Apresentações",
-    "teachers": "Jonice De Oliveira",
-    "teacherHistory": [],
+    "teachers": "Jonice Oliveira",
+    "teacherHistory": [
+      {
+        "name": "Jonice Oliveira",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Jonice Oliveira",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Jonice Oliveira",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Se for a Jonice comemore. Com a Marilu, relatos dizem que é bem trabalhoso, mas nada muito complicado.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -539,7 +799,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, apresentações",
     "teachers": "Vivian Dos Santos",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Vivian Santos",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Giseli Lopes",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Vivian Santos, Giseli Lopes",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Se garanta na P1!!!! Álgebra relacional is no joke.",
     "availability": "Alta",
     "schedule": "Qua-Sex 8h-10h"
@@ -565,7 +838,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Ralph Silva",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Ralph Silva",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Gastão Gomes",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Carlos Zanini",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria essencial pra AD e Redes. Estude bastante, ambos os professores que atualmente dão são tranquilos. Caso tenha muita dificuldade, o Responde Aí é uma das melhores fontes de estudo, basicamente segue o formato do conteúdo dado em sala.",
     "availability": "Alta",
     "schedule": "Ter-Qui 8h-10h"
@@ -588,8 +874,21 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Mitre Costa",
-    "teacherHistory": [],
-    "advice": "Matéria abstrata, pré-lógica. Estude e reze para não ser o Mitre. Apostila do Menasché é uma boa.",
+    "teacherHistory": [
+      {
+        "name": "Hugo Musso",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Hugo Musso",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Hugo Musso",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Matéria abstrata, pré-lógica. Estude e reze para não ser o Mitre. Apostila do Menasché e playlist no youtube são uma boa.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 13h-15h"
   },
@@ -608,7 +907,20 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Ronald Chiesse",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Ronald Chiesse",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Ronald Chiesse",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Vinícius Gusmão",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Se for Gusmão e Ronald: Faça. Se for o Sadoc dobra e passa pro próximo.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -629,10 +941,23 @@
     ],
     "credits": 4.0,
     "curriculum": "Etapas do processo de modelagem. Modelos científicos e definição de modelo matemático. Classificação dos modelos de interesse. Apresentação de exemplos dos vários tipos de modelos. Modelagem de problemas de diferentes áreas do conhecimento, como física, biologia, etc., baseados em sistemas de equações de diferenças e diferenciais, otimização, grafos e cadeias de Markov. Outros tópicos de interesse a critério do professor.",
-    "difficultyLevel": "4/5",
+    "difficultyLevel": "5/5",
     "evaluationStyle": "Trabalhos, listas",
-    "teachers": "Severino Collier",
-    "teacherHistory": [],
+    "teachers": "Daniel Alfaro",
+    "teacherHistory": [
+      {
+        "name": "Daniel Alfaro",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Severino Collier",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Severino Collier",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Complicado com TODO mundo. Não tem boa opção pra essa matéria. Muito abstrata, precisa de muito conhecimento etc.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -651,10 +976,23 @@
     ],
     "credits": 4.0,
     "curriculum": "Tradução de linguagem de alto nível para linguagem de montagem; Compilação com otimização e análise de desempenho; Comparativo entre as arquiteturas de 32 e 64 bits; Comunicação entre processos, chamadas de sistemas, tratadores de eventos; Ligação de programas e criação de bibliotecas estáticas e compartilhadas; Otimização de desempenho de programas frente a novas arquiteturas de processadores e limitações dos compiladores.",
-    "difficultyLevel": "3/5",
+    "difficultyLevel": "2/5",
     "evaluationStyle": "Provas, trabalhos",
-    "teachers": "Valéria Menezes",
-    "teacherHistory": [],
+    "teachers": "Valéria Bastos",
+    "teacherHistory": [
+      {
+        "name": "Valéria Bastos",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Valéria Bastos",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Valéria Bastos",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Outra matéria de arquitetura, bem baixo nível. Estude e refaça os exercícios do livro base.",
     "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
@@ -680,7 +1018,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas",
     "teachers": "Paulo Mann, Vinícius Gusmão",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Mitre Dourado",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Paulo Mann, Mitre Dourado",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Paulo Mann",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "é.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 10h-12h"
@@ -704,7 +1055,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos",
     "teachers": "Gabriel Pereira",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Gabriel Pereira",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Silvana Rossetto",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Silvana Rossetto",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria relativamente complicada, porém a didática da Silvana é excelente. Contudo, a mão dela é bem pesada então estude bastante.",
     "availability": "Baixa",
     "schedule": "Ter-Qui 8h-10h"
@@ -732,7 +1096,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Daniel Sadoc",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Daniel Sadoc",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Daniel Sadoc",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Daniel Sadoc",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Se for com o Sadoc é uma matéria 5/5. Muito conteúdista e densa, estudar nunca vai ser o suficiente. Caso a Carol esteja lecionando aproveite para passar.",
     "availability": "Alta",
     "schedule": "Seg-Qua 10h-12h"
@@ -755,7 +1132,20 @@
     "difficultyLevel": "4/5",
     "evaluationStyle": "Provas, trabalhos, listas",
     "teachers": "Paulo Mann",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Paulo Mann",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Carolina Marcelino",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Carolina Marcelino",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria densa, mas trabalhos relativamente tranquilos, cuidado com a prova",
     "availability": "Baixa",
     "schedule": "Ter-Qui 13h-15h"
@@ -777,11 +1167,24 @@
     ],
     "credits": 4.0,
     "curriculum": "Modelagem e Caracterização dos Problemas. Programação Linear. Programação Linear Inteira. Programação Não Linear Irrestrita. Aplicações.",
-    "difficultyLevel": "4/5",
+    "difficultyLevel": "2/5",
     "evaluationStyle": "Provas, trabalhos, listas, apresentações",
     "teachers": "Luziane",
-    "teacherHistory": [],
-    "advice": "Matemática densa, faça muitos exercícios, e faça as listas.",
+    "teacherHistory": [
+      {
+        "name": "Luziane Mendonça",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Luziane Mendonça",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Maria Helena",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Matemática densa, faça muitos exercícios, e faça as listas. Conte com a bondade da Luziane.",
     "availability": "Baixa",
     "schedule": ""
   },
@@ -799,7 +1202,20 @@
     "difficultyLevel": "2/5",
     "evaluationStyle": "Provas, listas",
     "teachers": "Aloísio Pina",
-    "teacherHistory": [],
+    "teacherHistory": [
+      {
+        "name": "Hugo Nóbrega",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Hugo Nóbrega",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Hugo Nóbrega",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Faça imediatamente.",
     "availability": "Baixa",
     "schedule": "Qua-Sex 8h-10h"
@@ -819,8 +1235,21 @@
     "curriculum": "Concepções do conhecimento e da pesquisa acadêmica. Tipos de pesquisa. Processo de desenvolvimento da pesquisa. Estruturação, redação e formatação de projeto de pesquisa. Relevância e contextualização da pesquisa. Fundamentação e contextualização da pesquisa. Estratégias de embasamento. Levantamento de fontes e referências. Ética na redação científica e legitimidade do saber. Métodos e estratégias de pesquisa. Coleta de dados. Técnicas para análise de dados. Planejamento e cronograma.",
     "difficultyLevel": "2/5",
     "evaluationStyle": "Apresentações, trabalhos",
-    "teachers": "Carla Amor Divino",
-    "teacherHistory": [],
+    "teachers": "Carla Delgado",
+    "teacherHistory": [
+      {
+        "name": "Maria Luiza",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Maria Luiza",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Maria Luiza",
+        "semester": "2025.1"
+      }
+    ],
     "advice": "Matéria tranquila, talvez tenha uma quantidade de trabalho um pouco desproporcional, por isso é recomendável puxar com algumas eletivas.",
     "availability": "Baixa",
     "schedule": "Seg-Qua 8h-10h"
@@ -840,8 +1269,21 @@
     "difficultyLevel": "3/5",
     "evaluationStyle": "Apresentações, prova",
     "teachers": "Gabriel Caldas",
-    "teacherHistory": [],
-    "advice": "Pouco se sabe sobre essa matéria, porém parece ser tranquila.",
+    "teacherHistory": [
+      {
+        "name": "Gabriel Caldas",
+        "semester": "2026.1"
+      },
+      {
+        "name": "Gabriel Caldas",
+        "semester": "2025.2"
+      },
+      {
+        "name": "Daniel Sadoc",
+        "semester": "2025.1"
+      }
+    ],
+    "advice": "Pouco se sabe sobre essa matéria, porém parece ser tranquila, conte com a tranquilidade do Caldas.",
     "availability": "Baixa",
     "schedule": ""
   },
