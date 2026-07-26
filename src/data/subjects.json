@@ -863,5 +863,22 @@
     "advice": "",
     "availability": "",
     "schedule": ""
+  },
+  {
+    "id": "ICPX06",
+    "name": "Horas Complementares",
+    "shortName": "Horas Compl",
+    "period": 8,
+    "preRequisites": [],
+    "postRequisites": [],
+    "credits": 2.0,
+    "curriculum": "",
+    "difficultyLevel": "",
+    "evaluationStyle": "",
+    "teachers": "",
+    "teacherHistory": [],
+    "advice": "",
+    "availability": "",
+    "schedule": ""
   }
 ]
