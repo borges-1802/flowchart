@@ -1,4 +1,3 @@
-import type { SubjectSchedule } from '../types/turma.types';
 import type { DisciplineOption } from './buildDisciplineOptions';
 
 export interface PpgiSubject {
@@ -8,7 +7,21 @@ export interface PpgiSubject {
   credits: number;
 }
 
-export function buildPpgiOptions(subjects: PpgiSubject[], schedules: SubjectSchedule[]): DisciplineOption[] {
+export interface PpgiTurma {
+  code: string;
+  teacher: string;
+  slots: { day: string; time: string }[];
+}
+
+export interface PpgiSchedule {
+  subjectId: string;
+  program: 'mestrado' | 'doutorado';
+  area: string;
+  hours: number;
+  turmas: PpgiTurma[];
+}
+
+export function buildPpgiOptions(subjects: PpgiSubject[], schedules: PpgiSchedule[]): DisciplineOption[] {
   const subjectById = new Map(subjects.map((subject) => [subject.id, subject]));
   const options: DisciplineOption[] = [];
 
@@ -28,6 +41,8 @@ export function buildPpgiOptions(subjects: PpgiSubject[], schedules: SubjectSche
         turmaCode: turma.code,
         teacher: turma.teacher,
         slots: turma.slots,
+        program: schedule.program,
+        area: schedule.area,
       });
     });
   }

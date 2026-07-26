@@ -6,69 +6,15 @@
     "credits": 4.0
   },
   {
-    "id": "ICP890",
-    "name": "Metodologia de Pesq Doutorado",
-    "shortName": "Metod Pesq Dout",
+    "id": "ICP743",
+    "name": "Sistemas Colaborativos e Computação Social",
+    "shortName": "Sist Colab Comp Social",
     "credits": 4.0
   },
   {
-    "id": "ICP707",
-    "name": "Estud Dir Inteligenc Comp II",
-    "shortName": "Intelig Comp II",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP826",
-    "name": "Est Dir Gestão Sist Complex II",
-    "shortName": "Sist Complex II",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP775",
-    "name": "Top Esp Otimização",
-    "shortName": "Top Esp Otim",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP734",
-    "name": "Aspectos Sociais Eng Software",
-    "shortName": "Aspec Soc Eng Soft",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP810",
-    "name": "Tóp Esp Anál Sist Complexos",
-    "shortName": "Anál Sist Complex",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP704",
-    "name": "Redes de Computadores",
-    "shortName": "Redes Comp (PPGI)",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP702",
-    "name": "Inteligência Computacional",
-    "shortName": "Intelig Comput",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP747",
-    "name": "Top Esp Met Tec Computação II",
-    "shortName": "Top Esp Met Tec II",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP765",
-    "name": "Análise Numérica I",
-    "shortName": "Anál Numérica I",
-    "credits": 4.0
-  },
-  {
-    "id": "ICP773",
-    "name": "Teoria de Grafos",
-    "shortName": "Teoria Grafos (PPGI)",
+    "id": "ICP746",
+    "name": "Top Esp Met Tec Computação I",
+    "shortName": "Top Esp Met Tec Comp I",
     "credits": 4.0
   },
   {
@@ -78,15 +24,15 @@
     "credits": 4.0
   },
   {
-    "id": "ICP740",
-    "name": "Lab Análise de Redes Sociais",
-    "shortName": "Lab Anál Redes Soc",
+    "id": "ICP747",
+    "name": "Top Esp Met Tec Computação II (Mineração de Dados)",
+    "shortName": "Top Esp MetTecComp II (Mineração)",
     "credits": 4.0
   },
   {
-    "id": "ICP824",
-    "name": "Top Esp Gestão Sist Complexos",
-    "shortName": "Gestão Sist Complex",
+    "id": "ICP747-TC",
+    "name": "Top Esp Met Tec Computação II (Álgebra p/ Programação)",
+    "shortName": "Top Esp MetTec Comp II (Álgebra)",
     "credits": 4.0
   },
   {
@@ -96,9 +42,99 @@
     "credits": 4.0
   },
   {
+    "id": "ICP702",
+    "name": "Inteligência Computacional",
+    "shortName": "Inteligência Computacional",
+    "credits": 4.0
+  },
+  {
     "id": "ICP712",
     "name": "Tóp Esp Sistemas Computação II",
     "shortName": "Tóp Esp Sist Comp II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP707",
+    "name": "Estud Dir Inteligenc Comp II",
+    "shortName": "ED Inteligenc Comp II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP711",
+    "name": "Top Esp Sist de Computação I (Otim c/ Metaheurísticas)",
+    "shortName": "Otim Metaheurísticas",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP704",
+    "name": "Redes de Computadores",
+    "shortName": "Redes Comp (PPGI)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP765",
+    "name": "Análise Numérica I",
+    "shortName": "Análise Numérica I",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP773",
+    "name": "Teoria de Grafos",
+    "shortName": "Teoria Grafos (PPGI)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP809",
+    "name": "Top Esp Otimização",
+    "shortName": "Top Esp Otimização (Dout)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP808",
+    "name": "Teoria Fundamental Grafos",
+    "shortName": "Teoria Fund Grafos",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP824",
+    "name": "Top Esp Gestão Sist Complexos",
+    "shortName": "Gestão Sist Complex",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP823",
+    "name": "Organizações como Sistemas Complexos",
+    "shortName": "Org Sist Complexos",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP890",
+    "name": "Metodologia de Pesq Doutorado",
+    "shortName": "Metod Pesq Dout",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP810",
+    "name": "Tóp Esp Anál Sist Complexos",
+    "shortName": "Anál Sist Complex",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP842",
+    "name": "Est Dirig Redes Sist Complex",
+    "shortName": "ED Redes Complex",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP826",
+    "name": "Est Dir Gestão Sist Complex II",
+    "shortName": "Getão Sist Complex II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP843",
+    "name": "Sist Adapt Compl Inteligentes",
+    "shortName": "Sist Adapt Compl Intel",
     "credits": 4.0
   },
   {

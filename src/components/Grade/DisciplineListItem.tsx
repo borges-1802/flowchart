@@ -48,7 +48,9 @@ export function DisciplineListItem({
           <span className="block truncate text-xs opacity-80">{option.teacher}</span>
           <span className="block truncate text-[11px] opacity-70">{schedule}</span>
         </span>
-        <span className="shrink-0 text-xs opacity-80">{option.hours}h</span>
+        <span className="shrink-0 rounded bg-black/20 px-1.5 py-0.5 text-[10px] font-bold">
+          {option.area || `${option.hours}h`}
+        </span>
         <button
           type="button"
           onClick={onRemove}
@@ -80,7 +82,13 @@ export function DisciplineListItem({
         <span className="block truncate text-xs text-neutral-500">{option.teacher}</span>
         <span className="block truncate text-[11px] text-neutral-500">{schedule}</span>
       </span>
-      <span className="shrink-0 text-xs text-neutral-500">{option.hours}h</span>
+      <span
+        className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-bold ${
+          option.area ? (isDark ? 'bg-neutral-700 text-neutral-300' : 'bg-neutral-200 text-neutral-600') : 'text-neutral-500'
+        }`}
+      >
+        {option.area || `${option.hours}h`}
+      </span>
     </button>
   );
 }

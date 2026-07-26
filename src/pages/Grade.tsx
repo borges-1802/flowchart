@@ -6,10 +6,11 @@ import { GradeSummary } from '../components/Grade/GradeSummary';
 import { GradeTabs } from '../components/Grade/GradeTabs';
 import { usePersistedState } from '../hooks/usePersistedState';
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
-import { buildPpgiOptions, type PpgiSubject } from '../domain/buildPpgiOptions';
+import { buildPpgiOptions, type PpgiSubject, type PpgiSchedule } from '../domain/buildPpgiOptions';
 import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import { getMigratedTabsState, type TabId, type TabData, type TabsState } from '../domain/gradeTabs';
+import type { PeriodFilter } from '../components/Grade/DisciplineList';
 import subjectsData from '../data/subjects.json';
 import electivesData from '../data/electives.json';
 import turmasData from '../data/turmas.json';
@@ -25,7 +26,7 @@ const schedules = turmasData as SubjectSchedule[];
 const bccOptions = buildDisciplineOptions(subjects, electives, schedules);
 
 const ppgiSubjects = ppgiSubjectsData as PpgiSubject[];
-const ppgiSchedules = ppgiTurmasData as SubjectSchedule[];
+const ppgiSchedules = ppgiTurmasData as PpgiSchedule[];
 const ppgiOptions = buildPpgiOptions(ppgiSubjects, ppgiSchedules);
 
 // Pool único: todas as colunas/abas usam o mesmo conjunto de disciplinas,
@@ -35,11 +36,12 @@ const periods = [...new Set(options.map((option) => option.period).filter((perio
   (a, b) => a - b,
 );
 const hasElectives = options.some((option) => option.period === 0);
-const hasPpgi = options.some((option) => option.period === -1);
+const hasPpgiMestrado = options.some((option) => option.period === -1 && option.program === 'mestrado');
+const hasPpgiDoutorado = options.some((option) => option.period === -1 && option.program === 'doutorado');
 
 export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
-  const [selectedPeriod, setSelectedPeriod] = useState<number | 'all' | 'eletiva' | 'ppgi'>('all');
+  const [selectedPeriod, setSelectedPeriod] = useState<PeriodFilter>('all');
   const [armedId, setArmedId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = usePersistedState<TabId>('grade:activeTab', 'A');
   const [tabsState, setTabsState] = usePersistedState<TabsState>('grade:tabs', getMigratedTabsState());
@@ -147,7 +149,8 @@ export function Grade() {
               options={options}
               periods={periods}
               hasElectives={hasElectives}
-              hasPpgi={hasPpgi}
+              hasPpgiMestrado={hasPpgiMestrado}
+              hasPpgiDoutorado={hasPpgiDoutorado}
               selectedPeriod={selectedPeriod}
               onPeriodChange={setSelectedPeriod}
               armedId={armedId}

@@ -13,6 +13,8 @@ export interface DisciplineOption {
   turmaCode: string;
   teacher: string;
   slots: { day: string; time: string }[];
+  program?: 'mestrado' | 'doutorado';
+  area?: string;
 }
 
 export function buildDisciplineOptions(

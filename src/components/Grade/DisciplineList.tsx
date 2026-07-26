@@ -1,14 +1,17 @@
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
 import { DisciplineListItem } from './DisciplineListItem';
 
+export type PeriodFilter = number | 'all' | 'eletiva' | 'ppgi-mestrado' | 'ppgi-doutorado';
+
 interface DisciplineListProps {
   theme: 'dark' | 'light';
   options: DisciplineOption[];
   periods: number[];
   hasElectives: boolean;
-  hasPpgi: boolean;
-  selectedPeriod: number | 'all' | 'eletiva' | 'ppgi';
-  onPeriodChange: (period: number | 'all' | 'eletiva' | 'ppgi') => void;
+  hasPpgiMestrado: boolean;
+  hasPpgiDoutorado: boolean;
+  selectedPeriod: PeriodFilter;
+  onPeriodChange: (period: PeriodFilter) => void;
   armedId: string | null;
   placedIds: Set<string>;
   colorAssignments: Record<string, number>;
@@ -21,7 +24,8 @@ export function DisciplineList({
   options,
   periods,
   hasElectives,
-  hasPpgi,
+  hasPpgiMestrado,
+  hasPpgiDoutorado,
   selectedPeriod,
   onPeriodChange,
   armedId,
@@ -31,14 +35,17 @@ export function DisciplineList({
   onRemove,
 }: DisciplineListProps) {
   const isDark = theme === 'dark';
+
   const filteredOptions =
     selectedPeriod === 'all'
       ? options
       : selectedPeriod === 'eletiva'
         ? options.filter((option) => option.period === 0)
-        : selectedPeriod === 'ppgi'
-          ? options.filter((option) => option.period === -1)
-          : options.filter((option) => option.period === selectedPeriod);
+        : selectedPeriod === 'ppgi-mestrado'
+          ? options.filter((option) => option.period === -1 && option.program === 'mestrado')
+          : selectedPeriod === 'ppgi-doutorado'
+            ? options.filter((option) => option.period === -1 && option.program === 'doutorado')
+            : options.filter((option) => option.period === selectedPeriod);
 
   return (
     <div className="flex h-full flex-col">
@@ -50,7 +57,11 @@ export function DisciplineList({
         value={selectedPeriod}
         onChange={(event) => {
           const value = event.target.value;
-          onPeriodChange(value === 'all' || value === 'eletiva' || value === 'ppgi' ? value : Number(value));
+          onPeriodChange(
+            value === 'all' || value === 'eletiva' || value === 'ppgi-mestrado' || value === 'ppgi-doutorado'
+              ? value
+              : Number(value),
+          );
         }}
         className={`mb-3 rounded-lg border px-3 py-2 text-sm ${
           isDark ? 'border-neutral-700 bg-neutral-800 text-white' : 'border-neutral-300 bg-white text-neutral-900'
@@ -63,7 +74,8 @@ export function DisciplineList({
           </option>
         ))}
         {hasElectives && <option value="eletiva">Eletivas</option>}
-        {hasPpgi && <option value="ppgi">PPGI</option>}
+        {hasPpgiMestrado && <option value="ppgi-mestrado">PPGI - Mestrado</option>}
+        {hasPpgiDoutorado && <option value="ppgi-doutorado">PPGI - Doutorado</option>}
       </select>
 
       <div className="custom-scrollbar flex flex-1 flex-col gap-1 overflow-y-auto">

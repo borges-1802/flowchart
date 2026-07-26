@@ -1,7 +1,8 @@
 [
   {
     "subjectId": "ICP790",
-    "period": 0,
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
@@ -21,92 +22,31 @@
     ]
   },
   {
-    "subjectId": "ICP890",
-    "period": 0,
+    "subjectId": "ICP743",
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Adriana Vivacqua, Juliana França",
+        "teacher": "Adriana Vivacqua",
         "slots": [
           {
             "day": "TER",
-            "time": "08-10h"
+            "time": "13-15h"
           },
           {
             "day": "TER",
-            "time": "10-12h"
+            "time": "15-17h"
           }
         ]
       }
     ]
   },
   {
-    "subjectId": "ICP707",
-    "period": 0,
-    "hours": 4,
-    "turmas": [
-      {
-        "code": "T1",
-        "teacher": "Daniel Sadoc",
-        "slots": [
-          {
-            "day": "QUA",
-            "time": "08-10h"
-          },
-          {
-            "day": "SEX",
-            "time": "08-10h"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "subjectId": "ICP826",
-    "period": 0,
-    "hours": 4,
-    "turmas": [
-      {
-        "code": "T1",
-        "teacher": "Daniel Sadoc",
-        "slots": [
-          {
-            "day": "QUA",
-            "time": "08-10h"
-          },
-          {
-            "day": "SEX",
-            "time": "08-10h"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "subjectId": "ICP775",
-    "period": 0,
-    "hours": 4,
-    "turmas": [
-      {
-        "code": "T1",
-        "teacher": "Amaury Cruz",
-        "slots": [
-          {
-            "day": "SEG",
-            "time": "08-10h"
-          },
-          {
-            "day": "QUA",
-            "time": "08-10h"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "subjectId": "ICP734",
-    "period": 0,
+    "subjectId": "ICP746",
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
@@ -114,11 +54,11 @@
         "teacher": "Rafael Mello",
         "slots": [
           {
-            "day": "QUI",
+            "day": "TER",
             "time": "08-10h"
           },
           {
-            "day": "QUI",
+            "day": "TER",
             "time": "10-12h"
           }
         ]
@@ -126,29 +66,62 @@
     ]
   },
   {
-    "subjectId": "ICP810",
-    "period": 0,
+    "subjectId": "ICP742",
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Carla Delgado",
-        "slots": []
+        "teacher": "Giseli Lopes",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUI",
+            "time": "13-15h"
+          }
+        ]
       }
     ]
   },
   {
-    "subjectId": "ICP704",
-    "period": 0,
+    "subjectId": "ICP747",
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Daniel Sadoc",
+        "teacher": "Silas Lima Filho (Mineração de Dados)",
         "slots": [
           {
-            "day": "QUA",
-            "time": "10-12h"
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP732",
+    "program": "mestrado",
+    "area": "MT",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Maria Luiza Campos",
+        "slots": [
+          {
+            "day": "SEX",
+            "time": "08-10h"
           },
           {
             "day": "SEX",
@@ -160,7 +133,8 @@
   },
   {
     "subjectId": "ICP702",
-    "period": 0,
+    "program": "mestrado",
+    "area": "MT",
     "hours": 4,
     "turmas": [
       {
@@ -180,13 +154,36 @@
     ]
   },
   {
-    "subjectId": "ICP719",
-    "period": 0,
+    "subjectId": "ICP712",
+    "program": "mestrado",
+    "area": "SC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Gabriel Caldas",
+        "teacher": "Cabral Lima",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "TER",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP707",
+    "program": "mestrado",
+    "area": "SC",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc, Heudson Mirandola",
         "slots": [
           {
             "day": "QUA",
@@ -201,21 +198,44 @@
     ]
   },
   {
-    "subjectId": "ICP747",
-    "period": 0,
+    "subjectId": "ICP711",
+    "program": "mestrado",
+    "area": "SC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Silas Lima Filho",
+        "teacher": "Carolina Marcelino",
         "slots": [
           {
-            "day": "TER",
-            "time": "15-17h"
+            "day": "SEG",
+            "time": "13-15h"
           },
           {
-            "day": "QUI",
-            "time": "15-17h"
+            "day": "QUA",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP704",
+    "program": "mestrado",
+    "area": "SC",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "10-12h"
+          },
+          {
+            "day": "SEX",
+            "time": "10-12h"
           }
         ]
       }
@@ -223,12 +243,26 @@
   },
   {
     "subjectId": "ICP765",
-    "period": 0,
+    "program": "mestrado",
+    "area": "TC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
         "teacher": "Marcello Goulart",
+        "slots": []
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP747-TC",
+    "program": "mestrado",
+    "area": "TC",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T2",
+        "teacher": "João Paixão (Álgebra p/ Programação)",
         "slots": [
           {
             "day": "SEG",
@@ -244,12 +278,13 @@
   },
   {
     "subjectId": "ICP773",
-    "period": 0,
+    "program": "mestrado",
+    "area": "TC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Matheus Adauto",
+        "teacher": "Matheus Adauto, João Paixão",
         "slots": [
           {
             "day": "SEG",
@@ -264,20 +299,21 @@
     ]
   },
   {
-    "subjectId": "ICP742",
-    "period": 0,
+    "subjectId": "ICP809",
+    "program": "doutorado",
+    "area": "ASC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Giseli Lopes",
+        "teacher": "João Paixão",
         "slots": [
-            {
-            "day": "TER",
+          {
+            "day": "SEG",
             "time": "13-15h"
           },
           {
-            "day": "QUI",
+            "day": "QUA",
             "time": "13-15h"
           }
         ]
@@ -285,21 +321,22 @@
     ]
   },
   {
-    "subjectId": "ICP740",
-    "period": 0,
+    "subjectId": "ICP808",
+    "program": "doutorado",
+    "area": "ASC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Jonice Oliveira",
+        "teacher": "Matheus Adauto, João Paixão",
         "slots": [
           {
-            "day": "TER",
-            "time": "15-17h"
+            "day": "SEG",
+            "time": "08-10h"
           },
           {
-            "day": "QUI",
-            "time": "15-17h"
+            "day": "QUA",
+            "time": "08-10h"
           }
         ]
       }
@@ -307,14 +344,15 @@
   },
   {
     "subjectId": "ICP824",
-    "period": 0,
+    "program": "doutorado",
+    "area": "GSC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
         "teacher": "Jonice Oliveira",
         "slots": [
-            {
+          {
             "day": "TER",
             "time": "15-17h"
           },
@@ -327,17 +365,84 @@
     ]
   },
   {
-    "subjectId": "ICP732",
-    "period": 0,
+    "subjectId": "ICP823",
+    "program": "doutorado",
+    "area": "GSC",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Maria Luiza Campos",
+        "teacher": "Adriana Vivacqua",
         "slots": [
-            {
-            "day": "SEX",
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "TER",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP890",
+    "program": "doutorado",
+    "area": "GSC",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Adriana Vivacqua, Juliana França",
+        "slots": [
+          {
+            "day": "TER",
             "time": "08-10h"
+          },
+          {
+            "day": "TER",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP810",
+    "program": "doutorado",
+    "area": "SCA",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Carla Delgado",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "TER",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP842",
+    "program": "doutorado",
+    "area": "SCA",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "10-12h"
           },
           {
             "day": "SEX",
@@ -348,17 +453,66 @@
     ]
   },
   {
-    "subjectId": "ICP712",
-    "period": 0,
+    "subjectId": "ICP826",
+    "program": "doutorado",
+    "area": "SCA",
     "hours": 4,
     "turmas": [
       {
         "code": "T1",
-        "teacher": "Cabral Lima",
+        "teacher": "Daniel Sadoc",
         "slots": [
           {
-            "day": "TER",
-            "time": "15-17h"
+            "day": "QUA",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP843",
+    "program": "doutorado",
+    "area": "SCA",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Carolina Marcelino",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUA",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP719",
+    "program": "mestrado",
+    "area": "",
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Gabriel Caldas",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "08-10h"
           }
         ]
       }
