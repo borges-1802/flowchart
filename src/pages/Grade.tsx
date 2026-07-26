@@ -1,21 +1,26 @@
 import { useEffect, useMemo, useState } from 'react';
+
 import { Header } from '../components/Header';
 import { DisciplineList } from '../components/Grade/DisciplineList';
 import { ScheduleGrid } from '../components/Grade/ScheduleGrid';
 import { GradeSummary } from '../components/Grade/GradeSummary';
 import { GradeTabs } from '../components/Grade/GradeTabs';
+
 import { usePersistedState } from '../hooks/usePersistedState';
+
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
 import { buildPpgiOptions, type PpgiSubject, type PpgiSchedule } from '../domain/buildPpgiOptions';
 import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import { getMigratedTabsState, type TabId, type TabData, type TabsState } from '../domain/gradeTabs';
-import type { PeriodFilter } from '../components/Grade/DisciplineList';
+
 import subjectsData from '../data/subjects.json';
 import electivesData from '../data/electives.json';
 import turmasData from '../data/turmas.json';
 import ppgiSubjectsData from '../data/ppgiSubjects.json';
 import ppgiTurmasData from '../data/ppgiTurmas.json';
+
+import type { PeriodFilter } from '../components/Grade/DisciplineList';
 import type { Subject } from '../types/subject.types';
 import type { SubjectSchedule } from '../types/turma.types';
 import type { ElectiveOption } from '../types/electiveOption.types';
@@ -177,6 +182,7 @@ export function Grade() {
                 placedIds={placedIds}
                 armedOption={armedOption}
                 colorAssignments={colorAssignments}
+                onRemove={handleRemove}
               />
             </div>
           </div>

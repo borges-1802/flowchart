@@ -10,6 +10,7 @@ interface ScheduleGridProps {
   placedIds: Set<string>;
   armedOption: DisciplineOption | null;
   colorAssignments: Record<string, number>;
+  onRemove: (optionId: string) => void;
 }
 
 const dayLabels: Record<(typeof DAYS)[number], string> = {
@@ -20,7 +21,7 @@ const dayLabels: Record<(typeof DAYS)[number], string> = {
   SEX: 'SEX',
 };
 
-export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssignments }: ScheduleGridProps) {
+export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssignments, onRemove }: ScheduleGridProps) {
   const isDark = theme === 'dark';
 
   return (
@@ -73,6 +74,7 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
                     : null
                 }
                 conflictColorIndex={armedOption ? colorAssignments[armedOption.subjectId] : undefined}
+                onRemove={onRemove}
               />
             );
           })}

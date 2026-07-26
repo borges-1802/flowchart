@@ -22,6 +22,10 @@ const steps = [
     title: '',
     text: 'Cada período tem um botão "Marcar período todo" que conclui tudo que já está disponível e vira "Desmarcar período todo" quando o período estiver 100% completo.',
   },
+  {
+    title: '',
+    text: 'Embaixo do fluxograma, o painel de créditos mostra quanto você já concluiu (total e por categoria: obrigatórias, eletivas, humanidades, livre escolha).',
+  },
 ];
 
 const gradeSteps = [
@@ -43,7 +47,7 @@ const gradeSteps = [
   },
   {
     title: 'Pra remover',
-    text: 'clique no X dentro do item já encaixado, na lista de disciplinas.',
+    text: 'clique no X dentro do item já encaixado na lista, ou clique duas vezes direto no quadrado dela na grade.',
   },
   {
     title: '',
@@ -52,6 +56,10 @@ const gradeSteps = [
   {
     title: '',
     text: 'Clique duas vezes no nome de uma aba pra renomear (ex: "Plano A", "Se der ruim"). O nome fica salvo, assim como o conteúdo de cada grade.',
+  },
+  {
+    title: '',
+    text: 'O dropdown de período também tem opções pra Eletivas e pra PPGI (Mestrado e Doutorado), caso queira montar uma grade de pós.',
   },
 ];
 

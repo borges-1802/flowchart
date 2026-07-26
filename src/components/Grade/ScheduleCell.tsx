@@ -9,6 +9,7 @@ interface ScheduleCellProps {
   previewColor: string | null;
   conflictOption: DisciplineOption | null;
   conflictColorIndex: number | undefined;
+  onRemove: (optionId: string) => void;
 }
 
 export function ScheduleCell({
@@ -19,6 +20,7 @@ export function ScheduleCell({
   previewColor,
   conflictOption,
   conflictColorIndex,
+  onRemove,
 }: ScheduleCellProps) {
   const isDark = theme === 'dark';
 
@@ -30,8 +32,11 @@ export function ScheduleCell({
     const conflictColor = conflictColorIndex !== undefined ? getColorByIndex(conflictColorIndex) : null;
 
     return (
-      <div
-        className={`relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded px-0.5 text-center sm:aspect-auto sm:h-16 sm:rounded-lg sm:px-1 ${bgClass} ${textClass}`}
+      <button
+        type="button"
+        onDoubleClick={() => onRemove(occupant.id)}
+        title="Clique duas vezes pra remover da grade"
+        className={`relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded px-0.5 text-center transition-opacity hover:opacity-80 sm:aspect-auto sm:h-16 sm:rounded-lg sm:px-1 ${bgClass} ${textClass}`}
       >
         <span className="line-clamp-2 w-full wrap-break-word text-[8px] font-semibold leading-[1.1] sm:line-clamp-1 sm:truncate sm:text-xs sm:leading-tight">
           {occupant.shortName}
@@ -47,7 +52,7 @@ export function ScheduleCell({
             {conflictOption.shortName}
           </span>
         )}
-      </div>
+      </button>
     );
   }
 
