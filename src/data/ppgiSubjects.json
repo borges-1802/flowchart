@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ICP790",
+    "name": "Metodologia de Pesq P/ Comput",
+    "shortName": "Metod Pesq Mestr",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP890",
+    "name": "Metodologia de Pesq Doutorado",
+    "shortName": "Metod Pesq Dout",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP707",
+    "name": "Estud Dir Inteligenc Comp II",
+    "shortName": "Intelig Comp II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP826",
+    "name": "Est Dir Gestão Sist Complex II",
+    "shortName": "Sist Complex II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP775",
+    "name": "Top Esp Otimização",
+    "shortName": "Top Esp Otim",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP734",
+    "name": "Aspectos Sociais Eng Software",
+    "shortName": "Aspec Soc Eng Soft",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP810",
+    "name": "Tóp Esp Anál Sist Complexos",
+    "shortName": "Anál Sist Complex",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP704",
+    "name": "Redes de Computadores",
+    "shortName": "Redes Comp (PPGI)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP702",
+    "name": "Inteligência Computacional",
+    "shortName": "Intelig Comput",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP747",
+    "name": "Top Esp Met Tec Computação II",
+    "shortName": "Top Esp Met Tec II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP765",
+    "name": "Análise Numérica I",
+    "shortName": "Anál Numérica I",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP773",
+    "name": "Teoria de Grafos",
+    "shortName": "Teoria Grafos (PPGI)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP742",
+    "name": "Recuperação da Informação",
+    "shortName": "Rec Info (PPGI)",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP740",
+    "name": "Lab Análise de Redes Sociais",
+    "shortName": "Lab Anál Redes Soc",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP824",
+    "name": "Top Esp Gestão Sist Complexos",
+    "shortName": "Gestão Sist Complex",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP732",
+    "name": "Fundamentos de Modelagem",
+    "shortName": "Fund Modelagem",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP712",
+    "name": "Tóp Esp Sistemas Computação II",
+    "shortName": "Tóp Esp Sist Comp II",
+    "credits": 4.0
+  },
+  {
+    "id": "ICP719",
+    "name": "Segurança em Redes",
+    "shortName": "Segurança em Redes",
+    "credits": 4.0
+  }
+]

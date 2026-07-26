@@ -1,0 +1,367 @@
+[
+  {
+    "subjectId": "ICP790",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Adriana Vivacqua, Juliana França",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "08-10h"
+          },
+          {
+            "day": "TER",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP890",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Adriana Vivacqua, Juliana França",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "08-10h"
+          },
+          {
+            "day": "TER",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP707",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP826",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP775",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Amaury Cruz",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "08-10h"
+          },
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP734",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Rafael Mello",
+        "slots": [
+          {
+            "day": "QUI",
+            "time": "08-10h"
+          },
+          {
+            "day": "QUI",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP810",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Carla Delgado",
+        "slots": []
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP704",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Daniel Sadoc",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "10-12h"
+          },
+          {
+            "day": "SEX",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP702",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Paulo Mann",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUI",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP719",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Gabriel Caldas",
+        "slots": [
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP747",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Silas Lima Filho",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP765",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Marcello Goulart",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUA",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP773",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Matheus Adauto",
+        "slots": [
+          {
+            "day": "SEG",
+            "time": "08-10h"
+          },
+          {
+            "day": "QUA",
+            "time": "08-10h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP742",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Giseli Lopes",
+        "slots": [
+            {
+            "day": "TER",
+            "time": "13-15h"
+          },
+          {
+            "day": "QUI",
+            "time": "13-15h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP740",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Jonice Oliveira",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP824",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Jonice Oliveira",
+        "slots": [
+            {
+            "day": "TER",
+            "time": "15-17h"
+          },
+          {
+            "day": "QUI",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP732",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Maria Luiza Campos",
+        "slots": [
+            {
+            "day": "SEX",
+            "time": "08-10h"
+          },
+          {
+            "day": "SEX",
+            "time": "10-12h"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subjectId": "ICP712",
+    "period": 0,
+    "hours": 4,
+    "turmas": [
+      {
+        "code": "T1",
+        "teacher": "Cabral Lima",
+        "slots": [
+          {
+            "day": "TER",
+            "time": "15-17h"
+          }
+        ]
+      }
+    ]
+  }
+]

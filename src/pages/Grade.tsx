@@ -6,12 +6,15 @@ import { GradeSummary } from '../components/Grade/GradeSummary';
 import { GradeTabs } from '../components/Grade/GradeTabs';
 import { usePersistedState } from '../hooks/usePersistedState';
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
+import { buildPpgiOptions, type PpgiSubject } from '../domain/buildPpgiOptions';
 import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import { getMigratedTabsState, type TabId, type TabData, type TabsState } from '../domain/gradeTabs';
 import subjectsData from '../data/subjects.json';
 import electivesData from '../data/electives.json';
 import turmasData from '../data/turmas.json';
+import ppgiSubjectsData from '../data/ppgiSubjects.json';
+import ppgiTurmasData from '../data/ppgiTurmas.json';
 import type { Subject } from '../types/subject.types';
 import type { SubjectSchedule } from '../types/turma.types';
 import type { ElectiveOption } from '../types/electiveOption.types';
@@ -19,15 +22,24 @@ import type { ElectiveOption } from '../types/electiveOption.types';
 const subjects = subjectsData as Subject[];
 const electives = electivesData as ElectiveOption[];
 const schedules = turmasData as SubjectSchedule[];
-const options = buildDisciplineOptions(subjects, electives, schedules);
+const bccOptions = buildDisciplineOptions(subjects, electives, schedules);
+
+const ppgiSubjects = ppgiSubjectsData as PpgiSubject[];
+const ppgiSchedules = ppgiTurmasData as SubjectSchedule[];
+const ppgiOptions = buildPpgiOptions(ppgiSubjects, ppgiSchedules);
+
+// Pool único: todas as colunas/abas usam o mesmo conjunto de disciplinas,
+// BCC + PPGI juntos. O dropdown de período é quem filtra qual parte ver.
+const options = [...bccOptions, ...ppgiOptions];
 const periods = [...new Set(options.map((option) => option.period).filter((period) => period > 0))].sort(
   (a, b) => a - b,
 );
 const hasElectives = options.some((option) => option.period === 0);
+const hasPpgi = options.some((option) => option.period === -1);
 
 export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
-  const [selectedPeriod, setSelectedPeriod] = useState<number | 'all' | 'eletiva'>('all');
+  const [selectedPeriod, setSelectedPeriod] = useState<number | 'all' | 'eletiva' | 'ppgi'>('all');
   const [armedId, setArmedId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = usePersistedState<TabId>('grade:activeTab', 'A');
   const [tabsState, setTabsState] = usePersistedState<TabsState>('grade:tabs', getMigratedTabsState());
@@ -53,7 +65,7 @@ export function Grade() {
     setTabsState((current) => ({ ...current, [activeTab]: updater(current[activeTab]) }));
   }
 
-  const currentTab = tabsState[activeTab];
+  const currentTab = tabsState[activeTab] ?? { placedIds: [], colorAssignments: {} };
   const placedIds = useMemo(() => new Set(currentTab.placedIds), [currentTab.placedIds]);
   const colorAssignments = currentTab.colorAssignments;
 
@@ -135,6 +147,7 @@ export function Grade() {
               options={options}
               periods={periods}
               hasElectives={hasElectives}
+              hasPpgi={hasPpgi}
               selectedPeriod={selectedPeriod}
               onPeriodChange={setSelectedPeriod}
               armedId={armedId}
@@ -154,7 +167,7 @@ export function Grade() {
               onRename={handleRenameTab}
             />
 
-            <div className={`overflow-x-auto rounded-xl p-4 ${cardClass}`}>
+            <div className={`mx-auto w-[75%] max-w-65 overflow-x-auto rounded-xl p-4 sm:mx-0 sm:w-full sm:max-w-none ${cardClass}`}>
               <ScheduleGrid
                 theme={theme}
                 options={options}
