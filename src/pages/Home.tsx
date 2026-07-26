@@ -208,6 +208,13 @@ export function Home() {
           theme={theme}
           onSelect={handleSelectElective}
           onClose={() => setOpenSlotId(null)}
+          usedIds={
+            new Set(
+              Object.entries(selectedElectives)
+                .filter(([slotId]) => slotId !== openSlot.id)
+                .map(([, selected]) => selected.id),
+            )
+          }
         />
       )}
     </div>

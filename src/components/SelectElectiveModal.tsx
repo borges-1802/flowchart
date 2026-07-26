@@ -20,9 +20,10 @@ interface SelectElectiveModalProps {
   theme: 'dark' | 'light';
   onSelect: (option: { id: string; name: string; shortName: string }) => void;
   onClose: () => void;
+  usedIds: Set<string>;
 }
 
-export function SelectElectiveModal({ slot, theme, onSelect, onClose }: SelectElectiveModalProps) {
+export function SelectElectiveModal({ slot, theme, onSelect, onClose, usedIds }: SelectElectiveModalProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [freeText, setFreeText] = useState('');
   const isDark = theme === 'dark';
@@ -38,9 +39,11 @@ export function SelectElectiveModal({ slot, theme, onSelect, onClose }: SelectEl
   const filteredOptions = useMemo(() => {
     const query = searchQuery.toLowerCase();
     return pool.filter(
-      (option) => option.name.toLowerCase().includes(query) || option.id.toLowerCase().includes(query),
+      (option) =>
+        !usedIds.has(option.id) &&
+        (option.name.toLowerCase().includes(query) || option.id.toLowerCase().includes(query)),
     );
-  }, [pool, searchQuery]);
+  }, [pool, searchQuery, usedIds]);
 
   if (slot.kind === 'livre') {
     return (
