@@ -14,7 +14,7 @@ export function Legend({ theme }: LegendProps) {
   const textClass = theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500';
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 pb-6 text-xs">
+    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
         <p>Legenda:</p>
       {items.map((item) => (
         <span key={item.label} className={`flex items-center gap-1.5 ${textClass}`}>

@@ -1,15 +1,22 @@
 import { useEffect, useState } from 'react';
+
 import { usePersistedState } from '../hooks/usePersistedState';
+
 import { Header } from '../components/Header';
 import { SemesterColumn } from '../components/SemesterColumn';
 import { SelectElectiveModal } from '../components/SelectElectiveModal';
 import { SubjectDetailPanel } from '../components/SubjectDetailPanel';
 import { Legend } from '../components/Legend';
+import { CreditsCounter } from '../components/CreditsCounter';
+
 import { getSubjectStatus } from '../domain/getSubjectStatus';
+import { computeCreditsSummary } from '../domain/creditsSummary';
+
 import subjectsData from '../data/subjects.json';
 import electiveSlotsData from '../data/electiveSlots.json';
 import electivesData from '../data/electives.json';
 import humanitiesData from '../data/humanities.json';
+
 import type { Subject } from '../types/subject.types';
 import type { ElectiveSlot } from '../types/electiveSlot.types';
 import type { ElectiveOption } from '../types/electiveOption.types';
@@ -183,7 +190,15 @@ export function Home() {
         ))}
       </div>
 
-      <Legend theme={theme} />
+      <div className="flex justify-center px-4 pb-6 pt-1">
+        <div className="flex flex-col items-center gap-4">
+          <CreditsCounter
+            theme={theme}
+            summary={computeCreditsSummary(subjects, electives, humanities, electiveSlots, completedIds, selectedElectives)}
+          />
+          <Legend theme={theme} />
+        </div>
+      </div>
 
       {selectedSubject && <SubjectDetailPanel theme={theme} subject={selectedSubject} nameById={nameById} />}
 
