@@ -167,7 +167,7 @@ export function Grade() {
               onRename={handleRenameTab}
             />
 
-            <div className={`mx-auto w-[75%] max-w-65 overflow-x-auto rounded-xl p-4 sm:mx-0 sm:w-full sm:max-w-none ${cardClass}`}>
+            <div className={`overflow-x-auto rounded-xl p-4 ${cardClass}`}>
               <ScheduleGrid
                 theme={theme}
                 options={options}
