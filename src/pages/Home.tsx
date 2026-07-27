@@ -11,6 +11,7 @@ import { CreditsCounter } from '../components/CreditsCounter';
 
 import { getSubjectStatus } from '../domain/getSubjectStatus';
 import { computeCreditsSummary } from '../domain/creditsSummary';
+import { findSubjectLike } from '../domain/findSubjectLike';
 
 import subjectsData from '../data/subjects.json';
 import electiveSlotsData from '../data/electiveSlots.json';
@@ -147,7 +148,23 @@ export function Home() {
   }
 
   const isDark = theme === 'dark';
-  const selectedSubject = subjects.find((subject) => subject.id === selectedId) ?? null;
+  const selectedSubject = selectedId ? findSubjectLike(selectedId, subjects, electives, humanities) : null;
+
+  const selectedStatus = selectedSubject
+    ? getSubjectStatus({
+        id: selectedSubject.id,
+        preRequisites: selectedSubject.preRequisites,
+        completedIds,
+        selectedSubject,
+      })
+    : null;
+
+  const isSelectedElective = selectedSubject ? !subjects.some((subject) => subject.id === selectedSubject.id) : false;
+  const showOverrideForId = selectedSubject && isSelectedElective && selectedStatus === 'locked' ? selectedSubject.id : null;
+
+  function handleForceComplete(id: string) {
+    setCompletedIds((current) => (current.includes(id) ? current : [...current, id]));
+  }
   const openSlot = electiveSlots.find((slot) => slot.id === openSlotId) ?? null;
 
   useEffect(() => {
@@ -186,6 +203,10 @@ export function Home() {
             onCompleteAll={() => handleCompleteColumn(period)}
             isComplete={isPeriodComplete(period)}
             onUncompleteAll={() => handleUncompleteColumn(period)}
+            theme={theme}
+            showOverrideForId={showOverrideForId}
+            onConfirmOverride={() => selectedSubject && handleForceComplete(selectedSubject.id)}
+            onDismissOverride={() => setSelectedId(null)}
           />
         ))}
       </div>

@@ -22,6 +22,10 @@ interface SemesterColumnProps {
   onCompleteAll: () => void;
   isComplete: boolean;
   onUncompleteAll: () => void;
+  theme: 'dark' | 'light';
+  showOverrideForId: string | null;
+  onConfirmOverride: () => void;
+  onDismissOverride: () => void;
 }
 
 export function SemesterColumn({
@@ -37,6 +41,10 @@ export function SemesterColumn({
   onCompleteAll,
   isComplete,
   onUncompleteAll,
+  theme,
+  showOverrideForId,
+  onConfirmOverride,
+  onDismissOverride,
 }: SemesterColumnProps) {
   return (
     <div className="w-full sm:w-34 sm:shrink-0">
@@ -62,6 +70,10 @@ export function SemesterColumn({
               isSelected={selected ? selectedId === selected.id : false}
               onClick={() => onSlotClick(slot)}
               onOpenPicker={() => onSlotOpenPicker(slot.id)}
+              theme={theme}
+              showRequirementOverride={selected ? selected.id === showOverrideForId : false}
+              onConfirmOverride={onConfirmOverride}
+              onDismissOverride={onDismissOverride}
             />
           );
         })}
