@@ -83,14 +83,15 @@ export function Home() {
     handleEntityClick(id, subject.preRequisites);
   }
 
+  function getElectivePreRequisites(slot: ElectiveSlot, electiveId: string): string[] {
+    return slot.kind === 'condicionada' ? (electives.find((option) => option.id === electiveId)?.preRequisites ?? []) : [];
+  }
+
   function handleSlotClick(slot: ElectiveSlot) {
     const selected = selectedElectives[slot.id];
     if (!selected) return;
 
-    const preRequisites =
-      slot.kind === 'condicionada'
-        ? (electives.find((option) => option.id === selected.id)?.preRequisites ?? [])
-        : [];
+    const preRequisites = getElectivePreRequisites(slot, selected.id);
 
     handleEntityClick(selected.id, preRequisites);
   }
@@ -207,6 +208,7 @@ export function Home() {
             showOverrideForId={showOverrideForId}
             onConfirmOverride={() => selectedSubject && handleForceComplete(selectedSubject.id)}
             onDismissOverride={() => setSelectedId(null)}
+            getElectivePreRequisites={getElectivePreRequisites}
           />
         ))}
       </div>

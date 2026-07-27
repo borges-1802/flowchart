@@ -26,6 +26,7 @@ interface SemesterColumnProps {
   showOverrideForId: string | null;
   onConfirmOverride: () => void;
   onDismissOverride: () => void;
+  getElectivePreRequisites: (slot: ElectiveSlot, electiveId: string) => string[];
 }
 
 export function SemesterColumn({
@@ -45,6 +46,7 @@ export function SemesterColumn({
   showOverrideForId,
   onConfirmOverride,
   onDismissOverride,
+  getElectivePreRequisites,
 }: SemesterColumnProps) {
   return (
     <div className="w-full sm:w-34 sm:shrink-0">
@@ -66,7 +68,7 @@ export function SemesterColumn({
               key={slot.id}
               slot={slot}
               selected={selected}
-              status={selected ? getStatus(selected.id, []) : 'locked'}
+              status={selected ? getStatus(selected.id, getElectivePreRequisites(slot, selected.id)) : 'locked'}
               isSelected={selected ? selectedId === selected.id : false}
               onClick={() => onSlotClick(slot)}
               onOpenPicker={() => onSlotOpenPicker(slot.id)}
