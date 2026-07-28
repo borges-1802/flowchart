@@ -62,17 +62,6 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         </button>
       </div>
 
-      {canInstall && (
-        <button
-          type="button"
-          aria-label="Instalar aplicativo"
-          onClick={promptInstall}
-          className={`flex h-9 w-9 items-center justify-center rounded-lg text-current sm:hidden ${hoverClass}`}
-        >
-          <Download className="h-5 w-5" />
-        </button>
-      )}
-
       <button
         type="button"
         aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
@@ -111,6 +100,20 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           >
             <Info className="h-4 w-4" />Sobre
           </Link>
+
+          {canInstall && (
+            <button
+              type="button"
+              onClick={() => {
+                promptInstall();
+                closeMenu();
+              }}
+              className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
+            >
+              <Download className="h-4 w-4" />
+              Baixar Flowchart
+            </button>
+          )}
 
           <button
             type="button"
