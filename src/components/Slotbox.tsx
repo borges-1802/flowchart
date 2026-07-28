@@ -102,6 +102,7 @@ export function SlotBox({
     <div className="relative">
       <button
         type="button"
+        id={selected ? `subject-${selected.id}` : undefined}
         onMouseDown={startHold}
         onMouseUp={cancelHold}
         onMouseLeave={cancelHold}

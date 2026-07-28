@@ -19,6 +19,7 @@ export function SubjectBox({ subject, status, isSelected, onClick }: SubjectBoxP
   return (
     <button
       type="button"
+      id={`subject-${subject.id}`}
       onClick={(event) => {
         event.stopPropagation();
         onClick(subject.id);
