@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Menu, ChartBar, CalendarDays, Info, X } from 'lucide-react';
+import { Sun, Moon, Menu, ChartBar, CalendarDays, Info, Download, X } from 'lucide-react';
+import { usePwaInstall } from '../hooks/usePwaInstall';
 interface HeaderProps {
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
@@ -8,6 +9,7 @@ interface HeaderProps {
 
 export function Header({ theme, onToggleTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { canInstall, promptInstall } = usePwaInstall();
   const isDark = theme === 'dark';
   const hoverClass = isDark ? 'hover:bg-white/10' : 'hover:bg-black/5';
 
@@ -59,6 +61,17 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </button>
       </div>
+
+      {canInstall && (
+        <button
+          type="button"
+          aria-label="Instalar aplicativo"
+          onClick={promptInstall}
+          className={`flex h-9 w-9 items-center justify-center rounded-lg text-current sm:hidden ${hoverClass}`}
+        >
+          <Download className="h-5 w-5" />
+        </button>
+      )}
 
       <button
         type="button"
