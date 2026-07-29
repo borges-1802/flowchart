@@ -1,8 +1,9 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
 import { DAYS, TIME_BLOCKS, getOptionAt } from '../../domain/scheduleGrid';
 import { getColorByIndex } from '../../domain/subjectColor';
 import { ScheduleCell } from './ScheduleCell';
+import { CreateAtCellPopover } from './CreateAtCellPopover';
 
 interface ScheduleGridProps {
   theme: 'dark' | 'light';
@@ -11,6 +12,7 @@ interface ScheduleGridProps {
   armedOption: DisciplineOption | null;
   colorAssignments: Record<string, number>;
   onRemove: (optionId: string) => void;
+  onCreateAndPlaceCustom: (name: string, credits: number, day: string, time: string, duration: 2 | 4) => void;
 }
 
 const dayLabels: Record<(typeof DAYS)[number], string> = {
@@ -21,8 +23,17 @@ const dayLabels: Record<(typeof DAYS)[number], string> = {
   SEX: 'SEX',
 };
 
-export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssignments, onRemove }: ScheduleGridProps) {
+export function ScheduleGrid({
+  theme,
+  options,
+  placedIds,
+  armedOption,
+  colorAssignments,
+  onRemove,
+  onCreateAndPlaceCustom,
+}: ScheduleGridProps) {
   const isDark = theme === 'dark';
+  const [creatingSlot, setCreatingSlot] = useState<{ day: string; time: string } | null>(null);
 
   const noScheduleOptions = options.filter((option) => option.slots.length === 0 && placedIds.has(option.id));
   const armedHasNoSchedule = armedOption ? armedOption.slots.length === 0 : false;
@@ -63,6 +74,8 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
                   : 'border-neutral-400 bg-neutral-100'
               : null;
 
+            const isCreatingHere = creatingSlot?.day === day && creatingSlot?.time === time;
+
             return (
               <ScheduleCell
                 key={`${day}-${time}`}
@@ -78,7 +91,21 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
                 }
                 conflictColorIndex={armedOption ? colorAssignments[armedOption.subjectId] : undefined}
                 onRemove={onRemove}
-              />
+                onCreateHere={!occupant ? () => setCreatingSlot({ day, time }) : undefined}
+              >
+                {isCreatingHere && (
+                  <CreateAtCellPopover
+                    theme={theme}
+                    day={day}
+                    time={time}
+                    onCreate={(name, credits, duration) => {
+                      onCreateAndPlaceCustom(name, credits, day, time, duration);
+                      setCreatingSlot(null);
+                    }}
+                    onCancel={() => setCreatingSlot(null)}
+                  />
+                )}
+              </ScheduleCell>
             );
           })}
         </Fragment>

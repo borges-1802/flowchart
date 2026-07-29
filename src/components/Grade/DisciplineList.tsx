@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
+import { isCustomOptionId, type CustomElective } from '../../domain/customElectives';
 import { DisciplineListItem } from './DisciplineListItem';
+import { CustomElectiveForm } from './CustomElectiveForm';
 
-export type PeriodFilter = number | 'all' | 'eletiva' | 'ppgi-mestrado' | 'ppgi-doutorado';
+export type PeriodFilter = number | 'all' | 'eletiva' | 'ppgi-mestrado' | 'ppgi-doutorado' | 'livre';
 
 interface DisciplineListProps {
   theme: 'dark' | 'light';
@@ -18,6 +20,8 @@ interface DisciplineListProps {
   colorAssignments: Record<string, number>;
   onItemClick: (option: DisciplineOption) => void;
   onRemove: (optionId: string) => void;
+  onCreateCustom: (elective: CustomElective) => void;
+  onDeleteCustom: (optionId: string) => void;
 }
 
 export function DisciplineList({
@@ -34,6 +38,8 @@ export function DisciplineList({
   colorAssignments,
   onItemClick,
   onRemove,
+  onCreateCustom,
+  onDeleteCustom,
 }: DisciplineListProps) {
   const isDark = theme === 'dark';
   const [query, setQuery] = useState('');
@@ -47,7 +53,9 @@ export function DisciplineList({
           ? options.filter((option) => option.period === -1 && option.program === 'mestrado')
           : selectedPeriod === 'ppgi-doutorado'
             ? options.filter((option) => option.period === -1 && option.program === 'doutorado')
-            : options.filter((option) => option.period === selectedPeriod);
+            : selectedPeriod === 'livre'
+              ? options.filter((option) => option.period === -2)
+              : options.filter((option) => option.period === selectedPeriod);
 
   const trimmedQuery = query.trim().toLowerCase();
   const filteredOptions =
@@ -60,11 +68,15 @@ export function DisciplineList({
         )
       : periodFiltered;
 
+  const hasCustom = options.some((option) => option.period === -2);
+
   return (
     <div className="flex h-full flex-col">
       <p className={`mb-2 text-xs font-semibold uppercase tracking-wide ${isDark ? 'text-neutral-500' : 'text-neutral-400'}`}>
         Disciplinas
       </p>
+
+      <CustomElectiveForm theme={theme} onCreate={onCreateCustom} />
 
       <input
         type="text"
@@ -83,7 +95,7 @@ export function DisciplineList({
         onChange={(event) => {
           const value = event.target.value;
           onPeriodChange(
-            value === 'all' || value === 'eletiva' || value === 'ppgi-mestrado' || value === 'ppgi-doutorado'
+            value === 'all' || value === 'eletiva' || value === 'ppgi-mestrado' || value === 'ppgi-doutorado' || value === 'livre'
               ? value
               : Number(value),
           );
@@ -101,6 +113,7 @@ export function DisciplineList({
         {hasElectives && <option value="eletiva">Eletivas</option>}
         {hasPpgiMestrado && <option value="ppgi-mestrado">PPGI - Mestrado</option>}
         {hasPpgiDoutorado && <option value="ppgi-doutorado">PPGI - Doutorado</option>}
+        {hasCustom && <option value="livre">Livre (criadas)</option>}
       </select>
 
       <div className="custom-scrollbar flex flex-1 flex-col gap-1 overflow-y-auto">
@@ -111,9 +124,11 @@ export function DisciplineList({
             option={option}
             isArmed={armedId === option.id}
             isPlaced={placedIds.has(option.id)}
+            isCustom={isCustomOptionId(option.subjectId)}
             colorIndex={colorAssignments[option.subjectId]}
             onClick={() => onItemClick(option)}
             onRemove={() => onRemove(option.id)}
+            onDelete={() => onDeleteCustom(option.id)}
           />
         ))}
         {filteredOptions.length === 0 && (

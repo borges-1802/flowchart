@@ -1,4 +1,4 @@
-import { X } from 'lucide-react';
+import { X, Trash2 } from 'lucide-react';
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
 import { getColorByIndex, NEUTRAL_DOT } from '../../domain/subjectColor';
 
@@ -7,9 +7,11 @@ interface DisciplineListItemProps {
   option: DisciplineOption;
   isArmed: boolean;
   isPlaced: boolean;
+  isCustom: boolean;
   colorIndex: number | undefined;
   onClick: () => void;
   onRemove: () => void;
+  onDelete: () => void;
 }
 
 function formatSlots(slots: { day: string; time: string }[]): string {
@@ -27,9 +29,11 @@ export function DisciplineListItem({
   option,
   isArmed,
   isPlaced,
+  isCustom,
   colorIndex,
   onClick,
   onRemove,
+  onDelete,
 }: DisciplineListItemProps) {
   const isDark = theme === 'dark';
   const schedule = formatSlots(option.slots);
@@ -43,7 +47,7 @@ export function DisciplineListItem({
       <div className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 ${bgClass} ${textClass}`}>
         <span className="min-w-0 flex-1">
           <span className="block truncate text-sm font-semibold">
-            {option.subjectId} · {option.shortName}
+            {isCustom ? option.shortName : `${option.subjectId} · ${option.shortName}`}
           </span>
           <span className="block truncate text-xs opacity-80">{option.teacher}</span>
           <span className="block truncate text-[11px] opacity-70">{schedule}</span>
@@ -67,17 +71,21 @@ export function DisciplineListItem({
   const hoverClass = isDark ? 'hover:bg-white/5' : 'hover:bg-black/5';
 
   return (
-    <button
-      type="button"
+    <div
       onClick={onClick}
-      className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left transition-colors ${
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') onClick();
+      }}
+      className={`flex w-full cursor-pointer items-center gap-2.5 rounded-lg px-3 py-2.5 text-left transition-colors ${
         isArmed ? armedClass : hoverClass
       }`}
     >
       <span className={`h-2 w-2 shrink-0 rounded-full ${NEUTRAL_DOT}`} />
       <span className="min-w-0 flex-1">
         <span className={`block truncate text-sm font-medium ${isDark ? 'text-neutral-100' : 'text-neutral-900'}`}>
-          {option.subjectId} · {option.shortName}
+          {isCustom ? option.shortName : `${option.subjectId} · ${option.shortName}`}
         </span>
         <span className="block truncate text-xs text-neutral-500">{option.teacher}</span>
         <span className="block truncate text-[11px] text-neutral-500">{schedule}</span>
@@ -89,6 +97,22 @@ export function DisciplineListItem({
       >
         {option.area || `${option.hours}h`}
       </span>
-    </button>
+      {isCustom && (
+        <button
+          type="button"
+          onClick={(event) => {
+            event.stopPropagation();
+            onDelete();
+          }}
+          aria-label={`Excluir ${option.shortName}`}
+          title="Excluir esta eletiva livre"
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
+            isDark ? 'text-neutral-500 hover:bg-red-500/20 hover:text-red-400' : 'text-neutral-400 hover:bg-red-100 hover:text-red-600'
+          }`}
+        >
+          <Trash2 className="h-3.5 w-3.5" />
+        </button>
+      )}
+    </div>
   );
 }

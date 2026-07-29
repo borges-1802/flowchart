@@ -10,7 +10,8 @@ import { usePersistedState } from '../hooks/usePersistedState';
 
 import { buildDisciplineOptions, type DisciplineOption } from '../domain/buildDisciplineOptions';
 import { buildPpgiOptions, type PpgiSubject, type PpgiSchedule } from '../domain/buildPpgiOptions';
-import { hasConflict, isSameSubjectAlreadyPlaced } from '../domain/scheduleGrid';
+import { buildCustomOptions, getNextTimeBlock, type CustomElective } from '../domain/customElectives';
+import { hasConflict, isSameSubjectAlreadyPlaced, getOptionAt } from '../domain/scheduleGrid';
 import { pickRandomColorIndex } from '../domain/subjectColor';
 import { getMigratedTabsState, type TabId, type TabData, type TabsState } from '../domain/gradeTabs';
 
@@ -34,15 +35,13 @@ const ppgiSubjects = ppgiSubjectsData as PpgiSubject[];
 const ppgiSchedules = ppgiTurmasData as PpgiSchedule[];
 const ppgiOptions = buildPpgiOptions(ppgiSubjects, ppgiSchedules);
 
-// Pool único: todas as colunas/abas usam o mesmo conjunto de disciplinas,
-// BCC + PPGI juntos. O dropdown de período é quem filtra qual parte ver.
-const options = [...bccOptions, ...ppgiOptions];
-const periods = [...new Set(options.map((option) => option.period).filter((period) => period > 0))].sort(
+const catalogOptions = [...bccOptions, ...ppgiOptions];
+const periods = [...new Set(catalogOptions.map((option) => option.period).filter((period) => period > 0))].sort(
   (a, b) => a - b,
 );
-const hasElectives = options.some((option) => option.period === 0);
-const hasPpgiMestrado = options.some((option) => option.period === -1 && option.program === 'mestrado');
-const hasPpgiDoutorado = options.some((option) => option.period === -1 && option.program === 'doutorado');
+const hasElectives = catalogOptions.some((option) => option.period === 0);
+const hasPpgiMestrado = catalogOptions.some((option) => option.period === -1 && option.program === 'mestrado');
+const hasPpgiDoutorado = catalogOptions.some((option) => option.period === -1 && option.program === 'doutorado');
 
 export function Grade() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
@@ -55,8 +54,13 @@ export function Grade() {
     B: 'Grade B',
     C: 'Grade C',
   });
+  const [customElectives, setCustomElectives] = usePersistedState<CustomElective[]>('grade:customElectives', []);
   const isDark = theme === 'dark';
   const [feedback, setFeedback] = useState<string | null>(null);
+
+  const options = useMemo(() => {
+    return [...catalogOptions, ...buildCustomOptions(customElectives)];
+  }, [customElectives]);
 
   useEffect(() => {
     if (!feedback) return;
@@ -132,6 +136,60 @@ export function Grade() {
     setTabNames((current) => ({ ...current, [tabId]: name }));
   }
 
+  function handleCreateCustom(elective: CustomElective) {
+    setCustomElectives((current) => [...current, elective]);
+  }
+
+  function handleCreateAndPlaceCustom(name: string, credits: number, day: string, time: string, duration: 2 | 4) {
+    if (duration === 4) {
+      const nextBlock = getNextTimeBlock(time);
+      if (nextBlock && getOptionAt(day, nextBlock, placedIds, options) !== null) {
+        setFeedback(`${nextBlock} em ${day} já está ocupado — não dá pra encaixar 4h aqui.`);
+        return;
+      }
+    }
+
+    const id = `custom-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    const elective: CustomElective = { id, name, credits, day, time, duration };
+
+    setCustomElectives((current) => [...current, elective]);
+
+    updateActiveTab((tab) => {
+      const nextColorAssignments = { ...tab.colorAssignments };
+      if (!(id in nextColorAssignments)) {
+        const placedSubjectIds = new Set(
+          options.filter((item) => tab.placedIds.includes(item.id)).map((item) => item.subjectId),
+        );
+        const usedIndices = [...placedSubjectIds]
+          .map((subjectId) => nextColorAssignments[subjectId])
+          .filter((index) => index !== undefined);
+        nextColorAssignments[id] = pickRandomColorIndex(usedIndices);
+      }
+      return { placedIds: [...tab.placedIds, id], colorAssignments: nextColorAssignments };
+    });
+  }
+
+  function handleDeleteCustom(optionId: string) {
+    setCustomElectives((current) => current.filter((elective) => elective.id !== optionId));
+
+    setTabsState((current) => {
+      const next = { ...current } as TabsState;
+      (Object.keys(next) as TabId[]).forEach((tabId) => {
+        const tab = next[tabId];
+        if (!tab.placedIds.includes(optionId)) return;
+        const nextColorAssignments = { ...tab.colorAssignments };
+        delete nextColorAssignments[optionId];
+        next[tabId] = {
+          placedIds: tab.placedIds.filter((id) => id !== optionId),
+          colorAssignments: nextColorAssignments,
+        };
+      });
+      return next;
+    });
+
+    if (armedId === optionId) setArmedId(null);
+  }
+
   const placedOptions = options.filter((option) => placedIds.has(option.id));
   const credits = placedOptions.reduce((sum, option) => sum + option.credits, 0);
   const hoursPerWeek = placedOptions.reduce((sum, option) => sum + option.hours, 0);
@@ -148,7 +206,7 @@ export function Grade() {
         </p>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
-          <div className={`order-3 max-h-105 overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-110 ${cardClass}`}>
+          <div className={`order-3 max-h-140 overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-155 ${cardClass}`}>
             <DisciplineList
               theme={theme}
               options={options}
@@ -163,6 +221,8 @@ export function Grade() {
               colorAssignments={colorAssignments}
               onItemClick={handleItemClick}
               onRemove={handleRemove}
+              onCreateCustom={handleCreateCustom}
+              onDeleteCustom={handleDeleteCustom}
             />
           </div>
 
@@ -175,7 +235,7 @@ export function Grade() {
               onRename={handleRenameTab}
             />
 
-            <div className={`overflow-x-auto rounded-xl p-4 ${cardClass}`}>
+            <div className={`custom-scrollbar overflow-x-auto rounded-xl p-4 ${cardClass}`}>
               <ScheduleGrid
                 theme={theme}
                 options={options}
@@ -183,11 +243,10 @@ export function Grade() {
                 armedOption={armedOption}
                 colorAssignments={colorAssignments}
                 onRemove={handleRemove}
+                onCreateAndPlaceCustom={handleCreateAndPlaceCustom}
               />
             </div>
-          </div>
 
-          <div className="order-2 lg:order-3 lg:col-span-2">
             <GradeSummary theme={theme} credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
           </div>
         </div>

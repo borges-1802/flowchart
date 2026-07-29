@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { DisciplineOption } from '../../domain/buildDisciplineOptions';
 import { getColorByIndex, NEUTRAL_DOT } from '../../domain/subjectColor';
 
@@ -10,6 +11,8 @@ interface ScheduleCellProps {
   conflictOption: DisciplineOption | null;
   conflictColorIndex: number | undefined;
   onRemove: (optionId: string) => void;
+  onCreateHere?: () => void;
+  children?: ReactNode;
 }
 
 export function ScheduleCell({
@@ -21,6 +24,8 @@ export function ScheduleCell({
   conflictOption,
   conflictColorIndex,
   onRemove,
+  onCreateHere,
+  children,
 }: ScheduleCellProps) {
   const isDark = theme === 'dark';
 
@@ -57,14 +62,19 @@ export function ScheduleCell({
   }
 
   return (
-    <div
-      className={`aspect-square w-full rounded border border-dashed transition-colors sm:aspect-auto sm:h-16 sm:rounded-lg ${
-        isPreview && previewColor
-          ? previewColor
-          : isDark
-            ? 'border-neutral-800'
-            : 'border-neutral-300'
-      }`}
-    />
+    <div className="relative">
+      <div
+        onDoubleClick={onCreateHere}
+        title={onCreateHere ? 'Clique duas vezes pra criar uma eletiva livre aqui' : undefined}
+        className={`aspect-square w-full rounded border border-dashed transition-colors sm:aspect-auto sm:h-16 sm:rounded-lg ${
+          isPreview && previewColor
+            ? previewColor
+            : isDark
+              ? 'border-neutral-800 hover:border-neutral-600'
+              : 'border-neutral-300 hover:border-neutral-400'
+        }`}
+      />
+      {children}
+    </div>
   );
 }
