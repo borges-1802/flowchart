@@ -102,7 +102,7 @@ export function ComplementaryTracker({ theme, activities, entries, onAdd, onRemo
           )}
         </div>
 
-        <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:gap-3">
+        <div className="mb-3 flex flex-col gap-3 sm:flex-row">
           <select
             value={typeId}
             onChange={(event) => {
