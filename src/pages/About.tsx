@@ -61,6 +61,10 @@ const gradeSteps = [
     title: '',
     text: 'O dropdown de período também tem opções pra Eletivas e pra PPGI (Mestrado e Doutorado), caso queira montar uma grade de pós.',
   },
+  {
+    title: 'Eletivas livres:',
+    text: 'você pode cadastrar disciplinas que não estão no catálogo. Duas formas: o botão "+ Nova eletiva livre" na lista, ou clicando duas vezes direto numa célula vazia da grade (já cria e encaixa no lugar certo). Dá pra escolher 2h ou 4h (dois blocos seguidos).',
+  },
 ];
 
 const complementarySteps = [
@@ -115,7 +119,8 @@ export function About() {
         <div className="mx-auto max-w-2xl">
             <h2 className="mb-1 text-xl font-bold">Sobre</h2>
           <p className={`mb-6 text-sm leading-relaxed ${bodyClass}`}>
-            Um mapa interativo da grade curricular do Bacharelado em Ciência da Computação da UFRJ.
+            Um mapa interativo da grade curricular do Bacharelado em Ciência da Computação da UFRJ. No celular, dá
+            pra instalar como app pelo menu (☰) → "Baixar Flowchart", quando o navegador permitir.
           </p>
 
           <div className={`mb-4 rounded-xl p-5 ${cardClass}`}>
