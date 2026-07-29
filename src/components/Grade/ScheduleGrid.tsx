@@ -24,6 +24,9 @@ const dayLabels: Record<(typeof DAYS)[number], string> = {
 export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssignments, onRemove }: ScheduleGridProps) {
   const isDark = theme === 'dark';
 
+  const noScheduleOptions = options.filter((option) => option.slots.length === 0 && placedIds.has(option.id));
+  const armedHasNoSchedule = armedOption ? armedOption.slots.length === 0 : false;
+
   return (
     <div className="grid w-full grid-cols-[22px_repeat(5,1fr)] gap-0.5 sm:grid-cols-[64px_repeat(5,1fr)] sm:gap-2">
       <div />
@@ -80,6 +83,40 @@ export function ScheduleGrid({ theme, options, placedIds, armedOption, colorAssi
           })}
         </Fragment>
       ))}
+
+      <p
+        className={`flex items-center text-[8px] leading-tight sm:text-xs ${isDark ? 'text-neutral-500' : 'text-neutral-500'}`}
+      >
+        <span className="sm:hidden">S/H</span>
+        <span className="hidden sm:inline">Sem horário</span>
+      </p>
+      {DAYS.map((_, index) => {
+        const occupant = noScheduleOptions[index] ?? null;
+
+        return (
+          <ScheduleCell
+            key={`no-schedule-${index}`}
+            theme={theme}
+            occupant={occupant}
+            colorIndex={occupant ? colorAssignments[occupant.subjectId] : undefined}
+            isPreview={!occupant && index === noScheduleOptions.length ? armedHasNoSchedule : false}
+            previewColor={
+              armedHasNoSchedule && armedOption
+                ? colorAssignments[armedOption.subjectId] !== undefined
+                  ? isDark
+                    ? getColorByIndex(colorAssignments[armedOption.subjectId]).previewDark
+                    : getColorByIndex(colorAssignments[armedOption.subjectId]).previewLight
+                  : isDark
+                    ? 'border-blue-500 bg-blue-500/10'
+                    : 'border-blue-500 bg-blue-100'
+                : null
+            }
+            conflictOption={null}
+            conflictColorIndex={undefined}
+            onRemove={onRemove}
+          />
+        );
+      })}
     </div>
   );
 }

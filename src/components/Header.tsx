@@ -115,6 +115,20 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
             <Info className="h-4 w-4" />Sobre
           </Link>
 
+          <div className={`my-1 border-t ${isDark ? 'border-neutral-800' : 'border-neutral-200'}`} />
+
+          <button
+            type="button"
+            onClick={() => {
+              onToggleTheme();
+              closeMenu();
+            }}
+            className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
+          >
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            {isDark ? 'Modo claro' : 'Modo escuro'}
+          </button>
+
           {canInstall && (
             <button
               type="button"
@@ -139,18 +153,6 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
               Já baixado
             </div>
           )}
-
-          <button
-            type="button"
-            onClick={() => {
-              onToggleTheme();
-              closeMenu();
-            }}
-            className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
-          >
-            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            {isDark ? 'Modo claro' : 'Modo escuro'}
-          </button>
         </div>
       )}
     </header>

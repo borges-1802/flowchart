@@ -148,7 +148,7 @@ export function Grade() {
         </p>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
-          <div className={`order-2 max-h-105 overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-110 ${cardClass}`}>
+          <div className={`order-3 max-h-105 overflow-hidden rounded-xl p-4 lg:order-1 lg:max-h-110 ${cardClass}`}>
             <DisciplineList
               theme={theme}
               options={options}
@@ -186,9 +186,11 @@ export function Grade() {
               />
             </div>
           </div>
-        </div>
 
-        <GradeSummary theme={theme} credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
+          <div className="order-2 lg:order-3 lg:col-span-2">
+            <GradeSummary theme={theme} credits={credits} hoursPerWeek={hoursPerWeek} placedCount={placedOptions.length} />
+          </div>
+        </div>
 
         {feedback && (
           <div

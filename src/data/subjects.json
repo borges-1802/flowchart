@@ -1308,8 +1308,8 @@
   },
   {
     "id": "ICPX06",
-    "name": "Horas Complementares",
-    "shortName": "Horas Compl",
+    "name": "Atividades Complementares",
+    "shortName": "Ativ Complementares",
     "period": 8,
     "preRequisites": [],
     "postRequisites": [],
