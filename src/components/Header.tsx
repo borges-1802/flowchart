@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Menu, ChartBar, CalendarDays, Info, Download, X } from 'lucide-react';
+import { Sun, Moon, Menu, ChartBar, CalendarDays, Info, Download, ClipboardList, Check, X } from 'lucide-react';
 import { usePwaInstall } from '../hooks/usePwaInstall';
 interface HeaderProps {
   theme: 'dark' | 'light';
@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export function Header({ theme, onToggleTheme }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { canInstall, promptInstall } = usePwaInstall();
+  const { canInstall, isInstalled, promptInstall } = usePwaInstall();
   const isDark = theme === 'dark';
   const hoverClass = isDark ? 'hover:bg-white/10' : 'hover:bg-black/5';
 
@@ -44,6 +44,12 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
         >
           Montar Grade
+        </Link>
+        <Link
+          to="/atividades-complementares"
+          className={`rounded-lg px-3 py-2 text-sm font-medium text-current ${hoverClass}`}
+        >
+          At. Complementares
         </Link>
         <Link
           to="/sobre"
@@ -94,6 +100,14 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           </Link>
 
           <Link
+            to="/atividades-complementares"
+            onClick={closeMenu}
+            className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
+          >
+            <ClipboardList className="h-4 w-4" />At. Complement
+          </Link>
+
+          <Link
             to="/sobre"
             onClick={closeMenu}
             className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-current ${hoverClass}`}
@@ -113,6 +127,17 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
               <Download className="h-4 w-4" />
               Baixar Flowchart
             </button>
+          )}
+
+          {isInstalled && (
+            <div
+              className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium ${
+                isDark ? 'text-neutral-500' : 'text-neutral-400'
+              }`}
+            >
+              <Check className="h-4 w-4" />
+              Já baixado
+            </div>
           )}
 
           <button

@@ -63,6 +63,25 @@ const gradeSteps = [
   },
 ];
 
+const complementarySteps = [
+  {
+    title: 'Lance cada atividade',
+    text: 'já feita (tipo, quantidade/duração e uma descrição opcional). O app converte pra horas sozinho, seguindo a taxa de cada categoria.',
+  },
+  {
+    title: '',
+    text: 'Cada categoria tem um teto próprio (nenhuma passa de 54h), a barra da categoria mostra em azul quanto entraria e avisa se a quantidade digitada estoura o limite.',
+  },
+  {
+    title: '',
+    text: 'O total no topo acompanha as 90h exigidas pelo RCS (ICPX06); quando bate a meta, aparece um aviso de que já dá pra solicitar a inclusão.',
+  },
+  {
+    title: '',
+    text: 'Essa página só calcula o total. O pedido de inclusão de verdade é feito por e-mail à COAC, com o formulário oficial preenchido e os comprovantes de cada atividade (links no topo da página).',
+  },
+];
+
 const legendLeft = [
   { color: 'bg-red-400', label: 'Disponível (pré-requisitos ok)' },
   { color: 'bg-neutral-500', label: 'Bloqueada (falta pré-requisito)' },
@@ -122,6 +141,25 @@ export function About() {
             <h3 className="mb-3 text-sm font-semibold">Como usar o Montar Grade</h3>
             <ol className="space-y-3">
               {gradeSteps.map((step, index) => (
+                <li key={index} className="flex gap-3">
+                  <span
+                    className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${badgeClass}`}
+                  >
+                    {index + 1}
+                  </span>
+                  <p className={`text-sm leading-relaxed ${bodyClass}`}>
+                    {step.title && <span className="font-semibold text-current">{step.title} </span>}
+                    {step.text}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className={`mb-4 rounded-xl p-5 ${cardClass}`}>
+            <h3 className="mb-3 text-sm font-semibold">Como usar Atividades Complementares</h3>
+            <ol className="space-y-3">
+              {complementarySteps.map((step, index) => (
                 <li key={index} className="flex gap-3">
                   <span
                     className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${badgeClass}`}

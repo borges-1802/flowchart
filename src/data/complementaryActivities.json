@@ -1,0 +1,173 @@
+[
+  {
+    "id": "estagio",
+    "label": "Estágio",
+    "unit": "meses",
+    "rate": 9,
+    "min": 3,
+    "max": 54,
+    "doc": "Contrato(s) assinado(s), com vigência e assinaturas do aluno, empregador e Coordenação."
+  },
+  {
+    "id": "ic",
+    "label": "Iniciação Científica (c/ apresentação SIAC/JIC)",
+    "unit": "meses",
+    "rate": 9,
+    "min": 3,
+    "max": 54,
+    "doc": "Declaração do orientador + certificado de apresentação no SIAC/JIC."
+  },
+    {
+    "id": "ouvinte",
+    "label": "Participação como ouvinte (SIAC, JIC, palestras, etc.)",
+    "unit": "eventos",
+    "rate": 3,
+    "min": 1,
+    "max": 18,
+    "doc": "Certificado de participação ou declaração da organização."
+  },
+  {
+    "id": "apresentacao",
+    "label": "Apresentação de trabalhos em eventos científicos",
+    "unit": "apresentações",
+    "rate": 5,
+    "min": 1,
+    "max": 30,
+    "doc": "Certificado de apresentação."
+  },
+  {
+    "id": "competicao",
+    "label": "Competições acadêmicas (maratonas, olimpíadas)",
+    "unit": "etapas",
+    "rate": 9,
+    "min": 1,
+    "max": 27,
+    "doc": "Certificado de participação."
+  },
+  {
+    "id": "premiacao",
+    "label": "Premiação ou Menção Honrosa",
+    "unit": "premiações",
+    "rate": 5,
+    "min": 1,
+    "max": 30,
+    "doc": "Certificado emitido pela organização atestando a premiação."
+  },
+  {
+    "id": "colegiado",
+    "label": "Participação em Colegiados Superiores",
+    "unit": "meses",
+    "rate": 3,
+    "min": 3,
+    "max": 36,
+    "doc": "Declaração do(a) presidente do Colegiado/Congregação."
+  },
+  {
+    "id": "comissao",
+    "label": "Comissões de grupos de trabalho acadêmicos",
+    "unit": "meses",
+    "rate": 3,
+    "min": 3,
+    "max": 18,
+    "doc": "Declaração do(a) presidente da Comissão."
+  },
+  {
+    "id": "mesario",
+    "label": "Mesário em processos eleitorais (TSE/TRE)",
+    "unit": "dias",
+    "rate": 3,
+    "min": 1,
+    "max": 9,
+    "doc": "Declaração da Justiça Eleitoral."
+  },
+  {
+    "id": "diretoria",
+    "label": "Membro de diretoria estudantil",
+    "unit": "meses",
+    "rate": 3,
+    "min": 3,
+    "max": 18,
+    "doc": "Ata oficial do CA/DCE atestando eleição e vigência."
+  },
+  {
+    "id": "ejcm_membro",
+    "label": "EjCM como membro simples (CR > 5,0)",
+    "unit": "meses",
+    "rate": 3,
+    "min": 3,
+    "max": 27,
+    "doc": "Declaração da EjCM assinada pelo presidente."
+  },
+  {
+    "id": "ejcm_diretor",
+    "label": "EjCM como Conselheiro/Diretor (CR > 5,0)",
+    "unit": "meses",
+    "rate": 5,
+    "min": 3,
+    "max": 30,
+    "doc": "Declaração da EjCM assinada pelo presidente."
+  },
+  {
+    "id": "organizacao",
+    "label": "Organização de eventos (SNCT, Semana da Computação)",
+    "unit": "eventos",
+    "rate": 5,
+    "min": 1,
+    "max": 30,
+    "doc": "Declaração assinada pelo coordenador do evento."
+  },
+  {
+    "id": "monitoria_ic",
+    "label": "Monitor de disciplina do IC",
+    "unit": "semestres",
+    "rate": 15,
+    "min": 1,
+    "max": 30,
+    "doc": "Declaração do(s) professor(es) com disciplina e semestre."
+  },
+  {
+    "id": "monitoria_lab",
+    "label": "Monitor de laboratório LCI/LIGs",
+    "unit": "semestres",
+    "rate": 15,
+    "min": 1,
+    "max": 30,
+    "doc": "Declaração do(s) responsável(is) pelo laboratório."
+  },
+  {
+    "id": "comunitario",
+    "label": "Trabalhos comunitários",
+    "unit": "meses",
+    "rate": 5,
+    "min": 3,
+    "max": 30,
+    "doc": "Declaração do coordenador da instituição, com duração."
+  },
+  {
+    "id": "intercambio",
+    "label": "Intercâmbio Acadêmico (não creditado)",
+    "unit": "meses",
+    "rate": 5,
+    "min": 1,
+    "max": 30,
+    "doc": "Declaração da Universidade de destino, com duração."
+  },
+  {
+    "id": "curso_aperf",
+    "label": "Curso de aperfeiçoamento em CC (externo à UFRJ)",
+    "unit": "horas",
+    "rate": 0.5,
+    "min": 1,
+    "max": 36,
+    "doc": "Certificado com carga horária total do curso."
+  },
+  {
+    "id": "idiomas",
+    "label": "Cursos de idiomas",
+    "unit": "semestres",
+    "rate": 5,
+    "min": 1,
+    "max": 20,
+    "doc": "Certificado/declaração com datas e participação."
+  }
+]
