@@ -119,7 +119,7 @@ export function SubjectDetailPanel({ theme, subject, nameById }: SubjectDetailPa
                 ))}
               </ul>
             ) : (
-              <p className={`text-sm ${labelClass}`}>—</p>
+              <p className={`text-sm ${labelClass}`}>-</p>
             )}
           </div>
         </div>

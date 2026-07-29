@@ -97,7 +97,7 @@ export function ComplementaryTracker({ theme, activities, entries, onAdd, onRemo
             >
               <b className={isDark ? 'text-white' : 'text-neutral-900'}>Como calculamos:</b> cada tipo de atividade tem
               uma taxa fixa (ex: 9h por mês) e um teto máximo de horas. Preencha a duração/quantidade que a norma pede,
-              e nós convertemos automaticamente — sempre respeitando o teto da categoria.
+              e nós convertemos automaticamente, sempre respeitando o teto da categoria.
             </div>
           )}
         </div>
@@ -173,7 +173,7 @@ export function ComplementaryTracker({ theme, activities, entries, onAdd, onRemo
                 {exceeds && (
                   <>
                     {' '}
-                    — mas só <span className="font-bold text-blue-500">{round1(allowedHours)}h</span> entram (excede o
+                    mas só <span className="font-bold text-blue-500">{round1(allowedHours)}h</span> entram (excede o
                     teto)
                   </>
                 )}
@@ -200,7 +200,7 @@ export function ComplementaryTracker({ theme, activities, entries, onAdd, onRemo
                     <div key={entry.id} className={`flex items-center justify-between rounded-lg px-3 py-2 ${cardInnerClass}`}>
                       <span className="text-xs">
                         {entry.units} {entry.activityId === group.activity.id ? group.activity.unit : ''}
-                        {entry.description && ` — ${entry.description}`}
+                        {entry.description && ` - ${entry.description}`}
                       </span>
                       <div className="flex items-center gap-2.5">
                         <span className={`text-xs ${labelClass}`}>{round1(entry.hours)}h</span>
