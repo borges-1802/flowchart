@@ -91,21 +91,21 @@
   },
   {
     "id": "ejcm_membro",
-    "label": "EjCM como membro simples (CR > 5,0)",
+    "label": "EJCM como membro simples (CR > 5,0)",
     "unit": "meses",
     "rate": 3,
     "min": 3,
     "max": 27,
-    "doc": "Declaração da EjCM assinada pelo presidente."
+    "doc": "Declaração da EJCM assinada pelo presidente."
   },
   {
     "id": "ejcm_diretor",
-    "label": "EjCM como Conselheiro/Diretor (CR > 5,0)",
+    "label": "EJCM como Conselheiro/Diretor (CR > 5,0)",
     "unit": "meses",
     "rate": 5,
     "min": 3,
     "max": 30,
-    "doc": "Declaração da EjCM assinada pelo presidente."
+    "doc": "Declaração da EJCM assinada pelo presidente."
   },
   {
     "id": "organizacao",
