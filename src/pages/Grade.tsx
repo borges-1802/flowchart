@@ -136,6 +136,10 @@ export function Grade() {
     setTabNames((current) => ({ ...current, [tabId]: name }));
   }
 
+  function handleClearTab() {
+    setTabsState((current) => ({ ...current, [activeTab]: { placedIds: [], colorAssignments: {} } }));
+  }
+
   function handleCreateCustom(elective: CustomElective) {
     setCustomElectives((current) => [...current, elective]);
   }
@@ -233,6 +237,7 @@ export function Grade() {
               tabNames={tabNames}
               onChange={handleTabChange}
               onRename={handleRenameTab}
+              onClearTab={handleClearTab}
             />
 
             <div className={`custom-scrollbar overflow-x-auto rounded-xl p-4 ${cardClass}`}>
