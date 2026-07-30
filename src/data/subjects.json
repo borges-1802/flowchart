@@ -67,7 +67,7 @@
       }
     ],
     "advice": "A segunda mais tranquila do primeiro período, não precisa ter medo, faça os trabalhos e resumos dos slides.",
-    "availability": "Baixa",
+    "availability": "Média",
     "schedule": "Ter-Qui 13h-15h"
   },
   {
@@ -102,7 +102,7 @@
       }
     ],
     "advice": "Pode ser difícil se for a sua primeira vez vendo este conteúdo, recomenda-se rever as aulas e pesquisar conteúdo no youtube.",
-    "availability": "Baixa",
+    "availability": "Média",
     "schedule": "Ter-Qui 8h-10h"
   },
   {
@@ -169,7 +169,7 @@
       }
     ],
     "advice": "Matéria mais tranquila do primeiro período, basicamente fazer todos os trabalhos e treinar apresentações que você consegue sair com uma nota alta.",
-    "availability": "Alta",
+    "availability": "Baixa",
     "schedule": "Seg-Qua 13h-15h"
   },
   {
@@ -276,7 +276,7 @@
       }
     ],
     "advice": "Outra matéria pra você ficar MUITO tranquilo.",
-    "availability": "Baixa",
+    "availability": "Alta",
     "schedule": "Ter 10h-12h"
   },
   {
@@ -310,7 +310,7 @@
       }
     ],
     "advice": "Estude como usar Protoboard e Arduíno, além disso estude circuitos lógicos, matéria bem prática mesmo.",
-    "availability": "Baixa",
+    "availability": "Média",
     "schedule": "Ter 13h-15h"
   },
   {
@@ -348,7 +348,7 @@
       }
     ],
     "advice": "if !=Mitre return pull. Se for o Claudson, refaça provas antigas, se for o Hugo, novamente, conte com a compaixão dele. Matéria mais chata do segundo período.",
-    "availability": "Média",
+    "availability": "Alta",
     "schedule": "Ter-Qui 8h-10h"
   },
   {
@@ -383,7 +383,7 @@
       }
     ],
     "advice": "Ótima matéria! Apenas apresente seus trabalhos.",
-    "availability": "Alta",
+    "availability": "Média",
     "schedule": "Qui 10h-12h (Turma A) / Qui 13h-15h (Turma B)"
   },
   {
@@ -401,7 +401,7 @@
     "curriculum": "Funções de uma variável real. Limites e derivadas. Cálculo de derivadas e aplicações. Teorema do valor médio. Integral definida. Teorema fundamental do cálculo. Cálculo de integrais e aplicações.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
-    "teachers": "Não Informado",
+    "teachers": "Substituto",
     "teacherHistory": [
       {
         "name": "Nicolas Danielski",
@@ -544,7 +544,7 @@
       }
     ],
     "advice": "Se for com a França aproveite, ótima professora. Se for com a Vivacqua também aproveite!",
-    "availability": "Alta",
+    "availability": "Média",
     "schedule": "Ter-Qui 15h-17h"
   },
   {
@@ -581,7 +581,7 @@
       }
     ],
     "advice": "Antigo Cálculo Numérico, entenda todos os métodos, a aplicação é tranquila, mas é bom ter aprendido os outros cálculos.",
-    "availability": "Média",
+    "availability": "Alta",
     "schedule": "Qua 15h-17h"
   },
   {
@@ -622,7 +622,7 @@
       }
     ],
     "advice": "Outra matéria essencial, estude bastante, e aproveite o Gusmão.",
-    "availability": "Média",
+    "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h"
   },
   {
@@ -646,7 +646,7 @@
     "curriculum": "Curvas no plano e no espaço, velocidade e aceleração. Funções de duas e mais variáveis, derivadas direcionais. Derivadas parciais e derivada como aproximação linear. Funções implícitas, multiplicadores de lagrange. Hessiana. Equações diferenciais ordinárias de primeira ordem e equações diferenciais ordinárias de segunda ordem com coeficientes constantes.",
     "difficultyLevel": "5/5",
     "evaluationStyle": "Provas",
-    "teachers": "Vários",
+    "teachers": "Substituto",
     "teacherHistory": [
       {
         "name": "Lucas Aragão",
@@ -700,7 +700,7 @@
       }
     ],
     "advice": "Muita matéria para pouco tempo.",
-    "availability": "Alta",
+    "availability": "Média",
     "schedule": "Ter-Qui 10h-12h"
   },
   {
@@ -738,7 +738,7 @@
       }
     ],
     "advice": "Listas, trabalhos e provas bem longas estilo João Paixão. Doidera. Estude.",
-    "availability": "Baixa",
+    "availability": "Alta",
     "schedule": "Qua-Sex 10h-12h"
   },
   {
@@ -922,7 +922,7 @@
       }
     ],
     "advice": "Se for Gusmão e Ronald: Faça. Se for o Sadoc dobra e passa pro próximo.",
-    "availability": "Alta",
+    "availability": "Média",
     "schedule": "Seg-Qua 10h-12h"
   },
   {
@@ -959,7 +959,7 @@
       }
     ],
     "advice": "Complicado com TODO mundo. Não tem boa opção pra essa matéria. Muito abstrata, precisa de muito conhecimento etc.",
-    "availability": "Baixa",
+    "availability": "Alta",
     "schedule": "Seg-Qua 8h-10h"
   },
   {
@@ -1033,7 +1033,7 @@
       }
     ],
     "advice": "é.",
-    "availability": "Baixa",
+    "availability": "Alta",
     "schedule": "Ter-Qui 10h-12h"
   },
   {
@@ -1251,7 +1251,7 @@
       }
     ],
     "advice": "Matéria tranquila, talvez tenha uma quantidade de trabalho um pouco desproporcional, por isso é recomendável puxar com algumas eletivas.",
-    "availability": "Baixa",
+    "availability": "Alta",
     "schedule": "Seg-Qua 8h-10h"
   },
   {

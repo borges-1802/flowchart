@@ -85,21 +85,40 @@ export function SubjectDetailPanel({ theme, subject, nameById }: SubjectDetailPa
             isDark ? 'border-neutral-800' : 'border-neutral-300'
           }`}
         >
-          {difficulty && (
-            <div className="mb-4">
-              <p className={`mb-1.5 text-[11px] font-semibold uppercase tracking-wide ${labelClass}`}>Dificuldade</p>
-              <div className="flex gap-1.5">
-                {Array.from({ length: difficulty.total }).map((_, index) => (
-                  <span
-                    key={index}
-                    className={`h-3 w-3 rounded-full ${
-                      index < difficulty.filled ? 'bg-pink-500' : isDark ? 'bg-neutral-700' : 'bg-neutral-300'
-                    }`}
-                  />
-                ))}
+          <div className="mb-4 flex gap-6">
+            {subject.availability && (
+              <div>
+                <p className={`mb-1.5 text-[11px] font-semibold uppercase tracking-wide ${labelClass}`}>Briga por vaga</p>
+                <span
+                  className={`inline-block rounded-full px-2.5 py-1 text-xs font-semibold ${
+                    subject.availability === 'Alta'
+                      ? 'bg-red-500/20 text-red-400'
+                      : subject.availability === 'Média'
+                        ? 'bg-amber-500/20 text-amber-400'
+                        : 'bg-green-500/20 text-green-400'
+                  }`}
+                >
+                  {subject.availability}
+                </span>
               </div>
-            </div>
-          )}
+            )}
+
+            {difficulty && (
+              <div>
+                <p className={`mb-1.5 text-[11px] font-semibold uppercase tracking-wide ${labelClass}`}>Dificuldade</p>
+                <div className="flex gap-1.5">
+                  {Array.from({ length: difficulty.total }).map((_, index) => (
+                    <span
+                      key={index}
+                      className={`h-3 w-3 rounded-full ${
+                        index < difficulty.filled ? 'bg-pink-500' : isDark ? 'bg-neutral-700' : 'bg-neutral-300'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           <div>
             <p className={`mb-1.5 text-[11px] font-semibold uppercase tracking-wide ${labelClass}`}>Professores</p>
@@ -119,7 +138,7 @@ export function SubjectDetailPanel({ theme, subject, nameById }: SubjectDetailPa
                 ))}
               </ul>
             ) : (
-              <p className={`text-sm ${labelClass}`}>-</p>
+              <p className={`text-sm ${labelClass}`}>—</p>
             )}
           </div>
         </div>
