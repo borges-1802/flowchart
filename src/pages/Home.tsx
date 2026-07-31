@@ -168,6 +168,22 @@ export function Home() {
   }
   const openSlot = electiveSlots.find((slot) => slot.id === openSlotId) ?? null;
 
+  function handleRemoveElective(slot: ElectiveSlot) {
+  const selected = selectedElectives[slot.id];
+  if (!selected) return;
+
+  setSelectedElectives((current) => {
+    const { [slot.id]: _removed, ...rest } = current;
+    return rest;
+  });
+
+  setCompletedIds((current) => current.filter((id) => id !== selected.id));
+
+  if (selectedId === selected.id) {
+    setSelectedId(null);
+  }
+}
+
   useEffect(() => {
     document.body.style.overflow = openSlot ? 'hidden' : '';
     return () => {
@@ -209,6 +225,7 @@ export function Home() {
             onConfirmOverride={() => selectedSubject && handleForceComplete(selectedSubject.id)}
             onDismissOverride={() => setSelectedId(null)}
             getElectivePreRequisites={getElectivePreRequisites}
+            onSlotRemove={handleRemoveElective}
           />
         ))}
       </div>

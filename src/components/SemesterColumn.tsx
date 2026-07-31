@@ -19,6 +19,7 @@ interface SemesterColumnProps {
   selectedElectives: Record<string, SelectedElective>;
   onSlotClick: (slot: ElectiveSlot) => void;
   onSlotOpenPicker: (slotId: string) => void;
+  onSlotRemove: (slot: ElectiveSlot) => void;
   onCompleteAll: () => void;
   isComplete: boolean;
   onUncompleteAll: () => void;
@@ -39,6 +40,7 @@ export function SemesterColumn({
   selectedElectives,
   onSlotClick,
   onSlotOpenPicker,
+  onSlotRemove,
   onCompleteAll,
   isComplete,
   onUncompleteAll,
@@ -72,6 +74,7 @@ export function SemesterColumn({
               isSelected={selected ? selectedId === selected.id : false}
               onClick={() => onSlotClick(slot)}
               onOpenPicker={() => onSlotOpenPicker(slot.id)}
+              onRemove={() => onSlotRemove(slot)}
               theme={theme}
               showRequirementOverride={selected ? selected.id === showOverrideForId : false}
               onConfirmOverride={onConfirmOverride}
