@@ -4,6 +4,9 @@ interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
+interface NavigatorWithRelatedApps extends Navigator {
+  getInstalledRelatedApps?: () => Promise<unknown[]>;
+}
 
 const INSTALLED_STORAGE_KEY = 'flowchart:pwa-installed';
 
@@ -30,6 +33,12 @@ function persistInstalled() {
   }
 }
 
+function clearPersistedInstalled() {
+  try {
+    localStorage.removeItem(INSTALLED_STORAGE_KEY);
+  } catch { // localStorage indisponível, só limpeza de estado.
+  }
+}
 
 interface Snapshot {
   installEvent: BeforeInstallPromptEvent | null;
@@ -60,11 +69,46 @@ function getSnapshot() {
   return cachedSnapshot;
 }
 
+async function reconcileInstalledState() {
+  if (checkIsStandalone()) {
+    if (!isInstalled) {
+      isInstalled = true;
+      persistInstalled();
+      notify();
+    }
+    return;
+  }
+
+  const nav = window.navigator as NavigatorWithRelatedApps;
+  if (!nav.getInstalledRelatedApps) return;
+
+  try {
+    const relatedApps = await nav.getInstalledRelatedApps();
+    const actuallyInstalled = relatedApps.length > 0;
+
+    if (isInstalled !== actuallyInstalled) {
+      isInstalled = actuallyInstalled;
+      if (actuallyInstalled) {
+        persistInstalled();
+      } else {
+        clearPersistedInstalled();
+      }
+      notify();
+    }
+  } catch {
+  }
+}
+
 if (typeof window !== 'undefined') {
   window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    if (isInstalled) return;
     installEvent = event as BeforeInstallPromptEvent;
+
+    if (isInstalled && !checkIsStandalone()) {
+      isInstalled = false;
+      clearPersistedInstalled();
+    }
+
     notify();
   });
 
@@ -73,6 +117,13 @@ if (typeof window !== 'undefined') {
     isInstalled = true;
     persistInstalled();
     notify();
+  });
+
+  reconcileInstalledState();
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      reconcileInstalledState();
+    }
   });
 }
 
