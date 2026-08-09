@@ -5,7 +5,7 @@
     "shortName": "Fis I",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução. Vetores. Velocidade e aceleração vetoriais. Os princípios da dinâmica. Aplicações das leis de Newton. Trabalho e energia mecânica. Conservação da energia. Momento linear e conservação do momento linear. Colisões. Rotação e momento angular. Dinâmica de corpos rígidos. Força que varia inversamente ao quadrado da distância (gravitação).",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -19,7 +19,7 @@
       "MAE111"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Dinâmica das rotações: cinemática das rotações, determinação de momento de inércia, pêndulo composto. Movimento oscilatório: movimento harmônico simples, movimento harmônico amortecido, combinação de movimentos harmônicos. Hidrostática: determinação de viscosidade, determinação de densidade de líquidos e sólidos. Ondas mecânicas: velocidade do som (método de ressonância), cordas vibrantes. Calorimetria: capacidade calorífica, equivalente mecânico.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -33,7 +33,7 @@
       "MAE992"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Lei de Coulomb. Campos elétricos. Lei de Gauss. Potencial Elétrico, capacitores, correntes e circuitos. Campos magnéticos, leis de Ampere e Biot - Savart, Lei de Faraday, indutância, corrente de deslocamento. Circuitos de corrente alternada, equações de Maxwell.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -46,7 +46,7 @@
       "FIM230"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ondas eletromagnéticas. Energia e momento da luz. Noções da relatividade restrita. Ótica geométrica. Fenômenos de interferência. Difração. Polarização. Física moderna. Efeitos fotoelétricos e Compton. Átomo de hidrogênio. Difração de elétrons. Função de onda. Equação de Schroedinger. Principio de incerteza. Disciplinas de Escolha Restrita",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -57,7 +57,7 @@
     "shortName": "Ética em Comp",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Discussão sobre o que é Ética. Estudo da ética normativa. O papel dos Códigos de Ética Profissional e da ética na pesquisa científica. Casos de estudo de ética na computação (segurança e proteção de dados, princípios FAIR, privacidade e direitos civis, propriedade intelectual, ética da informação). Computadores e valores humanos, ética e Inteligência Artificial e agentes morais artificiais.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -71,7 +71,7 @@
       "ICP362"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Histórico, conceitos e definições no contexto de Internet das Coisas (IoT); Tipos de sensores e atuadores; RFID (radio frequency identification); Plataformas de hardware; Redes e interfaces de comunicação; Protocolos e bibliotecas de comunicação; Linguagens de programação e plataformas de software para IoT; Arquitetura e middleware para IoT; Segurança de informação em IoT.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -84,7 +84,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Visão geral e definição de Computação Social; Ferramentas de comunicação e colaboração; Ações coletivas e Crowdsourcing; Análise de redes sociais; Computação Humana; Perfil, incentivos e recompensas; Recomendação; Reputação, incentivos e gamificação; Ética e Princípios FAT (Fairness, Accountability, & Transparency)",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -97,7 +97,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução à Web Semântica; Mecanismos classificatórios e terminológicos; Introdução a Dados Conectados; Representação de Dados em RDF e RDF Schema; Formatos de Serialização; Triplificação de Dados; Consultas SPARQL; Gerenciamento de Dados Conectados; Sistemas de Gerenciamento de Dados baseados em grafos; Tendências em Web Semântica.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -111,7 +111,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -125,7 +125,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -139,7 +139,7 @@
       "MAE992"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Séries e sequências. Números e funções complexas. Transformadas de Laplace, Z e de Fourier. Algoritmo de transformada rápida de Fourier (Fast Fourier Transform - FFT). Aplicações: Multiplicação de polinômios e inteiros grandes; amostragem e análise de sinais; processamento de imagens.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -153,7 +153,7 @@
       "ICP351"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelagem matemática de problemas que resultam em Problemas de Valor Inicial (PVIs) e Problemas de Valor de Contorno (PVCs) para Equações Diferenciais Ordinárias (EDOs). Métodos numéricos para PVIs. Métodos para EDOs rígidas. Método das Diferenças Finitas aplicado a PVCs.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -166,7 +166,7 @@
       "ICP014"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelagem matemática com Equações Diferenciais Parciais (EDPs) de problemas de diferentes áreas: Leis físicas e relações constitutivas; leis de conservação; modelos baseados em EDPs; exemplos e aplicações. Aplicação do método das diferenças finitas: Introdução ao método; problemas estacionários e de autovalores: equações de Laplace e Poisson; problemas de propagação: equação de difusão; equação da onda ou de advecção.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -179,7 +179,7 @@
       "ICP248"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Exemplos da Física Matemática; Leis de conservação e equações constitutivas. Relação com outros métodos numéricos. Discussão sobre convergência e cálculo de erros. Funções base e peso. Formulações forte e fraca em problemas uni e bi dimensionais estacionários. Abordagem de aspectos computacionais do método. Apresentação diferentes classes de elementos finitos. Introdução de outras complexidades: problemas envolvendo o tempo ou mais de um campo a ser resolvido, a critério do professor.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -192,7 +192,7 @@
       "ICP365"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelagem e Caracterização dos Problemas de Programação Linear. Revisão: Método Simplex; Dualidade; Método Dual Simplex. Condições de Otimalidade. Análise de Sensibilidade. Método dos Pontos Interiores. Aplicações.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -205,7 +205,7 @@
       "ICP365"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelagem e Caracterização de Problemas de Programação Não Linear. Programação Não Linear Irrestrita: Condições de otimalidade; direções de descida e busca linear; métodos clássicos; métodos sem derivada. Programação Não Linear com restrições: Condições KKT; métodos clássicos. Heurísticas. Aplicações",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -218,7 +218,7 @@
       "ICP248"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Matrizes definidas positivas. Fatoração Cholesky e QR. Métodos iterativos para autovalores e valores singulares. Aproximação de matriz. Aplicações de grande porte em ciência de dados, equações diferenciais, teoria dos grafos, processamento de imagens, aprendizado de máquina e outros. Condicionamento e Estabilidade. Matrizes esparsas. Representação e algoritmos. Álgebra Linear em Blocos. Pré-condicionadores.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -231,7 +231,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelos de ciclo de vida. Gerência de configuração de SW. Garantia de qualidade de SW. Requisitos e arquitetura de software. Conceitos e técnicas do projeto de software. Diagramas usados no projeto de software. Teste de módulos. Estratégias de teste. Métricas de SW. Gerência de projetos de software: escopo de projeto. Planejamento de projetos de software. Controle de versão. Manutenção de software.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -244,7 +244,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -257,7 +257,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -270,7 +270,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceito de Projeto; Ciclo de Vida de Projeto; Planejamento de projetos: objetivos escopo, organização do trabalho, cronograma, recursos e custos; Gestão de Projeto segundo PMBOK (Project Management Body of Knowledge); Gestão Ágil de Projetos (ex. Scrum); Questões atuais de gestão de projeto.Prática de métodos modernos de gestão de projetos (ex: PMBOK, PERT/CPM, Gantt, Risco de Projetos, Scrum, Sprints, etc.) utilizando ferramental de apoio.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -283,7 +283,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Técnicas de Elicitação de Requisitos; Regras de Negócio; Técnicas de Modelagem de Sistemas; Aplicação das linguagens de modelagem; Modelagem de Interação; Arquiteturas de Software (Cliente Servidor, Multicamadas, etc.); Padrões de Projeto",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -297,7 +297,7 @@
       "ICP362"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Objetivos e conceitos sobre computação em nuvem; Virtualização e migração de máquinas virtuais;Infraestrutura como serviço (IaaS); Modelo arquitetural, instalação, configuração e desenvolvimento de aplicações orientadas a serviços; Software como serviço (SaaS); Plataformas e frameworks populares na nuvem; Plataforma como serviço (PaaS); Gerenciamento e monitoração do ambiente em nuvem; Escalonamento, provisionamento e migração de recursos; Segurança e privacidade.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -310,7 +310,7 @@
       "ICP362"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Arquiteturas de gerenciamento e monitoramento de redes; Tecnologias de comunicação de redes sem fio pessoais, locais e metropolitanas; Tecnologias da telefonia celular e suporte a rede veicular; Suporte à qualidade de serviço (QoS) e ao tráfego prioritário: arquiteturas de serviços diferenciados e serviços integrados (políticas de filas e pontos de controle de decisão, suporte a multimídia); Redes definidas por software (SDN) e protocolo Openflow; Virtualização de redes.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -325,7 +325,7 @@
       "ICP134"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Algoritmos simétricos: cifra em blocos (César, afim, Vignére, Data Encryption Standard - DES), Algoritmos assimétricos: RSA, Diffie-Hellman, El Gamal, Algoritmos de fatoração (ingênuo, Fermat Pollard p-1 e Pollard rho), Algoritmos de resolução do logaritmo discreto (ingênuo, algoritmo \"Baby-Step / Giant-Step\" de Shanks, Pollard \"Rho\", Pohlig-Hellman e cálculo de Índices.), Assinatura digital: RSA, El Gamal e DSA (Digital Signature Algorithm),Funções hash seguras",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -338,7 +338,7 @@
       "ICP246"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Tipos de arquitetura, RISC x CISC. Pipeline: características, conflitos estruturais, dependências de dados, dependências de controle, tratamento de exceções. Predição de desvio: estática, dinâmica, Branch Target Cache, desvio atrasado, instruções condicionais. Escalonamento de instruções. Arquiteturas avançadas: superescalares, VLIW, Multithreading, SMT. Aceleradores: Manycore, GPU e FPGA. Arquiteturas Paralelas: SISD, SIMD, MIMD , Clusters. Redes de Interconexão: topologias, propriedades.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -351,7 +351,7 @@
       "ICP145"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceitos de tecnologia e inovação, formas de inovação, avaliação tecnológica. Visão de futuro, modelos de negócio e plano de negócios; redes e cadeias de valor econômico e social; estratégias de empreender e ferramentas de apoio; políticas de inovação; fomento de pesquisa e desenvolvimento. Sociedade e inovação:Ética em pesquisa e inovação; Estratégia para inovação nas organizações;Inclusão no mundo profissional;Legislação: em pesquisa e desenvolvimento, de informática, empresarial e startups.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -364,7 +364,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Governança de dados e governança corporativa e de tecnologias da informação. Políticas e processos associados a ativos de dados e informações. Qualidade de dados. Métricas e modelos de maturidade. Classificação de dados. Abordagens e tecnologias de apoio à governança de dados e informação. Gestão de repositórios de dados, de conteúdo e de documentos. Gestão de dados de pesquisa. Gestão de metadados e instrumentos terminológicos. Privacidade e Transparência. Ética na gestão de dados.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -378,7 +378,7 @@
       "ICP365"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -392,7 +392,7 @@
       "ICP365"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -403,7 +403,7 @@
     "shortName": "Análise de Redes Sociais",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução à análise de redes sociais. Tipos de representação e visualização de redes. Técnicas de modelagem, análise e monitoramento. Desafios e perspectivas de pesquisa e práticas. Aplicações em casos reais.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -417,7 +417,7 @@
       "ICP144"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -431,7 +431,7 @@
       "ICP144"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -444,7 +444,7 @@
       "ICP132"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Fundamentação de processos de negócio em sistemas de informação. Melhoria de processos de negócio. Tipos de processos de negócio. Processos intensivos em conhecimento, suas características e aplicações. Modelagem de processos e de atividades. Automação de processos de negócio, BPMS e Workflow. Medição de processos. Gestão por processos.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -457,7 +457,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Técnicas de Análise, Modelagem e Implementação de Sistemas para times de software. Organização e condução de projetos, gestão de tarefas. Ferramental de apoio.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -470,7 +470,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Técnicas de Análise, Modelagem e Implementação de Sistemas para times de software. Organização e condução de projetos, gestão de tarefas. Ferramental de apoio.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -483,7 +483,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -496,7 +496,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -509,7 +509,7 @@
       "ICP239"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução. Histórico: o que é a web. Linguagem de marcação, mecanismo de formatação de documentos web, linguagem para programação client-side e server-side, biblioteca para programação client-side, desenvolvimento de interface e front-end, introdução a sistemas de gerenciamento de banco de dados, APIs.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -522,7 +522,7 @@
       "ICP239"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Aplicativo de Página Única (SPA). Aplicativo de Múltiplas Páginas. Padrão MVC (Model, View Controler). NodeJS. Express. Django. ReactJS. Angular.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -535,7 +535,7 @@
       "ICP361"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -548,7 +548,7 @@
       "ICP362"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -562,7 +562,7 @@
       "ICP239"
     ],
     "credits": 2.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -576,7 +576,7 @@
       "ICP239"
     ],
     "credits": 2.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -590,7 +590,7 @@
       "ICP239"
     ],
     "credits": 2.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -604,7 +604,7 @@
       "ICP239"
     ],
     "credits": 2.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -618,7 +618,7 @@
       "ICP239"
     ],
     "credits": 2.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -629,7 +629,7 @@
     "shortName": "Tóp Esp Cie Comp I",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -640,7 +640,7 @@
     "shortName": "Tóp Esp Cie Comp II",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -651,7 +651,7 @@
     "shortName": "Tóp Esp Cie Comp III",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -662,7 +662,7 @@
     "shortName": "Tóp Esp Cie Comp IV",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -673,7 +673,7 @@
     "shortName": "Tóp Esp Cie Comp V",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Ementa livre.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -686,7 +686,7 @@
       "ICP034"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Tipos de rede; Modelagem da disseminação de informação; Formação de Opinião; Dinâmicas Sociais e de Grupo; Coleta e preparação dos dados sociais (?big social data? e ?small data?); Tratamento de dados experimentais; Carga de trabalho (workloads); Projeto experimental efetivo (Effective experimental design).",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -697,7 +697,7 @@
     "shortName": "Gestão Estratégica TI",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceitos e Terminologia; O novo ambiente de negócios (a economia digital); Ferramentas Estratégicas:; Definição do negócio (Missão, Visão, Valores); Análise SWOT; Porter: Estratégias genéricas, 5 forças (Concorrentes diretos, Substitutos, Fornecedores, Compradores e Novos Entrantes); Mintzberg: Estratégia Deliberada x Estratégia Emergente, Planejamento Estratégico x Pensamento Estratégico; Modelo Delta; Alinhamento Estratégico de TI (Plano Estratégico de Negócio e Plano; Estratégico de TI); Governança de TI (ITIL, COBIT); Balanced Scorecard e o alinhamento",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -710,7 +710,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Armazenamento de grandes volumes de dados; Modelos de programação para grandes volumes de dados; Plataformas para análise de grandes volumes de dados; Computação em nuvem;Internet das coisas; Organização e curagem de grandes volumes de dados; Streaming de dados; Integração semântica de dados; Big Social Data - Extraindo conhecimento de interações sociais; Grandes volumes de dados e redes complexas; Aprendizagem de dados em redes complexas.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -723,7 +723,7 @@
       "MAD243"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceitos de risco e análise de risco; O processo de gerência de risco; Análise de risco qualitativa: tabelas Probabilidade X Impacto; Método de Monte Carlo; Fundamentos da linguagem R; Análise quantitativa do risco de custo de projetos; Análise quantitativa do risco de prazo de projetos; Introdução a avaliação quantitativa do risco de investimentos financeiros.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -736,7 +736,7 @@
       "ICP116"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceito de arquivo. Modelagem física de armazenamento. Organização primárias de arquivos: sequencial, direto (“hash”), indexado sequencial. Estruturas de índices: listas invertidas, mapas, árvores. Ordenação de arquivos. Complexidade dos algoritmos apresentados.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -749,7 +749,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução à Inteligência de Negócio. Arquiteturas e ambientes analíticos de suporte à decisão. Componentes e ferramentas de apoio ao tratamento e processamento analítico. Metodologia de desenvolvimento de soluções de suporte à decisão. Modelagem multidimensional. Gerência de metadados. Tratamento (limpeza, transformação e descrição, em especial) e exploração de dados heterogêneos.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -762,7 +762,7 @@
       "MAD243"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "O processo de tomada de decisão - conceitos introdutórios, aspectos humanos e técnicos, visão geral das ferramentas para suporte à decisão. Dados no suporte à decisão: análise de dados, previsão (aprendizado de máquina, estatística, inferência), recomendação, visualização da informação. Condução do processo de tomada de decisão: Técnicas, ferramentas e questões éticas. Aplicações.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -776,7 +776,7 @@
       "ICP362"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Motivação e desafios de sistemas distribuídos; Arquiteturas de sistemas distribuídos (de software e de sistema); Middleware e abstrações de comunicação e de programação distribuída; Identificação e localização de entidades; Atributos de dependabilidade em sistemas distribuídos; Replicação, sincronização e consistência; Modelos de falhas, detecção e tolerância a falhas;Medidas de eficiência e monitoramento de sistemas distribuídos.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -787,7 +787,7 @@
     "shortName": "Tóp Esp Info Soc",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Características da sociedade informacional e a economia de serviços. Análise da desestruturação do mercado de trabalho no capitalismo contemporâneo. Impactos da introdução das tecnologias de informação e comunicação (TICs) e das inovações organizacionais (downsizing, teamwork, etc.) e seus impactos sobre o trabalho. Novos conceitos de qualificação, competência, habilidade e empregabilidade.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -802,7 +802,7 @@
       "ICP353"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Compiladores e interpretadores. Tradução dirigida pela sintaxe. Componentes e fases da compilação. Estruturas de dados e algoritmos para: análise léxica, análise sintática, análise semântica, geração de representação intermediária, otimização independente de máquina, geração de código, otimização dependente de máquina. Máquinas virtuais e código de montagem. Recuperação de erros. Coleta de lixo.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -815,7 +815,7 @@
       "ICP248"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Interpolação polinomial. funções spline. ajuste de curvas. Integração numérica, matriz simétrica. Matriz definida positiva. Métodos diretos (Gauss, LU, Cholesky), e iterativos (Gauss-Jacobi, Gauss-Seidel, Gradiente Conjugado) para sistema linear, sistema não linear. Elementos de álgebra linear. Número de condicionamento. Propagação de erros. Resolução numérica de grandes sistemas esparsos. Métodos numéricos para equações diferenciais.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -828,7 +828,7 @@
       "ICP489"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução de conceitos fundamentais tecnologias e aplicações inovadoras realizados ao processamento e análise de grandes volumes de dados (BigData) apresentando diferentes contextos de Ciência de Dados e suas arquiteturas (centralizada, paralela e distribuída). Investigar as soluções tecnológicas recentes, dentre as quais as diferentes formas de organização de grandes volumes de dados, incluindo conceitos e abordagens sistemas de armazenamento distribuídos, NoSQL (Teorema CAP, ACID vs BASE, modelos de dados chave-valor, colunar, documentos e grafos), newSQL, In-Memory DB e suas ligações como técnica de paralelismo baseado no particionamento de dados. Abordagens de SGBDs: Espaço-Temporais, Geográficos e MOD (Moving Objects Databases).",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -841,7 +841,7 @@
       "ICP368"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceito de Inteligência e de IA. História da IA até chegar no Estado da Arte. Apresentação das categorias clássicas da IA. Conceito de agentes inteligentes. Paradigmas simbolista e conexionista. Classes de problema (planejamento, processamento de linguagem natural, otimização, robótica). Classes de algoritmos (busca, bioinspirados, aprendizado de máquina). Representação de conhecimento e raciocínio. Questões éticas (passadas, atuais, considerações futuras).",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -854,7 +854,7 @@
       "ICP368"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Revisão dos Conceitos Básicos de Teoria dos Grafos. Representação de Grafos. Subgrafos. Árvores, articulações, pontes. Conectividade, blocos. Circuitos eulerianos. Ciclos hamiltonianos. Emparelhamentos. Coloração de arestas. Conjuntos independentes e cliques. Coloração de vértices. Grafos planares.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -868,7 +868,7 @@
       "MAD243"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Técnicas de Classificação; Técnicas de Agrupamento; Aprendizado por Reforço; Detecção de anomalias; Algoritmos de seleção de atributos; Análise de dados em grafos; Abordagens para análise de grande volume de dados; Sistemas de suporte à decisão (Metodologia CRISP-DM e estágios de mineração de dados); Análise e previsão em textos; Análise de sensibilidade; Agrupamento e recuperação de documentos; Extração da informação.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -881,7 +881,7 @@
       "ICP142"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Sociedade do Conhecimento. Ciclo de Vida do Conhecimento. Conhecimento Tácito e Capital Intelectual. Aprendizado Organizacional. Inteligência Competitiva. Suporte por Computador ao Trabalho Colaborativo. Modelos de criação do conhecimento. Processos de apoio à gestão do conhecimento. Métricas para avaliação de gestão do conhecimento. Gestão e modelagem de processos e seu papel na gestão do conhecimento. Estratégias de inovação.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -894,7 +894,7 @@
       "ICP116"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução à Recuperação de Informação; Operações de pré-processamento (sobre documentos e consultas); Modelos clássicos de Recuperação de Informação (Booleano, Vetorial e Probabilístico); Avaliação em Recuperação de Informação; Recuperação de Informação na Web; Sistemas de Recomendação; Tendências em Recuperação de Informação.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -907,7 +907,7 @@
       "ICP368"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Design e implementação de algoritmos envolvendo estruturas de dados, ordenação, aritmética, álgebra, combinatória, teoria dos números, divisão e conquista, backtracking, manipulação de cadeias de caracteres, grafos, método guloso, programação dinâmica, geometria e geometria computacional.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -920,7 +920,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Princípios de Interação Humano Computador; Histórico de Interação Humano Computador; Cognição e Interação; Projeto de Interação; Construção de interfaces (técnicas de prototipação); Técnicas de avaliação de usabilidade (ex: walkthrough, comunicabilidade)",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -933,7 +933,7 @@
       "ICP361"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Introdução e conceitos básicos sobre programação paralela; Biblioteca de programação MPI; Biblioteca de programação OpenMP;Biblioteca de programação OpenACC.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -946,7 +946,7 @@
       "ICP368"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Problemas de decisão e otimização. A classe de problemas P. A classe de problemas NP. Reduções e transformações polinomiais. A classe de problemas NP-completos. Exemplos de problemas NP completos e transformações. Razão de aproximação e algoritmo de aproximação. Técnicas para elaboração de algoritmos de aproximação. Exemplos de algoritmos de aproximação para os problemas estudados.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -959,7 +959,7 @@
       "ICP368"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelos de Máquinas Paralelas. Modelo PRAM. Complexidade de Tempo e Espaço. Ordenação, merge, cálculo de mediana. Somas de prefixo. Listas encadeadas. Percurso de árvores. Algoritmos em grafos: componentes conexas. Algoritmos de fecho convexo. Classes P e NC.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -974,7 +974,7 @@
       "ICP134"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Modelagem polinomial de problemas de geometria plana; anéis, domínios, corpos e ideais; polinômios em uma variável: divisão de polinômios, máximo divisor comum, algoritmo euclidiano estendido e ideais; polinômios em várias variáveis: ideais, radicais e geometria; ordens monomiais; divisão em várias variáveis; bases de Gröbner; o algoritmo de Buchberger; o critério de Buchberger; problema da pertinência a um ideal; aplicações à geometria plana.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -988,7 +988,7 @@
       "ICP134"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Números complexos; espaços de estados e q-bits;operadores hermitianos e observáveis;medidas em mecânica quântica;operadores unitários;portas lógicas: clássicas e quânticas;portas quânticas de um q-bit;sistemas probabilísticos e sistemas quânticos; criptografia quântica; teorema de não clonagem; produto tensorial e sistemas quânticos de mais de um q-bit;circuitos quânticos;algoritmos de Deutsch e Deutsch-Jozsa; algoritmo de Simon; algoritmo de Shor; algoritmo de busca de Grover.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -1001,7 +1001,7 @@
       "ICP237"
     ],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Conceitos básicos: defeito, erro, falha; casos de teste; níveis de teste; testes de caixa branca e caixa preta; testes de regressão; critérios e requisitos de teste; processo de teste; testes no processo de desenvolvimento de software (verificação e validação e desenvolvimento dirigido a testes -TDD). Técnicas de projeto de casos de teste baseadas em grafos, em lógica, em particionamento de dados e em sintaxe.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -1012,7 +1012,7 @@
     "shortName": "Monit I/II",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Auxílio aos professores do departamento nas atividades de suporte ao ensino das disciplinas e atuação nas atividades acadêmicas gerais do departamento tais como suporte aos laboratórios e criação de ferramentas de informática para auxílio ao ensino.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -1023,7 +1023,7 @@
     "shortName": "Economia",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "História econômica: revolução industrial, expansão do capitalismo a nível mundial, desenvolvimento e subdesenvolvimento. Conceitos de economia política: sistema econômico, unidades produtivas e mercados, moeda, bancos e sistemas financeiros, setor estatal, setor externo. Economia brasileira: evolução recente da economia brasileira, inflação, distribuição de renda. Tópicos especiais.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
@@ -1034,7 +1034,7 @@
     "shortName": "Libras",
     "preRequisites": [],
     "credits": 4.0,
-    "curriculum": "",
+    "curriculum": "Nomes próprios; pronomes pessoais; demonstrativos; possessivos; locativos em sentenças simples do tipo pergunta-resposta com \"o que\" e \"quem\" e outros vocábulos básicos; numerais; quantidade; topicalização; flexão verbal; flexão de negação; expressões faciais e corporais; percepção visual; conversação; diálogos; textos: LIBRAS, cultura e comunidade surda.",
     "evaluationStyle": "",
     "teachers": "",
     "advice": ""
