@@ -37,7 +37,8 @@ const kindLabels: Record<ElectiveKind, string> = {
 const statusColorClasses: Record<SubjectStatus, string> = {
   locked: 'bg-neutral-500',
   available: 'bg-red-400',
-  completed: 'bg-green-500',
+  'in-progress': 'bg-yellow-400',
+  completed: 'bg-green-600',
   'highlighted-pre': 'bg-blue-500',
   'highlighted-post': 'bg-purple-500',
 };
