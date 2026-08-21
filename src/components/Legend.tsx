@@ -4,6 +4,7 @@ interface LegendProps {
 
 const items = [
   { color: 'bg-red-400', label: 'Ainda não feita' },
+  { color: 'bg-yellow-400', label: 'Cursando' },
   { color: 'bg-green-500', label: 'Já feita' },
   { color: 'bg-neutral-500', label: 'Falta requisito' },
   { color: 'bg-blue-500', label: 'Pré-requisito' },

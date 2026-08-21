@@ -1,4 +1,4 @@
-export type SubjectStatus = 'locked' | 'available' | 'completed' | 'highlighted-pre' | 'highlighted-post';
+export type SubjectStatus = 'locked' | 'available' | 'in-progress' | 'completed' | 'highlighted-pre' | 'highlighted-post';
 
 export interface TeacherRecord {
   name: string;

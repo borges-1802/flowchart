@@ -13,6 +13,7 @@ interface SelectedElective {
 
 export interface CategorySummary {
     completed: number;
+    inProgress: number;
     total: number;
     }
 
@@ -32,9 +33,11 @@ export function computeCreditsSummary(
     humanities: HumanitiesOption[],
     electiveSlots: ElectiveSlot[],
     completedIds: string[],
+    inProgressIds: string[],
     selectedElectives: Record<string, SelectedElective>,
-): CreditsSummary {
+    ): CreditsSummary {
     const completedSet = new Set(completedIds);
+    const inProgressSet = new Set(inProgressIds);
     const electiveCreditsById = new Map(electives.map((e) => [e.id, e.credits]));
     const humanityCreditsById = new Map(humanities.map((h) => [h.id, h.credits]));
 
@@ -42,19 +45,28 @@ export function computeCreditsSummary(
     const obrigatoriasCompleted = subjects
         .filter((s) => completedSet.has(s.id))
         .reduce((sum, s) => sum + s.credits, 0);
+    const obrigatoriasInProgress = subjects
+        .filter((s) => inProgressSet.has(s.id))
+        .reduce((sum, s) => sum + s.credits, 0);
 
     function summarizeKind(kind: ElectiveKind, creditsById: Map<string, number>): CategorySummary {
         const slots = electiveSlots.filter((slot) => slot.kind === kind);
         const total = slots.length * NOMINAL_CREDITS_PER_SLOT;
 
         let completed = 0;
+        let inProgress = 0;
         for (const slot of slots) {
         const selected = selectedElectives[slot.id];
-        if (!selected || !completedSet.has(selected.id)) continue;
-        completed += creditsById.get(selected.id) ?? NOMINAL_CREDITS_PER_SLOT;
+        if (!selected) continue;
+
+        if (completedSet.has(selected.id)) {
+            completed += creditsById.get(selected.id) ?? NOMINAL_CREDITS_PER_SLOT;
+        } else if (inProgressSet.has(selected.id)) {
+            inProgress += creditsById.get(selected.id) ?? NOMINAL_CREDITS_PER_SLOT;
+        }
         }
 
-        return { completed, total };
+        return { completed, inProgress, total };
     }
 
     const condicionada = summarizeKind('condicionada', electiveCreditsById);
@@ -62,13 +74,15 @@ export function computeCreditsSummary(
     const livres = summarizeKind('livre', new Map());
 
     return {
-        obrigatorias: { completed: obrigatoriasCompleted, total: obrigatoriasTotal },
-        condicionada,
-        humanidades: humanidadesSummary,
-        livres,
-        total: {
+    obrigatorias: { completed: obrigatoriasCompleted, inProgress: obrigatoriasInProgress, total: obrigatoriasTotal },
+    condicionada,
+    humanidades: humanidadesSummary,
+    livres,
+    total: {
         completed: obrigatoriasCompleted + condicionada.completed + humanidadesSummary.completed + livres.completed,
+        inProgress:
+        obrigatoriasInProgress + condicionada.inProgress + humanidadesSummary.inProgress + livres.inProgress,
         total: obrigatoriasTotal + condicionada.total + humanidadesSummary.total + livres.total,
-        },
+    },
     };
 }

@@ -5,20 +5,46 @@ interface CreditsCounterProps {
   summary: CreditsSummary;
 }
 
-function percentageOf(data: CategorySummary): number {
+function completedPercentage(data: CategorySummary): number {
   if (data.total <= 0) return 0;
   return Math.min((data.completed / data.total) * 100, 100);
 }
 
-function ProgressRing({ percentage, size = 48 }: { percentage: number; size?: number }) {
+function inProgressPercentage(data: CategorySummary): number {
+  if (data.total <= 0) return 0;
+  return Math.min((data.inProgress / data.total) * 100, 100 - completedPercentage(data));
+}
+
+function ProgressRing({ data, size = 48 }: { data: CategorySummary; size?: number }) {
   const radius = size / 2 - 6;
   const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (percentage / 100) * circumference;
   const center = size / 2;
+
+  const completedPct = completedPercentage(data);
+  const inProgressPct = inProgressPercentage(data);
+
+  const completedOffset = circumference - (completedPct / 100) * circumference;
+  const inProgressLength = (inProgressPct / 100) * circumference;
+  const inProgressOffset = circumference - inProgressLength;
+  const inProgressRotation = (completedPct / 100) * 360;
 
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="-rotate-90 shrink-0">
       <circle cx={center} cy={center} r={radius} fill="none" strokeWidth="5" className="stroke-neutral-700/60" />
+      {inProgressPct > 0 && (
+        <circle
+          cx={center}
+          cy={center}
+          r={radius}
+          fill="none"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={inProgressOffset}
+          className="stroke-yellow-400 transition-[stroke-dashoffset] duration-500"
+          style={{ transform: `rotate(${inProgressRotation}deg)`, transformOrigin: '50% 50%' }}
+        />
+      )}
       <circle
         cx={center}
         cy={center}
@@ -27,18 +53,21 @@ function ProgressRing({ percentage, size = 48 }: { percentage: number; size?: nu
         strokeWidth="5"
         strokeLinecap="round"
         strokeDasharray={circumference}
-        strokeDashoffset={offset}
-        className="stroke-green-500 transition-[stroke-dashoffset] duration-500"
+        strokeDashoffset={completedOffset}
+        className="stroke-green-600 transition-[stroke-dashoffset] duration-500"
       />
     </svg>
   );
 }
 
 function ProgressBar({ data }: { data: CategorySummary }) {
-  const pct = percentageOf(data);
+  const completedPct = completedPercentage(data);
+  const inProgressPct = inProgressPercentage(data);
+
   return (
-    <div className="h-1 w-full overflow-hidden rounded-full bg-neutral-700/40 md:w-20">
-      <div className="h-full rounded-full bg-green-500 transition-all duration-500" style={{ width: `${pct}%` }} />
+    <div className="flex h-1 w-full overflow-hidden rounded-full bg-neutral-700/40 md:w-20">
+      <div className="h-full bg-green-600 transition-all duration-500" style={{ width: `${completedPct}%` }} />
+      <div className="h-full bg-yellow-400 transition-all duration-500" style={{ width: `${inProgressPct}%` }} />
     </div>
   );
 }
@@ -69,7 +98,7 @@ export function CreditsCounter({ theme, summary }: CreditsCounterProps) {
               <span className="text-base font-normal text-neutral-500">/{summary.total.total}</span>
             </p>
           </div>
-          <ProgressRing percentage={percentageOf(summary.total)} />
+          <ProgressRing data={summary.total} />
         </div>
 
         <div className={`border-t pt-3 ${dividerClass}`}>
@@ -110,7 +139,7 @@ export function CreditsCounter({ theme, summary }: CreditsCounterProps) {
               <span className="text-sm font-normal text-neutral-500">/{summary.total.total}</span>
             </p>
           </div>
-          <ProgressRing percentage={percentageOf(summary.total)} />
+          <ProgressRing data={summary.total} />
         </div>
       </div>
     </div>

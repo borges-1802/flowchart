@@ -4,6 +4,7 @@ interface GetSubjectStatusParams {
   id: string;
   preRequisites: string[];
   completedIds: string[];
+  inProgressIds: string[];
   selectedSubject: Subject | null;
 }
 
@@ -11,6 +12,7 @@ export function getSubjectStatus({
   id,
   preRequisites,
   completedIds,
+  inProgressIds,
   selectedSubject,
 }: GetSubjectStatusParams): SubjectStatus {
   if (selectedSubject && selectedSubject.id !== id) {
@@ -19,6 +21,7 @@ export function getSubjectStatus({
   }
 
   if (completedIds.includes(id)) return 'completed';
+  if (inProgressIds.includes(id)) return 'in-progress';
 
   const isAvailable = preRequisites.every((reqId) => completedIds.includes(reqId));
   return isAvailable ? 'available' : 'locked';

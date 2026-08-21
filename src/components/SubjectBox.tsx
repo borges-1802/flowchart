@@ -8,11 +8,12 @@ interface SubjectBoxProps {
 }
 
 const statusColorClasses: Record<SubjectStatus, string> = {
-  locked: 'bg-neutral-500',
-  available: 'bg-red-400',
-  completed: 'bg-green-500',
-  'highlighted-pre': 'bg-blue-500',
-  'highlighted-post': 'bg-purple-500',
+  locked: 'bg-neutral-500 text-white',
+  available: 'bg-red-400 text-white',
+  'in-progress': 'bg-yellow-400 text-neutral-900',
+  completed: 'bg-green-600 text-white',
+  'highlighted-pre': 'bg-blue-500 text-white',
+  'highlighted-post': 'bg-purple-500 text-white',
 };
 
 export function SubjectBox({ subject, status, isSelected, onClick }: SubjectBoxProps) {
@@ -24,7 +25,7 @@ export function SubjectBox({ subject, status, isSelected, onClick }: SubjectBoxP
         event.stopPropagation();
         onClick(subject.id);
       }}
-      className={`flex h-13.5 w-full items-center justify-center rounded-[10px] px-2 text-center text-xs font-semibold leading-tight text-white transition-transform duration-200 active:scale-95 ${statusColorClasses[status]} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
+      className={`flex h-13.5 w-full items-center justify-center rounded-[10px] px-2 text-center text-xs font-semibold leading-tight transition-transform duration-200 active:scale-95 ${statusColorClasses[status]} ${isSelected ? 'ring-2 ring-blue-400' : ''}`}
     >
       <span className="hidden sm:inline">{subject.name}</span>
       <span className="inline sm:hidden">{subject.shortName}</span>

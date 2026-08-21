@@ -52,6 +52,7 @@ export function Home() {
   const [theme, setTheme] = usePersistedState<'dark' | 'light'>('flowchart:theme', 'dark');
   const [completedIds, setCompletedIds] = usePersistedState<string[]>('flowchart:completedIds', []);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [inProgressIds, setInProgressIds] = usePersistedState<string[]>('flowchart:inProgressIds', []);
   const [selectedElectives, setSelectedElectives] = usePersistedState<Record<string, SelectedElective>>(
     'flowchart:selectedElectives',
     {},
@@ -65,10 +66,16 @@ export function Home() {
   function handleEntityClick(id: string, preRequisites: string[]) {
     if (selectedId === id) {
       const isAvailable = preRequisites.every((reqId) => completedIds.includes(reqId));
-      if (completedIds.includes(id) || isAvailable) {
-        setCompletedIds((current) =>
-          current.includes(id) ? current.filter((completedId) => completedId !== id) : [...current, id],
-        );
+      const isCompleted = completedIds.includes(id);
+      const isInProgress = inProgressIds.includes(id);
+
+      if (isInProgress) {
+      setInProgressIds((current) => current.filter((inProgressId) => inProgressId !== id));
+    } else if (isCompleted) {
+      setCompletedIds((current) => current.filter((completedId) => completedId !== id));
+      setInProgressIds((current) => [...current, id]);
+    } else if (isAvailable) {
+      setCompletedIds((current) => [...current, id]);
       }
       setSelectedId(null);
       return;
@@ -156,6 +163,7 @@ export function Home() {
         id: selectedSubject.id,
         preRequisites: selectedSubject.preRequisites,
         completedIds,
+        inProgressIds,
         selectedSubject,
       })
     : null;
@@ -210,7 +218,7 @@ export function Home() {
             subjects={subjects.filter((subject) => subject.period === period)}
             slots={electiveSlots.filter((slot) => slot.period === period)}
             getStatus={(id, preRequisites) =>
-              getSubjectStatus({ id, preRequisites, completedIds, selectedSubject })
+              getSubjectStatus({ id, preRequisites, completedIds, inProgressIds, selectedSubject })
             }
             selectedId={selectedId}
             onBoxClick={handleBoxClick}
@@ -234,7 +242,7 @@ export function Home() {
         <div className="flex flex-col items-center gap-4">
           <CreditsCounter
             theme={theme}
-            summary={computeCreditsSummary(subjects, electives, humanities, electiveSlots, completedIds, selectedElectives)}
+            summary={computeCreditsSummary(subjects, electives, humanities, electiveSlots, completedIds, inProgressIds, selectedElectives)}
           />
           <Legend theme={theme} />
         </div>
