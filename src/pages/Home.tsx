@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 import { usePersistedState } from '../hooks/usePersistedState';
 
@@ -8,6 +8,8 @@ import { SelectElectiveModal } from '../components/SelectElectiveModal';
 import { SubjectDetailPanel } from '../components/SubjectDetailPanel';
 import { Legend } from '../components/Legend';
 import { CreditsCounter } from '../components/CreditsCounter';
+import { ExportButton } from '../components/ExportButton';
+import { ExportPortraitGrid } from '../components/ExportPortraitGrid';
 
 import { getSubjectStatus } from '../domain/getSubjectStatus';
 import { computeCreditsSummary } from '../domain/creditsSummary';
@@ -58,6 +60,8 @@ export function Home() {
     {},
   );
   const [openSlotId, setOpenSlotId] = useState<string | null>(null);
+  const fluxogramaRef = useRef<HTMLDivElement>(null);
+  const portraitRef = useRef<HTMLDivElement>(null);
 
   function handleToggleTheme() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
@@ -210,42 +214,59 @@ export function Home() {
     >
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
 
-      <div className="flex flex-col gap-5 p-4 sm:flex-row sm:justify-center sm:gap-2 sm:overflow-x-auto">
-        {periods.map((period) => (
-          <SemesterColumn
-            key={period}
-            period={period}
-            subjects={subjects.filter((subject) => subject.period === period)}
-            slots={electiveSlots.filter((slot) => slot.period === period)}
-            getStatus={(id, preRequisites) =>
-              getSubjectStatus({ id, preRequisites, completedIds, inProgressIds, selectedSubject })
-            }
-            selectedId={selectedId}
-            onBoxClick={handleBoxClick}
-            selectedElectives={selectedElectives}
-            onSlotClick={handleSlotClick}
-            onSlotOpenPicker={setOpenSlotId}
-            onCompleteAll={() => handleCompleteColumn(period)}
-            isComplete={isPeriodComplete(period)}
-            onUncompleteAll={() => handleUncompleteColumn(period)}
-            theme={theme}
-            showOverrideForId={showOverrideForId}
-            onConfirmOverride={() => selectedSubject && handleForceComplete(selectedSubject.id)}
-            onDismissOverride={() => setSelectedId(null)}
-            getElectivePreRequisites={getElectivePreRequisites}
-            onSlotRemove={handleRemoveElective}
-          />
-        ))}
-      </div>
+      <div ref={fluxogramaRef} className="flex flex-col items-center gap-5">
+        <div className="flex w-full flex-col gap-5 p-4 sm:flex-row sm:justify-center sm:gap-2 sm:overflow-x-auto">
+          {periods.map((period) => (
+            <SemesterColumn
+              key={period}
+              period={period}
+              subjects={subjects.filter((subject) => subject.period === period)}
+              slots={electiveSlots.filter((slot) => slot.period === period)}
+              getStatus={(id, preRequisites) =>
+                getSubjectStatus({ id, preRequisites, completedIds, inProgressIds, selectedSubject })
+              }
+              selectedId={selectedId}
+              onBoxClick={handleBoxClick}
+              selectedElectives={selectedElectives}
+              onSlotClick={handleSlotClick}
+              onSlotOpenPicker={setOpenSlotId}
+              onCompleteAll={() => handleCompleteColumn(period)}
+              isComplete={isPeriodComplete(period)}
+              onUncompleteAll={() => handleUncompleteColumn(period)}
+              theme={theme}
+              showOverrideForId={showOverrideForId}
+              onConfirmOverride={() => selectedSubject && handleForceComplete(selectedSubject.id)}
+              onDismissOverride={() => setSelectedId(null)}
+              getElectivePreRequisites={getElectivePreRequisites}
+              onSlotRemove={handleRemoveElective}
+            />
+          ))}
+        </div>
 
-      <div className="flex justify-center px-4 pb-6 pt-1">
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 px-4 pb-6 pt-1">
           <CreditsCounter
             theme={theme}
             summary={computeCreditsSummary(subjects, electives, humanities, electiveSlots, completedIds, inProgressIds, selectedElectives)}
           />
           <Legend theme={theme} />
         </div>
+      </div>
+
+      <ExportPortraitGrid
+        ref={portraitRef}
+        periods={periods}
+        subjects={subjects}
+        electiveSlots={electiveSlots}
+        selectedElectives={selectedElectives}
+        getStatus={(id, preRequisites) =>
+          getSubjectStatus({ id, preRequisites, completedIds, inProgressIds, selectedSubject })
+        }
+        getElectivePreRequisites={getElectivePreRequisites}
+        summary={computeCreditsSummary(subjects, electives, humanities, electiveSlots, completedIds, inProgressIds, selectedElectives)}
+      />
+
+      <div className="flex justify-center px-4 pb-4 pt-2">
+        <ExportButton landscapeRef={fluxogramaRef} portraitRef={portraitRef} isDark={isDark} />
       </div>
 
       {selectedSubject && <SubjectDetailPanel theme={theme} subject={selectedSubject} nameById={nameById} />}
