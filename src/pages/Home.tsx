@@ -214,7 +214,7 @@ export function Home() {
     >
       <Header theme={theme} onToggleTheme={handleToggleTheme} />
 
-      <div ref={fluxogramaRef} className="flex flex-col items-center gap-5">
+      <div ref={fluxogramaRef} className="flex flex-col items-center">
         <div className="flex w-full flex-col gap-5 p-4 sm:flex-row sm:justify-center sm:gap-2 sm:overflow-x-auto">
           {periods.map((period) => (
             <SemesterColumn

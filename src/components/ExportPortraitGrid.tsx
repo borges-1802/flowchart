@@ -194,7 +194,7 @@ export const ExportPortraitGrid = forwardRef<HTMLDivElement, ExportPortraitGridP
                         style={{ backgroundColor: colors.bg, color: colors.text }}
                         className="flex h-20 w-19.5 items-center justify-center rounded-[10px] px-1 text-center text-[10px] font-semibold leading-tight"
                       >
-                        Vaga
+                        Eletiva
                       </div>
                     );
                   }
