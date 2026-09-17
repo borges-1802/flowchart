@@ -65,7 +65,7 @@ export function SelectElectiveModal({ slot, theme, onSelect, onClose, usedIds }:
             type="button"
             disabled={!freeText.trim()}
             onClick={() => onSelect({ id: slot.id, name: freeText.trim(), shortName: freeText.trim() })}
-            className="w-full rounded-lg bg-amber-500 px-3 py-2 text-sm font-semibold text-white disabled:opacity-40"
+            className="w-full rounded-lg bg-yellow-700 px-3 py-2 text-sm font-semibold text-white disabled:opacity-40"
           >
             Confirmar
           </button>
